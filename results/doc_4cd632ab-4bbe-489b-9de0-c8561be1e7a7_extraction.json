@@ -1,0 +1,117 @@
+{
+  "brain_info": {
+    "brain_id": "ce88cb71-2528-4598-a585-5fa2dfd03319",
+    "brain_name": "AP HK - Financial industry"
+  },
+  "document_info": {
+    "id": "4cd632ab-4bbe-489b-9de0-c8561be1e7a7",
+    "file_name": "2023_BEA ESG Highlights_EN.pdf",
+    "content_length": 34922
+  },
+  "extracted_stakeholders": [
+    {
+      "name": "The Bank of East Asia (BEA)",
+      "category": "Supplier",
+      "role": "Serves as a financial institution driving the low carbon transition and managing climate risk.",
+      "confidence": 90,
+      "hierarchy_level": "Meso"
+    },
+    {
+      "name": "Dr. the Hon. Sir David Li Kwok-po",
+      "category": "Internal",
+      "role": "Executive Chairman of BEA, overseeing the bank's ESG initiatives and strategic direction.",
+      "confidence": 90,
+      "hierarchy_level": "Micro"
+    },
+    {
+      "name": "Adrian Li",
+      "category": "Internal",
+      "role": "Co-Chief Executive of BEA, involved in sustainability performance and innovation.",
+      "confidence": 90,
+      "hierarchy_level": "Micro"
+    },
+    {
+      "name": "Brian Li",
+      "category": "Internal",
+      "role": "Co-Chief Executive of BEA, involved in sustainability performance and innovation.",
+      "confidence": 90,
+      "hierarchy_level": "Micro"
+    },
+    {
+      "name": "BEA Union Investment Management Limited",
+      "category": "Partner",
+      "role": "Part of BEA Group, enhancing sustainable finance and engaging in climate initiatives.",
+      "confidence": 90,
+      "hierarchy_level": "Meso"
+    },
+    {
+      "name": "Net-Zero Banking Alliance (NZBA)",
+      "category": "Partner",
+      "role": "Global coalition of banks committed to aligning with net zero goals.",
+      "confidence": 85,
+      "hierarchy_level": "Macro"
+    },
+    {
+      "name": "Climate Action 100+",
+      "category": "Partner",
+      "role": "Investor-led initiative to engage major GHG emitters in climate action.",
+      "confidence": 90,
+      "hierarchy_level": "Macro"
+    }
+  ],
+  "extracted_factors": [
+    {
+      "Label": "Global Climate Challenge",
+      "Type": "Exogenous Driver",
+      "Tags": "Climate Change, Temperature Rise",
+      "Description": "Rising global temperatures and frequent extreme weather events underscore the urgency for climate action."
+    },
+    {
+      "Label": "Financed Emissions",
+      "Type": "Direct Driver",
+      "Tags": "Carbon Footprint, Emissions Measurement",
+      "Description": "BEA's financed emissions constitute 99% of its carbon footprint, driving its net zero initiatives."
+    },
+    {
+      "Label": "Net Zero Targets",
+      "Type": "Outcome",
+      "Tags": "Carbon Reduction, Sustainability Goals",
+      "Description": "Achieving net zero targets involves reducing emissions in key sectors and expanding green finance capabilities."
+    },
+    {
+      "Label": "Green and Sustainable Finance (GSF)",
+      "Type": "Direct Driver",
+      "Tags": "Sustainable Lending, ESG Investments",
+      "Description": "BEA is expanding its GSF offerings, contributing to clients' transition to low-carbon operations."
+    },
+    {
+      "Label": "Climate Risk Management",
+      "Type": "Direct Driver",
+      "Tags": "Risk Assessment, Climate Adaptation",
+      "Description": "BEA is enhancing its climate risk management framework to mitigate financial risks associated with climate change."
+    }
+  ],
+  "extracted_pain_points": [
+    {
+      "id": "PP-001",
+      "category": "Environmental Impact",
+      "description": "Frequent and intense climate-induced events like super typhoons and record rainfall challenge economic stability.",
+      "confidence": 85,
+      "hierarchy_level": "Macro"
+    },
+    {
+      "id": "PP-002",
+      "category": "Carbon Emissions",
+      "description": "Financed emissions majorly contribute to BEA's carbon footprint, necessitating robust reduction strategies.",
+      "confidence": 90,
+      "hierarchy_level": "Meso"
+    },
+    {
+      "id": "PP-003",
+      "category": "Sustainability Implementation",
+      "description": "Setting and achieving carbon reduction targets in various sectors involves complex measurement and strategy development.",
+      "confidence": 85,
+      "hierarchy_level": "Meso"
+    }
+  ]
+}

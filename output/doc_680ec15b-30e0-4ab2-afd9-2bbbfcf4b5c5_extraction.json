@@ -1,0 +1,87 @@
+{
+  "brain_info": {
+    "brain_id": "2c05c3dc-5e04-4432-8b55-58a60dec8ccb",
+    "brain_name": "Deforestation - Civil Society voice"
+  },
+  "document_info": {
+    "id": "680ec15b-30e0-4ab2-afd9-2bbbfcf4b5c5",
+    "file_name": "31. Forest guard women patrol - Mosaic Indonesia.pdf",
+    "content_length": 9971
+  },
+  "extracted_stakeholders": [
+    {
+      "name": "Sumini",
+      "category": "Influencer",
+      "role": "Resident of Damanbaru, Aceh, who initiated and organized a women's forest patrol group to protect rainforests.",
+      "confidence": 95
+    },
+    {
+      "name": "Aceh Forest, Nature and Environment Foundation",
+      "category": "Partner",
+      "role": "Organization that assisted in registering the patrol group officially with a social forestry permit.",
+      "confidence": 90
+    },
+    {
+      "name": "Farwiza Farhan",
+      "category": "Internal",
+      "role": "Founder involved in teaching forest conservation methods to rangers.",
+      "confidence": 85
+    },
+    {
+      "name": "Muhammad Saleh",
+      "category": "Consumer",
+      "role": "Resident who transitioned from deforesting activities to joining forest patrols, influenced by his wife's advocacy.",
+      "confidence": 88
+    },
+    {
+      "name": "Global Forest Watch",
+      "category": "Influencer",
+      "role": "Organization providing data on deforestation rates in Indonesia.",
+      "confidence": 80
+    },
+    {
+      "name": "The Asia Foundation",
+      "category": "Partner",
+      "role": "Organization supporting female-led forest management through environmental governance programs.",
+      "confidence": 90
+    },
+    {
+      "name": "Rahpriyanto Alam Surya Putra",
+      "category": "Internal",
+      "role": "Director of The Asia Foundation's environmental governance program in Indonesia.",
+      "confidence": 85
+    }
+  ],
+  "extracted_factors": [
+    {
+      "Label": "Deforestation",
+      "Type": "Direct Driver",
+      "Tags": "deforestation, forest loss, environmental degradation",
+      "Description": "Large-scale deforestation driven by the development of palm oil plantations, paper and rubber production, and illegal logging resulting in forest loss and environmental degradation. Sumini and women in her village initiated patrols to combat these impacts."
+    },
+    {
+      "Label": "Social Forestry Permits",
+      "Type": "Direct Driver",
+      "Tags": "community forestry, legal framework",
+      "Description": "Permits that allow local communities to manage their forests, pivotal for the establishment of the women's patrol group, supported by the Aceh Forest, Nature and Environment Foundation."
+    },
+    {
+      "Label": "Women's Participation in Forest Management",
+      "Type": "Indirect Driver",
+      "Tags": "gender roles, community involvement",
+      "Description": "Women's involvement in forest management has been shown to improve sustainability and increase household income, despite cultural challenges in patriarchal communities."
+    },
+    {
+      "Label": "Flash Floods",
+      "Type": "Outcome",
+      "Tags": "natural disaster, environmental impact",
+      "Description": "Flash floods exacerbated by deforestation that led to village evacuations and heightened awareness, motivating Sumini to form a patrol team."
+    },
+    {
+      "Label": "Community Education and Engagement",
+      "Type": "Outcome",
+      "Tags": "awareness, education, conservation efforts",
+      "Description": "The efforts by women rangers to educate their community on the importance of forest conservation, leading to a more informed and engaged population."
+    }
+  ]
+}

@@ -69,9 +69,35 @@ DEFAULT_SCHEMA = {
                 "required": ["Label", "Type", "Description"]
             },
             "description": "List of factors identified in the text."
+        },
+        "pain_points": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "description": "A unique identifier for the pain point (e.g., PP-001)."
+                    },
+                    "category": {
+                        "type": "string",
+                        "description": "The category of the pain point (e.g., Healthcare Access, Financial Barriers)."
+                    },
+                    "description": {
+                        "type": "string",
+                        "description": "A brief description of the pain point."
+                    },
+                    "confidence": {
+                        "type": "number",
+                        "description": "Confidence score (0-100%) for this pain point identification."
+                    }
+                },
+                "required": ["id", "category", "description", "confidence"]
+            },
+            "description": "List of pain points identified in the text."
         }
     },
-    "required": ["stakeholders", "factors"]
+    "required": ["stakeholders", "factors", "pain_points"]
 }
 
 async def initialize_workspace(
@@ -229,7 +255,7 @@ async def extract_stakeholders(
     state: State, *, config: Optional[RunnableConfig] = None
 ) -> Dict[str, Any]:
     """
-    Extract and classify stakeholders from the current document using the LLM.
+    Extract and classify stakeholders, factors, and pain points from the current document using the LLM.
     """
     if not state.current_document_id or not state.current_document_content:
         return {
@@ -294,6 +320,12 @@ async def extract_stakeholders(
                 # Save factors to the document result
                 doc_result['extracted_factors'] = factors
             
+            # Store pain points separately
+            pain_points = result_json.get('pain_points', [])
+            if pain_points:
+                # Save pain points to the document result
+                doc_result['extracted_pain_points'] = pain_points
+            
             # Save individual result
             doc_file = os.path.join(state.output_dir, f"doc_{state.current_document_id}_extraction.json")
             with open(doc_file, 'w', encoding='utf-8') as f:
@@ -305,6 +337,7 @@ async def extract_stakeholders(
             
             stakeholder_count = len(result_json.get('stakeholders', []))
             factor_count = len(factors)
+            pain_point_count = len(pain_points)
             doc_name = doc_info.get('file_name', state.current_document_id) if doc_info else state.current_document_id
             
             return {
@@ -312,7 +345,7 @@ async def extract_stakeholders(
                 "current_document_id": None,
                 "current_document_content": None,
                 "info": result_json,  # Store the most recent extraction result
-                "messages": [AIMessage(content=f"Extracted {stakeholder_count} stakeholders and {factor_count} factors from document {doc_name}.")]
+                "messages": [AIMessage(content=f"Extracted {stakeholder_count} stakeholders, {factor_count} factors, and {pain_point_count} pain points from document {doc_name}.")]
             }
             
         except json.JSONDecodeError:
@@ -325,17 +358,18 @@ async def extract_stakeholders(
         
     except Exception as e:
         return {
-            "error": f"Error extracting stakeholders: {str(e)}",
+            "error": f"Error extracting information: {str(e)}",
             "current_document_id": None,
             "current_document_content": None,
-            "messages": [HumanMessage(content=f"Error extracting stakeholders: {str(e)}")]
+            "messages": [HumanMessage(content=f"Error extracting information: {str(e)}")]
         }
+
 
 async def aggregate_stakeholders(
     state: State, *, config: Optional[RunnableConfig] = None
 ) -> Dict[str, Any]:
     """
-    Aggregate stakeholder classifications across all processed documents.
+    Aggregate stakeholder classifications, factors, and pain points across all processed documents.
     """
     if not state.processed_documents:
         return {
@@ -366,6 +400,7 @@ async def aggregate_stakeholders(
                 category = stakeholder.get('category')
                 role = stakeholder.get('role')
                 confidence = stakeholder.get('confidence')
+                hierarchy_level = stakeholder.get('hierarchy_level', 'Meso')  # Default to Meso if not provided
                 
                 if not name:
                     continue
@@ -374,6 +409,7 @@ async def aggregate_stakeholders(
                     stakeholder_data[name] = {
                         'categories': {},
                         'roles': {},
+                        'hierarchy_levels': {},
                         'documents': [],
                         'total_mentions': 0
                     }
@@ -403,6 +439,12 @@ async def aggregate_stakeholders(
                     if role not in stakeholder_data[name]['roles']:
                         stakeholder_data[name]['roles'][role] = 0
                     stakeholder_data[name]['roles'][role] += 1
+                
+                # Add hierarchy level
+                if hierarchy_level:
+                    if hierarchy_level not in stakeholder_data[name]['hierarchy_levels']:
+                        stakeholder_data[name]['hierarchy_levels'][hierarchy_level] = 0
+                    stakeholder_data[name]['hierarchy_levels'][hierarchy_level] += 1
         
         # Determine the most common category and role for each stakeholder
         aggregated_stakeholders = []
@@ -428,11 +470,21 @@ async def aggregate_stakeholders(
                     highest_role_count = count
                     most_common_role = role
             
+            # Find most common hierarchy level
+            most_common_hierarchy = "Meso"  # Default
+            highest_hierarchy_count = 0
+            
+            for level, count in data['hierarchy_levels'].items():
+                if count > highest_hierarchy_count:
+                    highest_hierarchy_count = count
+                    most_common_hierarchy = level
+            
             # Add aggregated stakeholder entry
             aggregated_stakeholders.append({
                 'name': name,
                 'category': most_common_category,
                 'role': most_common_role,
+                'hierarchy_level': most_common_hierarchy,
                 'confidence': round(avg_confidence),
                 'mentions': data['total_mentions'],
                 'documents': data['documents']
@@ -479,10 +531,53 @@ async def aggregate_stakeholders(
                         
                         all_factors.append(factor)
         
-        # Include factors in the final info
+        # Aggregate pain points across all documents
+        all_pain_points = []
+        pain_point_ids = set()  # Keep track of existing IDs
+        id_counter = 1
+        
+        for doc_id, doc_result in state.processed_documents.items():
+            if 'extracted_pain_points' in doc_result:
+                pain_points = doc_result['extracted_pain_points']
+                for pain_point in pain_points:
+                    # Ensure pain point has a valid ID or generate one
+                    if not pain_point.get('id') or pain_point.get('id') in pain_point_ids:
+                        new_id = f"PP-{id_counter:03d}"
+                        while new_id in pain_point_ids:
+                            id_counter += 1
+                            new_id = f"PP-{id_counter:03d}"
+                        pain_point['id'] = new_id
+                        id_counter += 1
+                    
+                    pain_point_ids.add(pain_point['id'])
+                    
+                    # Add document reference
+                    doc_info = doc_result.get('document_info', {})
+                    brain_info = doc_result.get('brain_info', {})
+                    
+                    pain_point['source_document'] = {
+                        'id': doc_id,
+                        'name': doc_info.get('file_name', 'Unknown'),
+                        'brain': brain_info.get('brain_name', 'Unknown') if brain_info else 'Unknown'
+                    }
+                    
+                    # Assign hierarchy level based on content
+                    if not pain_point.get('hierarchy_level'):
+                        description = pain_point.get('description', '').lower()
+                        if any(term in description for term in ['system', 'policy', 'government', 'budget', 'national']):
+                            pain_point['hierarchy_level'] = 'Macro'
+                        elif any(term in description for term in ['local', 'individual', 'resident', 'community']):
+                            pain_point['hierarchy_level'] = 'Micro'
+                        else:
+                            pain_point['hierarchy_level'] = 'Meso'
+                    
+                    all_pain_points.append(pain_point)
+        
+        # Include all data in the final info
         info = {
             'stakeholders': aggregated_stakeholders,
-            'factors': all_factors
+            'factors': all_factors,
+            'pain_points': all_pain_points
         }
         
         # Save combined results
@@ -490,27 +585,101 @@ async def aggregate_stakeholders(
             'workspace_id': state.workspace_id,
             'total_documents': len(state.processed_documents),
             'stakeholders': aggregated_stakeholders,
-            'factors': all_factors
+            'factors': all_factors,
+            'pain_points': all_pain_points
         }
         
         # Save the combined results
         combined_file = os.path.join(state.output_dir, f"workspace_{state.workspace_id}_analysis.json")
         with open(combined_file, 'w', encoding='utf-8') as f:
             json.dump(combined_result, f, indent=2)
+
+        # Add relationships between hierarchy levels
+        hierarchy_relationships = []
+        relationship_id = 1
+
+        # Create relationships between macro and meso levels
+        for macro in [s for s in aggregated_stakeholders if s.get('hierarchy_level') == 'Macro']:
+            for meso in [s for s in aggregated_stakeholders if s.get('hierarchy_level') == 'Meso']:
+                # Analyze text to determine relationship type
+                relationship_type = "Regulation" if macro.get('category') == "Regulator" else "Funding"
+                
+                hierarchy_relationships.append({
+                    "id": f"R{relationship_id}",
+                    "source": macro.get('name'),
+                    "source_level": "macro",
+                    "target": meso.get('name'),
+                    "target_level": "meso",
+                    "type": relationship_type,
+                    "strength": 0.85  # Default strength
+                })
+                relationship_id += 1
+
+        # Create relationships between meso and micro levels
+        for meso in [s for s in aggregated_stakeholders if s.get('hierarchy_level') == 'Meso']:
+            for micro in [s for s in aggregated_stakeholders if s.get('hierarchy_level') == 'Micro']:
+                # Determine relationship type based on categories
+                relationship_type = "Service" if meso.get('category') == "Supplier" else "Support"
+                
+                hierarchy_relationships.append({
+                    "id": f"R{relationship_id}",
+                    "source": meso.get('name'),
+                    "source_level": "meso",
+                    "target": micro.get('name'),
+                    "target_level": "micro", 
+                    "type": relationship_type,
+                    "strength": 0.75  # Default strength
+                })
+                relationship_id += 1
+
+        # Add to the combined result
+        combined_result["relationships"] = hierarchy_relationships
+
+        # Create multi-level ecosystem representation
+        multi_level_ecosystem = {
+            "ecosystemMap": {
+                "name": f"Ecosystem Analysis for Workspace {state.workspace_id}",
+                "levels": {
+                    "macro": {
+                        "nodes": [s for s in aggregated_stakeholders if s.get('hierarchy_level') == 'Macro'],
+                        "pain_points": [p for p in all_pain_points if p.get('hierarchy_level') == 'Macro']
+                    },
+                    "meso": {
+                        "nodes": [s for s in aggregated_stakeholders if s.get('hierarchy_level') == 'Meso'],
+                        "pain_points": [p for p in all_pain_points if p.get('hierarchy_level') == 'Meso']
+                    },
+                    "micro": {
+                        "nodes": [s for s in aggregated_stakeholders if s.get('hierarchy_level') == 'Micro'],
+                        "pain_points": [p for p in all_pain_points if p.get('hierarchy_level') == 'Micro']
+                    }
+                },
+                "relationships": hierarchy_relationships
+            }
+        }
+
+        # Save the multi-level ecosystem representation
+        ecosystem_file = os.path.join(state.output_dir, f"workspace_{state.workspace_id}_ecosystem_map.json")
+        with open(ecosystem_file, 'w', encoding='utf-8') as f:
+            json.dump(multi_level_ecosystem, f, indent=2)
+
+        # Add to the final info
+        info["multi_level_ecosystem"] = multi_level_ecosystem
         
         return {
             "aggregated_stakeholders": aggregated_result,
-            "factors": all_factors,  # Add factors to the return
+            "factors": all_factors,
+            "pain_points": all_pain_points,
             "info": info,  # Final output that will be in OutputState
-            "messages": [AIMessage(content=f"Aggregated {len(aggregated_stakeholders)} stakeholders and {len(all_factors)} factors from {len(state.processed_documents)} documents.")]
+            "messages": [AIMessage(content=f"Aggregated {len(aggregated_stakeholders)} stakeholders, {len(all_factors)} factors, and {len(all_pain_points)} pain points from {len(state.processed_documents)} documents. Created multi-level ecosystem map.")]
         }
     
     except Exception as e:
         return {
-            "error": f"Error aggregating stakeholders: {str(e)}",
-            "messages": [HumanMessage(content=f"Error aggregating stakeholders: {str(e)}")]
-        }
+            "error": f"Error aggregating results: {str(e)}",
+            "messages": [HumanMessage(content=f"Error aggregating results: {str(e)}")]
+        }    
 
+    
 def route_after_initialization(state: State) -> str:
     """Route after workspace initialization."""
     if state.error:

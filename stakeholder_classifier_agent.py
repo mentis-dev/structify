@@ -33,63 +33,97 @@ async def main():
     
     # Define the combined extraction schema for stakeholders and factors
     extraction_schema = {
-        "type": "object",
-        "properties": {
-            "stakeholders": {
-                "type": "array",
-                "items": {
-                    "type": "object",
-                    "properties": {
-                        "name": {
-                            "type": "string",
-                            "description": "The name of the stakeholder organization or individual."
-                        },
-                        "category": {
-                            "type": "string",
-                            "description": "The category of the stakeholder (Regulator, Supplier, Consumer, Competitor, Partner, Influencer, Internal)."
-                        },
-                        "role": {
-                            "type": "string",
-                            "description": "Brief description of the stakeholder's role or function."
-                        },
-                        "confidence": {
-                            "type": "number",
-                            "description": "Confidence score (0-100%) for the classification."
-                        }
+    "type": "object",
+    "properties": {
+        "stakeholders": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "description": "The name of the stakeholder organization or individual."
                     },
-                    "required": ["name", "category", "role", "confidence"]
+                    "category": {
+                        "type": "string",
+                        "description": "The category of the stakeholder (Regulator, Supplier, Consumer, Competitor, Partner, Influencer, Internal)."
+                    },
+                    "role": {
+                        "type": "string",
+                        "description": "Brief description of the stakeholder's role or function."
+                    },
+                    "confidence": {
+                        "type": "number",
+                        "description": "Confidence score (0-100%) for the classification."
+                    },
+                    "hierarchy_level": {
+                        "type": "string",
+                        "description": "Level in the ecosystem hierarchy (Macro, Meso, Micro)."
+                    }
                 },
-                "description": "List of stakeholders identified in the text."
+                "required": ["name", "category", "role", "confidence", "hierarchy_level"]
             },
-            "factors": {
-                "type": "array",
-                "items": {
-                    "type": "object",
-                    "properties": {
-                        "Label": {
-                            "type": "string",
-                            "description": "The descriptive name for the factor."
-                        },
-                        "Type": {
-                            "type": "string",
-                            "description": "Classification type (e.g., Indirect Driver, Exogenous Driver, Outcome, Direct Driver)."
-                        },
-                        "Tags": {
-                            "type": "string",
-                            "description": "Any additional tags or keywords (optional)."
-                        },
-                        "Description": {
-                            "type": "string",
-                            "description": "A detailed description of the factor including stakeholder information."
-                        }
-                    },
-                    "required": ["Label", "Type", "Description"]
-                },
-                "description": "List of factors identified in the text."
-            }
+            "description": "List of stakeholders identified in the text."
         },
-        "required": ["stakeholders", "factors"]
-    }
+        "factors": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "Label": {
+                        "type": "string",
+                        "description": "The descriptive name for the factor."
+                    },
+                    "Type": {
+                        "type": "string",
+                        "description": "Classification type (e.g., Indirect Driver, Exogenous Driver, Outcome, Direct Driver)."
+                    },
+                    "Tags": {
+                        "type": "string",
+                        "description": "Any additional tags or keywords (optional)."
+                    },
+                    "Description": {
+                        "type": "string",
+                        "description": "A detailed description of the factor including stakeholder information."
+                    }
+                },
+                "required": ["Label", "Type", "Description"]
+            },
+            "description": "List of factors identified in the text."
+        },
+        "pain_points": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "description": "A unique identifier for the pain point (e.g., PP-001)."
+                    },
+                    "category": {
+                        "type": "string",
+                        "description": "The category of the pain point (e.g., Healthcare Access, Financial Barriers)."
+                    },
+                    "description": {
+                        "type": "string",
+                        "description": "A brief description of the pain point."
+                    },
+                    "confidence": {
+                        "type": "number",
+                        "description": "Confidence score (0-100%) for this pain point identification."
+                    },
+                    "hierarchy_level": {
+                        "type": "string",
+                        "description": "Level in the ecosystem hierarchy (Macro, Meso, Micro)."
+                    }
+                },
+                "required": ["id", "category", "description", "confidence"]
+            },
+            "description": "List of pain points identified in the text."
+        }
+    },
+    "required": ["stakeholders", "factors", "pain_points"]
+}
     
     # Create the initial InputState
     initial_state = InputState(
@@ -104,9 +138,10 @@ async def main():
     config_instance = Configuration(
         model=args.model,
         prompt=(
-            "You are an expert analyst tasked with extracting two types of information from the provided text:\n"
+            "You are an expert analyst tasked with extracting three types of information from the provided text:\n"
             "1. Stakeholders\n"
-            "2. Factors\n\n"
+            "2. Factors\n"
+            "3. Pain Points\n\n"
             
             "FOR STAKEHOLDERS:\n"
             "Identify key organizations and individuals mentioned in the text. For each stakeholder, provide:\n"
@@ -114,6 +149,12 @@ async def main():
             "- category: Classify into one of these categories: Regulator, Supplier, Consumer, Competitor, Partner, Influencer, or Internal\n"
             "- role: Brief description of their role or function\n"
             "- confidence: A score from 0-100% indicating your confidence in the classification\n\n"
+            "- hierarchy_level: Classify as Macro (national/policy level), Meso (regional/organizational level), or Micro (local/individual level)\n\n"
+
+            "HIERARCHY LEVELS:\n"
+            "- Macro: High-level entities with broad influence (government agencies, national regulators, policy makers)\n"
+            "- Meso: Mid-level organizations (hospitals, regional NGOs, service providers, industry groups)\n"
+            "- Micro: Local actors and individuals (local care centers, community groups, residents)\n\n"
             
             "STAKEHOLDER CATEGORIES:\n"
             "- Regulator: Government or oversight bodies that create and enforce rules\n"
@@ -139,6 +180,14 @@ async def main():
             
             "Schema:\n{info}\n\n"
             "Text:\n{topic}\n\n"
+
+            "FOR PAIN POINTS:\n"
+            "Identify key pain points or challenges mentioned in the text. For each pain point, provide:\n"
+            "- id: A unique identifier in the format PP-XXX (e.g., PP-001)\n"
+            "- category: A short category name (e.g., Healthcare Access, Financial Barriers)\n"
+            "- description: A brief description of the pain point\n"
+            "- confidence: A score from 0-100% indicating your confidence in the identification\n\n"
+    
             
             "Provide your analysis as properly formatted JSON exactly matching the schema. Include both stakeholders and factors arrays."
         ),
@@ -214,6 +263,37 @@ async def main():
                     print("\nNo factors were identified in the documents.")
             else:
                 print("\nNo factors were identified in the documents.")
+
+
+            # Print pain point results
+            if final_state.get("pain_points"):
+                pain_points = final_state.get("pain_points", [])
+                print(f"\nIdentified {len(pain_points)} pain points")
+    
+                # Print top pain points
+                if pain_points and len(pain_points) > 0:
+                    print("\nTop pain points:")
+                    for i, p in enumerate(pain_points[:5]):
+                        print(f"{i+1}. {p.get('id')} - {p.get('category')} ({p.get('confidence')}%)")
+                        if p.get('description'):
+                            print(f"   {p.get('description')}")
+                        else:
+                            print("\nNo pain points were identified in the documents.")
+            elif final_state.get("info") and "pain_points" in final_state.get("info", {}):
+                pain_points = final_state.get("info", {}).get("pain_points", [])
+                print(f"\nIdentified {len(pain_points)} pain points")
+                    
+                # Print top pain points
+                if pain_points and len(pain_points) > 0:
+                    print("\nTop pain points:")
+                    for i, p in enumerate(pain_points[:5]):
+                        print(f"{i+1}. {p.get('id')} - {p.get('category')} ({p.get('confidence')}%)")
+                        if p.get('description'):
+                            print(f"   {p.get('description')}")
+                else:
+                    print("\nNo pain points were identified in the documents.")
+            else:
+                print("\nNo pain points were identified in the documents.")
                 
             print(f"\nFull results saved to {args.output_dir}/workspace_{args.workspace_id}_analysis.json")
         

@@ -1,0 +1,153 @@
+{
+  "brain_info": {
+    "brain_id": "b532d371-eb19-43da-97ae-61cdc19900f1",
+    "brain_name": "Deforestation - Academia voice"
+  },
+  "document_info": {
+    "id": "6f55b1bb-dc28-47a6-b013-dd95e5417e1f",
+    "file_name": "04. Meta-analysis of drivers of deforestation (global).pdf",
+    "content_length": 71176
+  },
+  "extracted_stakeholders": [
+    {
+      "name": "Jonah Busch",
+      "category": "Influencer",
+      "role": "Author and researcher involved in the meta-analysis of deforestation drivers.",
+      "confidence": 95
+    },
+    {
+      "name": "Kalifi Ferretti-Gallon",
+      "category": "Influencer",
+      "role": "Co-author and researcher in the study on deforestation drivers.",
+      "confidence": 95
+    },
+    {
+      "name": "United Nations Framework Convention on Climate Change (UNFCCC)",
+      "category": "Regulator",
+      "role": "International body focused on slowing deforestation.",
+      "confidence": 98
+    },
+    {
+      "name": "Center for Global Development",
+      "category": "Internal",
+      "role": "Organization where much of the research work was conducted.",
+      "confidence": 90
+    },
+    {
+      "name": "Conservation International",
+      "category": "Partner",
+      "role": "Provided a working environment for authors during the study.",
+      "confidence": 90
+    },
+    {
+      "name": "David and Lucile Packard Foundation",
+      "category": "Partner",
+      "role": "Provided funding support for the research.",
+      "confidence": 90
+    },
+    {
+      "name": "Woods Hole Research Center",
+      "category": "Partner",
+      "role": "Provided funding support for the research.",
+      "confidence": 90
+    },
+    {
+      "name": "United States Agency for International Development (USAID)",
+      "category": "Partner",
+      "role": "Provided funding support for the research.",
+      "confidence": 90
+    },
+    {
+      "name": "Nature Conservancy",
+      "category": "Partner",
+      "role": "Provided funding support for the research.",
+      "confidence": 90
+    },
+    {
+      "name": "Environmental Defense Fund",
+      "category": "Partner",
+      "role": "Provided funding support for the research.",
+      "confidence": 90
+    },
+    {
+      "name": "Norwegian Agency for Development Cooperation",
+      "category": "Partner",
+      "role": "Provided funding support for the research.",
+      "confidence": 90
+    },
+    {
+      "name": "Victoria Fan",
+      "category": "Influencer",
+      "role": "Provided helpful comments on the article.",
+      "confidence": 85
+    },
+    {
+      "name": "David Kaimowitz",
+      "category": "Influencer",
+      "role": "Provided helpful comments on the article.",
+      "confidence": 85
+    },
+    {
+      "name": "Jack Putz",
+      "category": "Influencer",
+      "role": "Provided helpful comments on the article.",
+      "confidence": 85
+    },
+    {
+      "name": "Claudia Romero",
+      "category": "Influencer",
+      "role": "Provided helpful comments on the article.",
+      "confidence": 85
+    }
+  ],
+  "extracted_factors": [
+    {
+      "Label": "Market Demand for Agricultural Commodities",
+      "Type": "Direct Driver",
+      "Tags": "Agriculture, Market Prices",
+      "Description": "The strong influence of market demand for agricultural commodities on deforestation, suggesting that higher prices can lead to increased deforestation as land is converted to meet demand.",
+      "confidence": 95
+    },
+    {
+      "Label": "Biophysical Characteristics",
+      "Type": "Exogenous Driver",
+      "Tags": "Slope, Elevation, Soil",
+      "Description": "Exogenous factors such as slope, elevation, and soil suitability influence the economic activity land can support, affecting deforestation rates.",
+      "confidence": 90
+    },
+    {
+      "Label": "Proximity to Infrastructure",
+      "Type": "Direct Driver",
+      "Tags": "Roads, Urban Areas",
+      "Description": "Proximity to roads and urban areas is consistently associated with higher deforestation due to reduced transportation costs and increased accessibility.",
+      "confidence": 95
+    },
+    {
+      "Label": "Protected Areas",
+      "Type": "Outcome",
+      "Tags": "Conservation, Deforestation Reduction",
+      "Description": "Protected areas are consistently associated with lower deforestation, although their effectiveness varies with geographical and legal protection status.",
+      "confidence": 90
+    }
+  ],
+  "extracted_pain_points": [
+    {
+      "id": "PP-001",
+      "category": "Economic Incentives",
+      "description": "Land users often prefer the private benefits of alternative land uses over the public benefits of forests, leading to deforestation above the social optimum.",
+      "confidence": 85
+    },
+    {
+      "id": "PP-002",
+      "category": "Enforcement and Regulation",
+      "description": "The challenge of effectively enforcing forest laws and regulations to prevent illegal deforestation activities.",
+      "confidence": 80
+    },
+    {
+      "id": "PP-003",
+      "category": "Environmental Policy Effectiveness",
+      "description": "Inconsistencies in policies like PES and land tenure security in effectively reducing deforestation.",
+      "confidence": 85
+    }
+  ]
+}

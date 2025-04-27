@@ -1,0 +1,117 @@
+{
+  "brain_info": {
+    "brain_id": "ce88cb71-2528-4598-a585-5fa2dfd03319",
+    "brain_name": "AP HK - Financial industry"
+  },
+  "document_info": {
+    "id": "f2260239-74ef-4448-889b-8cec0196f1e9",
+    "file_name": "2022_Hang Seng Bank ESG report.pdf",
+    "content_length": 14787
+  },
+  "extracted_stakeholders": [
+    {
+      "name": "Hang Seng Bank",
+      "category": "Internal",
+      "role": "A financial institution dedicated to community investment and environmental sustainability initiatives.",
+      "confidence": 95,
+      "hierarchy_level": "Meso"
+    },
+    {
+      "name": "CarbonCare InnoLab",
+      "category": "Partner",
+      "role": "Collaborated with Hang Seng Bank on the Low Carbon Future \u2013 SolarCare Programme.",
+      "confidence": 90,
+      "hierarchy_level": "Meso"
+    },
+    {
+      "name": "The Conservancy Association",
+      "category": "Partner",
+      "role": "Collaborated with Hang Seng Bank for tree planting to enhance biodiversity and sustainability.",
+      "confidence": 90,
+      "hierarchy_level": "Meso"
+    },
+    {
+      "name": "The Community Chest of Hong Kong",
+      "category": "Partner",
+      "role": "Supported by Hang Seng Bank for fundraising and community programmes.",
+      "confidence": 95,
+      "hierarchy_level": "Meso"
+    },
+    {
+      "name": "The Hong Kong Family Welfare Society",
+      "category": "Partner",
+      "role": "Partnered with Hang Seng Bank to donate care packs and support COVID hotlines.",
+      "confidence": 90,
+      "hierarchy_level": "Meso"
+    },
+    {
+      "name": "Diana Cesar",
+      "category": "Internal",
+      "role": "Executive Director and Chief Executive of Hang Seng Bank, involved in volunteering and leadership roles.",
+      "confidence": 90,
+      "hierarchy_level": "Micro"
+    },
+    {
+      "name": "Hong Kong Table Tennis Association",
+      "category": "Partner",
+      "role": "Collaborated with Hang Seng Bank to nurture table tennis talents.",
+      "confidence": 85,
+      "hierarchy_level": "Meso"
+    }
+  ],
+  "extracted_factors": [
+    {
+      "Label": "Community Sponsorship",
+      "Type": "Direct Driver",
+      "Tags": "Community, Sponsorship",
+      "Description": "Hang Seng Bank allocates resources for community sponsorship programmes to support local initiatives."
+    },
+    {
+      "Label": "Environmental Sustainability",
+      "Type": "Indirect Driver",
+      "Tags": "Sustainability, Climate Change",
+      "Description": "Hang Seng Bank's commitment to environmental sustainability influences its investment and partnership strategies."
+    },
+    {
+      "Label": "Youth Development and Education",
+      "Type": "Direct Driver",
+      "Tags": "Youth, Education",
+      "Description": "Hang Seng Bank focuses on youth development by providing educational programmes and career planning support."
+    },
+    {
+      "Label": "COVID-19 Response",
+      "Type": "Outcome",
+      "Tags": "Pandemic, COVID-19",
+      "Description": "Hang Seng Bank's response to COVID-19 included donations and community support initiatives."
+    },
+    {
+      "Label": "Digitalisation of Banking Services",
+      "Type": "Direct Driver",
+      "Tags": "Digitalisation, Banking",
+      "Description": "Hang Seng Bank's strategic focus on digitalisation aims to enhance customer experience and operational efficiency."
+    }
+  ],
+  "extracted_pain_points": [
+    {
+      "id": "PP-001",
+      "category": "Financial Barriers",
+      "description": "Challenges in ensuring equitable access to financial literacy and services among disadvantaged groups.",
+      "confidence": 85,
+      "hierarchy_level": "Micro"
+    },
+    {
+      "id": "PP-002",
+      "category": "Climate Change",
+      "description": "Addressing climate change through sustainability initiatives and partnerships.",
+      "confidence": 90,
+      "hierarchy_level": "Macro"
+    },
+    {
+      "id": "PP-003",
+      "category": "Youth Empowerment",
+      "description": "Enhancing future skills and employability for youth in an ever-changing world.",
+      "confidence": 90,
+      "hierarchy_level": "Micro"
+    }
+  ]
+}

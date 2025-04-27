@@ -1,0 +1,120 @@
+{
+  "brain_info": {
+    "brain_id": "ce88cb71-2528-4598-a585-5fa2dfd03319",
+    "brain_name": "AP HK - Financial industry"
+  },
+  "document_info": {
+    "id": "449d1cfb-5f21-4a52-b13b-e921fb8a4056",
+    "file_name": "2022_DBS_SR2022.pdf",
+    "content_length": 414654
+  },
+  "extracted_stakeholders": [
+    {
+      "name": "DBS Group Holdings Ltd",
+      "category": "Internal",
+      "role": "A leading financial services group in Asia, headquartered in Singapore.",
+      "confidence": 95,
+      "hierarchy_level": "Meso"
+    },
+    {
+      "name": "DBS Bank China",
+      "category": "Internal",
+      "role": "A branch of DBS servicing the Greater China market.",
+      "confidence": 80,
+      "hierarchy_level": "Meso"
+    },
+    {
+      "name": "Digital for Life Fund",
+      "category": "Partner",
+      "role": "A fund aimed at supporting digital readiness and inclusion in Singapore.",
+      "confidence": 85,
+      "hierarchy_level": "Meso"
+    },
+    {
+      "name": "Asia Impact First Fund",
+      "category": "Internal",
+      "role": "Focuses on scaling innovative enterprises tackling social and environmental challenges.",
+      "confidence": 85,
+      "hierarchy_level": "Meso"
+    },
+    {
+      "name": "Singapore Government",
+      "category": "Regulator",
+      "role": "Oversees financial regulations in Singapore.",
+      "confidence": 95,
+      "hierarchy_level": "Macro"
+    },
+    {
+      "name": "Monetary Authority of Singapore (MAS)",
+      "category": "Regulator",
+      "role": "Responsible for monetary policies and financial regulations in Singapore.",
+      "confidence": 95,
+      "hierarchy_level": "Macro"
+    },
+    {
+      "name": "The National Environment Agency (NEA)",
+      "category": "Regulator",
+      "role": "Oversees environmental sustainability and initiatives in Singapore.",
+      "confidence": 85,
+      "hierarchy_level": "Macro"
+    }
+  ],
+  "extracted_factors": [
+    {
+      "Label": "Rising Inflation",
+      "Type": "Exogenous Driver",
+      "Tags": "Inflation, Economic Activity",
+      "Description": "Inflation increased significantly due to global crises, impacting cost-of-living for many."
+    },
+    {
+      "Label": "Climate Change",
+      "Type": "Exogenous Driver",
+      "Tags": "Environmental Risks, Weather Events",
+      "Description": "Environmental crises such as extreme weather events led to increased awareness and action towards climate change."
+    },
+    {
+      "Label": "Net-Zero Commitment",
+      "Type": "Direct Driver",
+      "Tags": "Carbon Neutrality, Environmental Goals",
+      "Description": "DBS\u2019s commitment to achieve net-zero emissions by 2050, guiding its banking activities and sustainability agenda."
+    },
+    {
+      "Label": "Sustainable Financing Growth",
+      "Type": "Outcome",
+      "Tags": "Financial Support, Green Initiatives",
+      "Description": "DBS's goal to boost sustainable financing to grow investments in sustainable sectors and projects."
+    },
+    {
+      "Label": "Technological Innovation",
+      "Type": "Indirect Driver",
+      "Tags": "Digital Banking, Customer Engagement",
+      "Description": "DBS\u2019s focus on leveraging digital technology to enhance customer service and financial operations."
+    }
+  ],
+  "extracted_pain_points": [
+    {
+      "id": "PP-001",
+      "category": "Economic Challenges",
+      "description": "Global economic instability due to geopolitical tensions and crises like the Russia-Ukraine war.",
+      "confidence": 90
+    },
+    {
+      "id": "PP-002",
+      "category": "Environmental Risks",
+      "description": "Increased frequency of extreme weather events causing harm to communities globally.",
+      "confidence": 95
+    },
+    {
+      "id": "PP-003",
+      "category": "Regulatory Pressures",
+      "description": "Emerging regulatory pressures require adaptation by financial institutions regarding climate-related disclosures.",
+      "confidence": 85
+    },
+    {
+      "id": "PP-004",
+      "category": "Supply Chain Disruptions",
+      "description": "Global supply chain disruptions have been exacerbated by geopolitical events and crises.",
+      "confidence": 90
+    }
+  ]
+}

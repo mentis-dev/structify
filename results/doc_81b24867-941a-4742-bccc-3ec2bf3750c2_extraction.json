@@ -1,0 +1,131 @@
+{
+  "brain_info": {
+    "brain_id": "ce88cb71-2528-4598-a585-5fa2dfd03319",
+    "brain_name": "AP HK - Financial industry"
+  },
+  "document_info": {
+    "id": "81b24867-941a-4742-bccc-3ec2bf3750c2",
+    "file_name": "2023_DBS_SR2023.pdf",
+    "content_length": 476205
+  },
+  "extracted_stakeholders": [
+    {
+      "name": "DBS Group Holdings Ltd",
+      "category": "Internal",
+      "role": "Leading financial services group in Asia, focusing on banking and sustainability initiatives.",
+      "confidence": 100,
+      "hierarchy_level": "Meso"
+    },
+    {
+      "name": "Piyush Gupta",
+      "category": "Internal",
+      "role": "CEO of DBS Group Holdings, drives the sustainability strategy and business initiatives.",
+      "confidence": 100,
+      "hierarchy_level": "Micro"
+    },
+    {
+      "name": "Monetary Authority of Singapore (MAS)",
+      "category": "Regulator",
+      "role": "Oversees financial stability in Singapore and works with the industry on green finance.",
+      "confidence": 95,
+      "hierarchy_level": "Macro"
+    },
+    {
+      "name": "H&M Group",
+      "category": "Partner",
+      "role": "Collaborates with DBS to provide sustainable financing solutions in the fashion supply chain.",
+      "confidence": 90,
+      "hierarchy_level": "Meso"
+    },
+    {
+      "name": "CLP Power",
+      "category": "Partner",
+      "role": "Collaborates with DBS to support SMEs in Hong Kong's low-carbon transition.",
+      "confidence": 90,
+      "hierarchy_level": "Meso"
+    },
+    {
+      "name": "S&P Global",
+      "category": "Influencer",
+      "role": "Provides methodologies for climate scenarios used by DBS for ESG assessments.",
+      "confidence": 85,
+      "hierarchy_level": "Macro"
+    },
+    {
+      "name": "Global Reporting Initiative (GRI)",
+      "category": "Partner",
+      "role": "Sets standards for sustainability reporting that DBS uses.",
+      "confidence": 85,
+      "hierarchy_level": "Macro"
+    }
+  ],
+  "extracted_factors": [
+    {
+      "Label": "Climate Change Regulations",
+      "Type": "Exogenous Driver",
+      "Description": "The financial and governance impacts from changing climate regulations and the need to comply with guidelines like TCFD and MAS frameworks.",
+      "Tags": "Climate, Regulations, Compliance"
+    },
+    {
+      "Label": "Financial Inclusion Initiatives",
+      "Type": "Direct Driver",
+      "Description": "Efforts by DBS to provide banking access to underbanked segments such as work permit holders and small businesses.",
+      "Tags": "Banking, Access, Inclusion"
+    },
+    {
+      "Label": "Decarbonisation Goals",
+      "Type": "Direct Driver",
+      "Description": "DBS's commitment to achieve net-zero emissions for prioritized sectors such as Power, Oil & Gas, and Shipping.",
+      "Tags": "Colimate, Decarbonization, Net Zero"
+    },
+    {
+      "Label": "Renewable Energy Investments",
+      "Type": "Direct Driver",
+      "Description": "DBS's strategic investment in renewable energy to increase sustainability and energy efficiency in operations.",
+      "Tags": "Renewable Energy, Investment, Sustainability"
+    },
+    {
+      "Label": "Sustainable Procurement",
+      "Type": "Indirect Driver",
+      "Description": "Enhancements to procurement policies to include restorative principles and human rights considerations.",
+      "Tags": "Sustainability, Procurement, Policy"
+    }
+  ],
+  "extracted_pain_points": [
+    {
+      "id": "PP-001",
+      "category": "Climate Risks",
+      "description": "Financial and credit risk associated with clients not meeting climate targets.",
+      "confidence": 90,
+      "hierarchy_level": "Meso"
+    },
+    {
+      "id": "PP-002",
+      "category": "Technological Disruptions",
+      "description": "Technology disruptions that affected service reliability, leading to a roadmap for enhanced resilience.",
+      "confidence": 85,
+      "hierarchy_level": "Meso"
+    },
+    {
+      "id": "PP-003",
+      "category": "Supply Chain Constraints",
+      "description": "Challenges in managing a sustainable supply chain due to external constraints like geopolitical influences.",
+      "confidence": 85,
+      "hierarchy_level": "Meso"
+    },
+    {
+      "id": "PP-004",
+      "category": "Regulatory Compliance",
+      "description": "Maintaining compliance with evolving climate and financial regulations poses a constant challenge.",
+      "confidence": 88,
+      "hierarchy_level": "Meso"
+    },
+    {
+      "id": "PP-005",
+      "category": "Scam Protection",
+      "description": "Need for enhanced measures to protect customers from evolving scam and fraud tactics.",
+      "confidence": 90,
+      "hierarchy_level": "Micro"
+    }
+  ]
+}

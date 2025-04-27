@@ -1,0 +1,111 @@
+{
+  "brain_info": {
+    "brain_id": "b532d371-eb19-43da-97ae-61cdc19900f1",
+    "brain_name": "Deforestation - Academia voice"
+  },
+  "document_info": {
+    "id": "867a7370-d777-4d6a-9472-65d2e89afac5",
+    "file_name": "61. 7880-infobrief.pdf",
+    "content_length": 53852
+  },
+  "extracted_stakeholders": [
+    {
+      "name": "Center for International Forestry Research (CIFOR)",
+      "category": "Influencer",
+      "role": "Conducts research and provides information on forest-related topics, influencing policies and practices.",
+      "confidence": 95
+    },
+    {
+      "name": "Ministry of Environment and Forestry (KLHK)",
+      "category": "Internal",
+      "role": "National agency responsible for environmental and forestry policies, including REDD+ implementation in Indonesia.",
+      "confidence": 90
+    },
+    {
+      "name": "Government of Norway",
+      "category": "Partner",
+      "role": "Provides financial support for REDD+ initiatives in Indonesia through bilateral agreements.",
+      "confidence": 85
+    },
+    {
+      "name": "Green Climate Fund (GCF)",
+      "category": "Partner",
+      "role": "Provides funding for reductions in greenhouse gas emissions as part of REDD+ initiatives in Indonesia.",
+      "confidence": 85
+    },
+    {
+      "name": "Governor\u2019s Climate and Forest Task Force (GCF-TF)",
+      "category": "Partner",
+      "role": "International network of subnational governments committed to reducing deforestation.",
+      "confidence": 85
+    },
+    {
+      "name": "Local Communities and Indigenous Groups",
+      "category": "Consumer",
+      "role": "Involved in REDD+ initiatives aiming to strengthen their rights and livelihoods related to forest resources.",
+      "confidence": 80
+    },
+    {
+      "name": "World Bank Forest Carbon Partnership Facility (FCPF)",
+      "category": "Partner",
+      "role": "Supports REDD+ readiness and implementation in Indonesia.",
+      "confidence": 85
+    },
+    {
+      "name": "Peat Restoration Agency (BRG)",
+      "category": "Internal",
+      "role": "Established to respond to peatland fires and restore peatlands.",
+      "confidence": 80
+    }
+  ],
+  "extracted_factors": [
+    {
+      "Label": "Political Turnover",
+      "Type": "Direct Driver",
+      "Tags": "Governance, Policies",
+      "Description": "Political changes, such as election cycles, impact the continuity and success of REDD+ initiatives by influencing laws and regulations."
+    },
+    {
+      "Label": "Institutionalization of REDD+",
+      "Type": "Outcome",
+      "Tags": "Sustainability, Governance",
+      "Description": "Embedding REDD+ into national and regional laws and institutions is necessary for long-term sustainability and success."
+    },
+    {
+      "Label": "Socioeconomic and Political Drivers of Deforestation",
+      "Type": "Indirect Driver",
+      "Tags": "Deforestation, Economics",
+      "Description": "The focus on economic policy over environmental concerns influences deforestation rates, affecting REDD+ implementation."
+    },
+    {
+      "Label": "Jurisdictional REDD+ Programs",
+      "Type": "Direct Driver",
+      "Tags": "Governance, Local Implementation",
+      "Description": "Jurisdictional programs at the subnational level help focus on holistic forest and land-use strategies, but progress varies significantly across jurisdictions."
+    },
+    {
+      "Label": "Private Sector Sustainability Initiatives",
+      "Type": "Indirect Driver",
+      "Tags": "Economic Development, Sustainability",
+      "Description": "Initiatives like those in the palm oil sector provide potential support for REDD+, but face resistance from some government sectors."
+    },
+    {
+      "Label": "Weak Law Enforcement",
+      "Type": "Direct Driver",
+      "Tags": "Governance, Policies",
+      "Description": "Insufficient law enforcement weakens efforts to protect forests and implement REDD+ strategies effectively."
+    },
+    {
+      "Label": "Climate Change",
+      "Type": "Exogenous Driver",
+      "Tags": "Environment, Global",
+      "Description": "Global climate challenges necessitate initiatives like REDD+ to be included in broader climate mitigation strategies."
+    },
+    {
+      "Label": "Decentralization of Governance",
+      "Type": "Indirect Driver",
+      "Tags": "Governance, Local Autonomy",
+      "Description": "Decentralization can empower local actors but also leads to challenges like corruption, impacting deforestation rates."
+    }
+  ]
+}

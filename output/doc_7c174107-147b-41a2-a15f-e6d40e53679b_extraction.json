@@ -1,0 +1,107 @@
+{
+  "brain_info": {
+    "brain_id": "2c05c3dc-5e04-4432-8b55-58a60dec8ccb",
+    "brain_name": "Deforestation - Civil Society voice"
+  },
+  "document_info": {
+    "id": "7c174107-147b-41a2-a15f-e6d40e53679b",
+    "file_name": "30. Asia Foundation - Indonesia-Overview-2022.pdf",
+    "content_length": 5181
+  },
+  "extracted_stakeholders": [
+    {
+      "name": "The Asia Foundation",
+      "category": "Partner",
+      "role": "A nonprofit international development organization working to improve lives across Asia-Pacific through various initiatives.",
+      "confidence": 95
+    },
+    {
+      "name": "Indonesian government",
+      "category": "Regulator",
+      "role": "Works with The Asia Foundation to improve public service delivery and legislative reform.",
+      "confidence": 90
+    },
+    {
+      "name": "US Agency for International Development (USAID)",
+      "category": "Partner",
+      "role": "Funds initiatives like the Effective, Efficient and Strong Governance (ERAT) project to enhance governance in Indonesia.",
+      "confidence": 90
+    },
+    {
+      "name": "Directorate General of Corrections",
+      "category": "Internal",
+      "role": "Collaborates with The Asia Foundation to improve prison management and reform.",
+      "confidence": 85
+    },
+    {
+      "name": "Local governments in Indonesia",
+      "category": "Regulator",
+      "role": "Partner with The Asia Foundation to expand services and protect citizens including survivors of gender-based violence.",
+      "confidence": 85
+    },
+    {
+      "name": "Civil society organizations",
+      "category": "Partner",
+      "role": "Work with The Asia Foundation across various initiatives including social, legal, and environmental programs.",
+      "confidence": 95
+    },
+    {
+      "name": "Community leaders and activists",
+      "category": "Influencer",
+      "role": "Receive training to counter radical narratives and foster democratic values.",
+      "confidence": 80
+    }
+  ],
+  "extracted_factors": [
+    {
+      "Label": "Legal Aid Training",
+      "Type": "Direct Driver",
+      "Description": "Training 716 paralegals to work with legal aid organizations, addressing cases affecting marginalized communities, aiming to create a fairer legal system."
+    },
+    {
+      "Label": "Countering Radical Narratives",
+      "Type": "Direct Driver",
+      "Description": "Training community leaders and groups to counter extremist messaging and support community resilience."
+    },
+    {
+      "Label": "Women's Economic Empowerment",
+      "Type": "Direct Driver",
+      "Description": "Providing digital skills training to women and people with disabilities to increase opportunities in entrepreneurship and employment."
+    },
+    {
+      "Label": "Sustainable Forest and Land Management",
+      "Type": "Direct Driver",
+      "Description": "Supporting policies that promote sustainable management practices, ensuring rights for forest-dependent communities."
+    },
+    {
+      "Label": "Sustainable Agriculture",
+      "Type": "Direct Driver",
+      "Description": "Increasing incomes for indigenous people through community groups sharing agricultural practices."
+    },
+    {
+      "Label": "Democratic Values Training",
+      "Type": "Direct Driver",
+      "Description": "Training grassroots activists on democratic values and inclusive governance to promote more participatory governance."
+    },
+    {
+      "Label": "Prison Reform and Management",
+      "Type": "Direct Driver",
+      "Description": "Efforts to digitize prison systems and improve inmate welfare, aiming for transparency and reducing overcrowding."
+    },
+    {
+      "Label": "Supporting Gender-Based Violence Survivors",
+      "Type": "Outcome",
+      "Description": "Providing inclusive support services for women in Papua, aiming to reduce violence and improve service provision."
+    },
+    {
+      "Label": "Environmental Governance",
+      "Type": "Direct Driver",
+      "Description": "Strengthening transparency and accountability in land use and forestry to reduce deforestation and support social forestry."
+    },
+    {
+      "Label": "Promoting Democratic Resilience",
+      "Type": "Outcome",
+      "Description": "Building bridges across political divides to promote community resilience against divisive narratives."
+    }
+  ]
+}

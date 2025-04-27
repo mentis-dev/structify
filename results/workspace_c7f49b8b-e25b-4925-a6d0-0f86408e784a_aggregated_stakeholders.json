@@ -1,0 +1,1160 @@
+{
+  "workspace_id": "c7f49b8b-e25b-4925-a6d0-0f86408e784a",
+  "total_documents": 10,
+  "stakeholders": [
+    {
+      "name": "Environmental NGOs",
+      "category": "Influencer",
+      "role": "Organizations actively monitoring and campaigning against deforestation due to infrastructure development.",
+      "confidence": 90,
+      "mentions": 2,
+      "documents": [
+        {
+          "id": "ffeb3b0c-760e-4a98-8a36-87f0c7fc1598",
+          "name": "AFoCO_Deforestation_20250119_144907_GROUP_CHATS.xlsx",
+          "brain": "AFoCO research questions"
+        },
+        {
+          "id": "6183e121-5244-493e-981e-4e82e8215a20",
+          "name": "12. Patterns of infringement, risk, and impact driven by coal mining.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Indonesian Government",
+      "category": "Regulator",
+      "role": "Central and district decision-making actor regulating land allocation policies.",
+      "confidence": 92,
+      "mentions": 2,
+      "documents": [
+        {
+          "id": "7f5390eb-8137-46b2-bda3-3c984848164b",
+          "name": "05. Systematic review of land change stakeholders and undelying causes in Sumatra and Kalimantan.pdf",
+          "brain": "Deforestation - Academia voice"
+        },
+        {
+          "id": "8b3b3207-5bfe-47e9-ab0b-84150660e68d",
+          "name": "09. Impact of Increasing Nickel Production on Forest and Environment.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Local Communities",
+      "category": "Consumer",
+      "role": "Communities managing land for agricultural purposes, often conflicting with state-controlled areas.",
+      "confidence": 80,
+      "mentions": 2,
+      "documents": [
+        {
+          "id": "7f5390eb-8137-46b2-bda3-3c984848164b",
+          "name": "05. Systematic review of land change stakeholders and undelying causes in Sumatra and Kalimantan.pdf",
+          "brain": "Deforestation - Academia voice"
+        },
+        {
+          "id": "6183e121-5244-493e-981e-4e82e8215a20",
+          "name": "12. Patterns of infringement, risk, and impact driven by coal mining.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Government of Indonesia",
+      "category": "Regulator",
+      "role": "Implementer and supporter of REDD+ program in Indonesia.",
+      "confidence": 95,
+      "mentions": 2,
+      "documents": [
+        {
+          "id": "cb1b94ea-fd91-4acb-a2e8-43fb63d711d8",
+          "name": "59. s10668-024-05368-w.pdf",
+          "brain": "Deforestation - Academia voice"
+        },
+        {
+          "id": "6183e121-5244-493e-981e-4e82e8215a20",
+          "name": "12. Patterns of infringement, risk, and impact driven by coal mining.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Ministry of Public Works and Housing",
+      "category": "Regulator",
+      "role": "National government body responsible for overseeing infrastructure development in Indonesia.",
+      "confidence": 95,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "ffeb3b0c-760e-4a98-8a36-87f0c7fc1598",
+          "name": "AFoCO_Deforestation_20250119_144907_GROUP_CHATS.xlsx",
+          "brain": "AFoCO research questions"
+        }
+      ]
+    },
+    {
+      "name": "Bappenas",
+      "category": "Regulator",
+      "role": "National Development Planning Agency involved in providing statistics and planning for infrastructure projects.",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "ffeb3b0c-760e-4a98-8a36-87f0c7fc1598",
+          "name": "AFoCO_Deforestation_20250119_144907_GROUP_CHATS.xlsx",
+          "brain": "AFoCO research questions"
+        }
+      ]
+    },
+    {
+      "name": "Local Communities and Indigenous Groups",
+      "category": "Consumer",
+      "role": "Communities that are affected by infrastructure projects, particularly in terms of livelihoods and displacement.",
+      "confidence": 85,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "ffeb3b0c-760e-4a98-8a36-87f0c7fc1598",
+          "name": "AFoCO_Deforestation_20250119_144907_GROUP_CHATS.xlsx",
+          "brain": "AFoCO research questions"
+        }
+      ]
+    },
+    {
+      "name": "Private Sector Companies",
+      "category": "Supplier",
+      "role": "Construction firms and investors involved in infrastructure projects that might contribute to deforestation.",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "ffeb3b0c-760e-4a98-8a36-87f0c7fc1598",
+          "name": "AFoCO_Deforestation_20250119_144907_GROUP_CHATS.xlsx",
+          "brain": "AFoCO research questions"
+        }
+      ]
+    },
+    {
+      "name": "AFoCO - General Expert on Deforestation",
+      "category": "Influencer",
+      "role": "Provides expertise and insights on deforestation and sustainable development in relation to infrastructure expansion.",
+      "confidence": 80,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "ffeb3b0c-760e-4a98-8a36-87f0c7fc1598",
+          "name": "AFoCO_Deforestation_20250119_144907_GROUP_CHATS.xlsx",
+          "brain": "AFoCO research questions"
+        }
+      ]
+    },
+    {
+      "name": "CIFOR",
+      "category": "Influencer",
+      "role": "Conducts research and provides information on forest research, including REDD+ initiatives.",
+      "confidence": 95,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "867a7370-d777-4d6a-9472-65d2e89afac5",
+          "name": "61. 7880-infobrief.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Norwegian Government",
+      "category": "Partner",
+      "role": "Provides financial support for REDD+ initiatives in Indonesia as part of a bilateral agreement.",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "867a7370-d777-4d6a-9472-65d2e89afac5",
+          "name": "61. 7880-infobrief.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Ministry of Environment and Forestry (KLHK)",
+      "category": "Internal",
+      "role": "Responsible for implementing REDD+ policies and initiatives in Indonesia.",
+      "confidence": 95,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "867a7370-d777-4d6a-9472-65d2e89afac5",
+          "name": "61. 7880-infobrief.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "National REDD+ Agency (BP REDD+)",
+      "category": "Internal",
+      "role": "Originally established to manage REDD+ efforts, later integrated into the Ministry of Environment and Forestry.",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "867a7370-d777-4d6a-9472-65d2e89afac5",
+          "name": "61. 7880-infobrief.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Indigenous Communities",
+      "category": "Consumer",
+      "role": "Their rights and lands are impacted by REDD+ initiatives and related forestry policies.",
+      "confidence": 85,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "867a7370-d777-4d6a-9472-65d2e89afac5",
+          "name": "61. 7880-infobrief.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Governor\u2019s Climate and Forest Task Force (GCF-TF)",
+      "category": "Partner",
+      "role": "Supports subnational jurisdictions to reduce deforestation through jurisdictional approaches.",
+      "confidence": 80,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "867a7370-d777-4d6a-9472-65d2e89afac5",
+          "name": "61. 7880-infobrief.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Private Sector (Palm Oil Industry)",
+      "category": "Supplier",
+      "role": "Involved in initiatives for sustainable land use and zero deforestation commitments.",
+      "confidence": 85,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "867a7370-d777-4d6a-9472-65d2e89afac5",
+          "name": "61. 7880-infobrief.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Environmental Fund Management Agency (BPDLH)",
+      "category": "Internal",
+      "role": "Manages REDD+ payments and climate funding in Indonesia.",
+      "confidence": 80,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "867a7370-d777-4d6a-9472-65d2e89afac5",
+          "name": "61. 7880-infobrief.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Kemen G Austin",
+      "category": "Influencer",
+      "role": "Lead researcher investigating deforestation causes",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "73502bcb-d5a2-4c03-a574-7281eade5768",
+          "name": "03.  Drivers of deforestation in Indonesia.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Amanda Schwantes",
+      "category": "Influencer",
+      "role": "Researcher involved in deforestation study",
+      "confidence": 85,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "73502bcb-d5a2-4c03-a574-7281eade5768",
+          "name": "03.  Drivers of deforestation in Indonesia.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Yaofeng Gu",
+      "category": "Influencer",
+      "role": "Researcher involved in deforestation study",
+      "confidence": 85,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "73502bcb-d5a2-4c03-a574-7281eade5768",
+          "name": "03.  Drivers of deforestation in Indonesia.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Prasad S Kasibhatla",
+      "category": "Influencer",
+      "role": "Researcher involved in deforestation study",
+      "confidence": 85,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "73502bcb-d5a2-4c03-a574-7281eade5768",
+          "name": "03.  Drivers of deforestation in Indonesia.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "RTI International",
+      "category": "Partner",
+      "role": "Organization associated with lead researcher",
+      "confidence": 80,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "73502bcb-d5a2-4c03-a574-7281eade5768",
+          "name": "03.  Drivers of deforestation in Indonesia.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Duke University",
+      "category": "Partner",
+      "role": "Institution affiliated with researchers",
+      "confidence": 80,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "73502bcb-d5a2-4c03-a574-7281eade5768",
+          "name": "03.  Drivers of deforestation in Indonesia.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "IPB University",
+      "category": "Internal",
+      "role": "Academic institution conducting research on land change.",
+      "confidence": 85,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "7f5390eb-8137-46b2-bda3-3c984848164b",
+          "name": "05. Systematic review of land change stakeholders and undelying causes in Sumatra and Kalimantan.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "MDPI",
+      "category": "Partner",
+      "role": "Publisher of the review, providing open access to research findings.",
+      "confidence": 80,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "7f5390eb-8137-46b2-bda3-3c984848164b",
+          "name": "05. Systematic review of land change stakeholders and undelying causes in Sumatra and Kalimantan.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Center for International Forestry Research (CIFOR)",
+      "category": "Partner",
+      "role": "Research institution involved in forestry research.",
+      "confidence": 85,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "7f5390eb-8137-46b2-bda3-3c984848164b",
+          "name": "05. Systematic review of land change stakeholders and undelying causes in Sumatra and Kalimantan.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Oil Palm Companies",
+      "category": "Supplier",
+      "role": "Entities responsible for the expansion and intensification of oil palm plantations.",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "7f5390eb-8137-46b2-bda3-3c984848164b",
+          "name": "05. Systematic review of land change stakeholders and undelying causes in Sumatra and Kalimantan.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Donor Agencies and Banks",
+      "category": "Partner",
+      "role": "Entities supporting government programs through grants and loans.",
+      "confidence": 75,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "7f5390eb-8137-46b2-bda3-3c984848164b",
+          "name": "05. Systematic review of land change stakeholders and undelying causes in Sumatra and Kalimantan.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Papua New Guinea Government",
+      "category": "Regulator",
+      "role": "Initiator of the RED initiative that evolved into REDD+.",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "cb1b94ea-fd91-4acb-a2e8-43fb63d711d8",
+          "name": "59. s10668-024-05368-w.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Coalition of Rainforest Nations",
+      "category": "Partner",
+      "role": "A nongovernmental organization that launched the RED initiative.",
+      "confidence": 85,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "cb1b94ea-fd91-4acb-a2e8-43fb63d711d8",
+          "name": "59. s10668-024-05368-w.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Indigenous Population Groups",
+      "category": "Consumer",
+      "role": "Vulnerable stakeholders affected by deforestation and REDD+ programs.",
+      "confidence": 92,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "cb1b94ea-fd91-4acb-a2e8-43fb63d711d8",
+          "name": "59. s10668-024-05368-w.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Smallholder Farmers",
+      "category": "Consumer",
+      "role": "Group affected by deforestation and REDD+ programs, with interests in continued land use.",
+      "confidence": 92,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "cb1b94ea-fd91-4acb-a2e8-43fb63d711d8",
+          "name": "59. s10668-024-05368-w.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Norway\u2019s International Climate and Forest Initiative",
+      "category": "Partner",
+      "role": "Major donor to the REDD+ program.",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "cb1b94ea-fd91-4acb-a2e8-43fb63d711d8",
+          "name": "59. s10668-024-05368-w.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Green Climate Fund (GCF)",
+      "category": "Partner",
+      "role": "Provides financial support and incentives for REDD+.",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "cb1b94ea-fd91-4acb-a2e8-43fb63d711d8",
+          "name": "59. s10668-024-05368-w.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Indonesian President",
+      "category": "Internal",
+      "role": "Facilitator of the REDD+ program through direct involvement.",
+      "confidence": 85,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "cb1b94ea-fd91-4acb-a2e8-43fb63d711d8",
+          "name": "59. s10668-024-05368-w.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Ministry of Environment and Forestry of Indonesia",
+      "category": "Internal",
+      "role": "Central regulator for implementing REDD+ policies.",
+      "confidence": 95,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "cb1b94ea-fd91-4acb-a2e8-43fb63d711d8",
+          "name": "59. s10668-024-05368-w.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Mining Companies",
+      "category": "Supplier",
+      "role": "Operate coal mines, contributing to expansion, land clearing, and environmental impacts.",
+      "confidence": 85,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "6183e121-5244-493e-981e-4e82e8215a20",
+          "name": "12. Patterns of infringement, risk, and impact driven by coal mining.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "East Kalimantan Local Governments",
+      "category": "Regulator",
+      "role": "Provincial and district administrations involved in issuing coal mining permits and enforcing regulations.",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "6183e121-5244-493e-981e-4e82e8215a20",
+          "name": "12. Patterns of infringement, risk, and impact driven by coal mining.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Indonesian President Joko Widodo",
+      "category": "Internal",
+      "role": "Announced plans for a new national capital city in East Kalimantan, impacting coal mining regulation and development.",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "6183e121-5244-493e-981e-4e82e8215a20",
+          "name": "12. Patterns of infringement, risk, and impact driven by coal mining.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Lambung Mangkurat University",
+      "category": "Internal",
+      "role": "Institution conducting the research on the effects of coal mining",
+      "confidence": 95,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "6bb6cda1-51ca-4522-8560-3497972ad1b7",
+          "name": "08. The Effect of Coal Mining Activities on Soil Surface Temperatures in Forested Areas.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Researchers",
+      "category": "Internal",
+      "role": "Individuals conducting the study on soil surface temperatures in forested areas around coal mines",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "6bb6cda1-51ca-4522-8560-3497972ad1b7",
+          "name": "08. The Effect of Coal Mining Activities on Soil Surface Temperatures in Forested Areas.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "EARTHEXPLORER.USGS.GOV",
+      "category": "Supplier",
+      "role": "Source of LANDSAT-8 satellite imagery data",
+      "confidence": 85,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "6bb6cda1-51ca-4522-8560-3497972ad1b7",
+          "name": "08. The Effect of Coal Mining Activities on Soil Surface Temperatures in Forested Areas.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "University of Lampung",
+      "category": "Internal",
+      "role": "Provides academic and research support for environmental studies",
+      "confidence": 95,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "8b3b3207-5bfe-47e9-ab0b-84150660e68d",
+          "name": "09. Impact of Increasing Nickel Production on Forest and Environment.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Regional Research and Development Agency, Lampung Province",
+      "category": "Internal",
+      "role": "Conducts regional research and development",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "8b3b3207-5bfe-47e9-ab0b-84150660e68d",
+          "name": "09. Impact of Increasing Nickel Production on Forest and Environment.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "PT Vale Indonesia",
+      "category": "Competitor",
+      "role": "Global leader in nickel ore production, involved in nickel mining in Indonesia",
+      "confidence": 85,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "8b3b3207-5bfe-47e9-ab0b-84150660e68d",
+          "name": "09. Impact of Increasing Nickel Production on Forest and Environment.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Kementerian Energi dan Sumber Daya Mineral (ESDM)",
+      "category": "Regulator",
+      "role": "Provides regulations and licenses for mining operations",
+      "confidence": 95,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "8b3b3207-5bfe-47e9-ab0b-84150660e68d",
+          "name": "09. Impact of Increasing Nickel Production on Forest and Environment.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "PT Aneka Tambang Tbk",
+      "category": "Supplier",
+      "role": "Operates smelters and involved in exports of nickel",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "8b3b3207-5bfe-47e9-ab0b-84150660e68d",
+          "name": "09. Impact of Increasing Nickel Production on Forest and Environment.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "WALHI",
+      "category": "Influencer",
+      "role": "Environmental organization addressing environmental impacts of mining",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "8b3b3207-5bfe-47e9-ab0b-84150660e68d",
+          "name": "09. Impact of Increasing Nickel Production on Forest and Environment.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "International Energy Association (IEA)",
+      "category": "Influencer",
+      "role": "Provides global energy demand forecasts",
+      "confidence": 85,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "8b3b3207-5bfe-47e9-ab0b-84150660e68d",
+          "name": "09. Impact of Increasing Nickel Production on Forest and Environment.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Jonah Busch",
+      "category": "Influencer",
+      "role": "Author and researcher involved in the meta-analysis of deforestation drivers.",
+      "confidence": 95,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "6f55b1bb-dc28-47a6-b013-dd95e5417e1f",
+          "name": "04. Meta-analysis of drivers of deforestation (global).pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Kalifi Ferretti-Gallon",
+      "category": "Influencer",
+      "role": "Co-author and researcher in the study on deforestation drivers.",
+      "confidence": 95,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "6f55b1bb-dc28-47a6-b013-dd95e5417e1f",
+          "name": "04. Meta-analysis of drivers of deforestation (global).pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "United Nations Framework Convention on Climate Change (UNFCCC)",
+      "category": "Regulator",
+      "role": "International body focused on slowing deforestation.",
+      "confidence": 98,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "6f55b1bb-dc28-47a6-b013-dd95e5417e1f",
+          "name": "04. Meta-analysis of drivers of deforestation (global).pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Center for Global Development",
+      "category": "Internal",
+      "role": "Organization where much of the research work was conducted.",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "6f55b1bb-dc28-47a6-b013-dd95e5417e1f",
+          "name": "04. Meta-analysis of drivers of deforestation (global).pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Conservation International",
+      "category": "Partner",
+      "role": "Provided a working environment for authors during the study.",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "6f55b1bb-dc28-47a6-b013-dd95e5417e1f",
+          "name": "04. Meta-analysis of drivers of deforestation (global).pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "David and Lucile Packard Foundation",
+      "category": "Partner",
+      "role": "Provided funding support for the research.",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "6f55b1bb-dc28-47a6-b013-dd95e5417e1f",
+          "name": "04. Meta-analysis of drivers of deforestation (global).pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Woods Hole Research Center",
+      "category": "Partner",
+      "role": "Provided funding support for the research.",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "6f55b1bb-dc28-47a6-b013-dd95e5417e1f",
+          "name": "04. Meta-analysis of drivers of deforestation (global).pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "United States Agency for International Development (USAID)",
+      "category": "Partner",
+      "role": "Provided funding support for the research.",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "6f55b1bb-dc28-47a6-b013-dd95e5417e1f",
+          "name": "04. Meta-analysis of drivers of deforestation (global).pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Nature Conservancy",
+      "category": "Partner",
+      "role": "Provided funding support for the research.",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "6f55b1bb-dc28-47a6-b013-dd95e5417e1f",
+          "name": "04. Meta-analysis of drivers of deforestation (global).pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Environmental Defense Fund",
+      "category": "Partner",
+      "role": "Provided funding support for the research.",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "6f55b1bb-dc28-47a6-b013-dd95e5417e1f",
+          "name": "04. Meta-analysis of drivers of deforestation (global).pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Norwegian Agency for Development Cooperation",
+      "category": "Partner",
+      "role": "Provided funding support for the research.",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "6f55b1bb-dc28-47a6-b013-dd95e5417e1f",
+          "name": "04. Meta-analysis of drivers of deforestation (global).pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Victoria Fan",
+      "category": "Influencer",
+      "role": "Provided helpful comments on the article.",
+      "confidence": 85,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "6f55b1bb-dc28-47a6-b013-dd95e5417e1f",
+          "name": "04. Meta-analysis of drivers of deforestation (global).pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "David Kaimowitz",
+      "category": "Influencer",
+      "role": "Provided helpful comments on the article.",
+      "confidence": 85,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "6f55b1bb-dc28-47a6-b013-dd95e5417e1f",
+          "name": "04. Meta-analysis of drivers of deforestation (global).pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Jack Putz",
+      "category": "Influencer",
+      "role": "Provided helpful comments on the article.",
+      "confidence": 85,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "6f55b1bb-dc28-47a6-b013-dd95e5417e1f",
+          "name": "04. Meta-analysis of drivers of deforestation (global).pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Claudia Romero",
+      "category": "Influencer",
+      "role": "Provided helpful comments on the article.",
+      "confidence": 85,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "6f55b1bb-dc28-47a6-b013-dd95e5417e1f",
+          "name": "04. Meta-analysis of drivers of deforestation (global).pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Adelina Chandra",
+      "category": "Influencer",
+      "role": "Lead author and researcher contributing to the study on zero-deforestation commitments in Indonesia.",
+      "confidence": 95,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "ae1c4dce-9922-4fe7-a049-906b3024e169",
+          "name": "07. How well does the implementation of corporate zero-deforestation commitments in Indonesia.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Rachael D Garrett",
+      "category": "Influencer",
+      "role": "Researcher and contributor to the study on zero-deforestation commitments.",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "ae1c4dce-9922-4fe7-a049-906b3024e169",
+          "name": "07. How well does the implementation of corporate zero-deforestation commitments in Indonesia.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Kimberly M Carlson",
+      "category": "Influencer",
+      "role": "Researcher and contributor to the study on zero-deforestation commitments.",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "ae1c4dce-9922-4fe7-a049-906b3024e169",
+          "name": "07. How well does the implementation of corporate zero-deforestation commitments in Indonesia.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Robert Heilmayr",
+      "category": "Influencer",
+      "role": "Researcher and contributor to the study on zero-deforestation commitments.",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "ae1c4dce-9922-4fe7-a049-906b3024e169",
+          "name": "07. How well does the implementation of corporate zero-deforestation commitments in Indonesia.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Matthieu Stigler",
+      "category": "Influencer",
+      "role": "Researcher and contributor to the study on zero-deforestation commitments.",
+      "confidence": 85,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "ae1c4dce-9922-4fe7-a049-906b3024e169",
+          "name": "07. How well does the implementation of corporate zero-deforestation commitments in Indonesia.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Jason J Benedict",
+      "category": "Influencer",
+      "role": "Researcher and contributor to the study on zero-deforestation commitments.",
+      "confidence": 85,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "ae1c4dce-9922-4fe7-a049-906b3024e169",
+          "name": "07. How well does the implementation of corporate zero-deforestation commitments in Indonesia.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Janina Grabs",
+      "category": "Influencer",
+      "role": "Researcher and contributor to the study on zero-deforestation commitments.",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "ae1c4dce-9922-4fe7-a049-906b3024e169",
+          "name": "07. How well does the implementation of corporate zero-deforestation commitments in Indonesia.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "ETH Z\u00fcrich",
+      "category": "Internal",
+      "role": "Department involved in the research.",
+      "confidence": 80,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "ae1c4dce-9922-4fe7-a049-906b3024e169",
+          "name": "07. How well does the implementation of corporate zero-deforestation commitments in Indonesia.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "University of Cambridge",
+      "category": "Internal",
+      "role": "Institution involved in the research.",
+      "confidence": 80,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "ae1c4dce-9922-4fe7-a049-906b3024e169",
+          "name": "07. How well does the implementation of corporate zero-deforestation commitments in Indonesia.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "New York University",
+      "category": "Internal",
+      "role": "Institution involved in the research.",
+      "confidence": 80,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "ae1c4dce-9922-4fe7-a049-906b3024e169",
+          "name": "07. How well does the implementation of corporate zero-deforestation commitments in Indonesia.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "University of California, Santa Barbara",
+      "category": "Internal",
+      "role": "Institution involved in the research.",
+      "confidence": 80,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "ae1c4dce-9922-4fe7-a049-906b3024e169",
+          "name": "07. How well does the implementation of corporate zero-deforestation commitments in Indonesia.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Universitat Ramon Llull, ESADE Business School",
+      "category": "Internal",
+      "role": "Institution involved in the research.",
+      "confidence": 80,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "ae1c4dce-9922-4fe7-a049-906b3024e169",
+          "name": "07. How well does the implementation of corporate zero-deforestation commitments in Indonesia.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Companies in the palm oil sector",
+      "category": "Supplier",
+      "role": "Entities implementing zero-deforestation commitments.",
+      "confidence": 95,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "ae1c4dce-9922-4fe7-a049-906b3024e169",
+          "name": "07. How well does the implementation of corporate zero-deforestation commitments in Indonesia.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "Smallholder farmers",
+      "category": "Consumer",
+      "role": "Affected parties by zero-deforestation commitments and inclusion programs.",
+      "confidence": 95,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "ae1c4dce-9922-4fe7-a049-906b3024e169",
+          "name": "07. How well does the implementation of corporate zero-deforestation commitments in Indonesia.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "European Union (EU)",
+      "category": "Regulator",
+      "role": "Entity responsible for the EU Deforestation Regulation setting mandatory due diligence requirements.",
+      "confidence": 95,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "ae1c4dce-9922-4fe7-a049-906b3024e169",
+          "name": "07. How well does the implementation of corporate zero-deforestation commitments in Indonesia.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "NGOs and civil society organizations",
+      "category": "Influencer",
+      "role": "Apply pressure on companies to adopt zero-deforestation commitments.",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "ae1c4dce-9922-4fe7-a049-906b3024e169",
+          "name": "07. How well does the implementation of corporate zero-deforestation commitments in Indonesia.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    },
+    {
+      "name": "RSPO (Roundtable on Sustainable Palm Oil)",
+      "category": "Partner",
+      "role": "Certification body verifying adherence to sustainable palm oil standards.",
+      "confidence": 85,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "ae1c4dce-9922-4fe7-a049-906b3024e169",
+          "name": "07. How well does the implementation of corporate zero-deforestation commitments in Indonesia.pdf",
+          "brain": "Deforestation - Academia voice"
+        }
+      ]
+    }
+  ]
+}

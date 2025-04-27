@@ -1,0 +1,144 @@
+{
+  "brain_info": {
+    "brain_id": "ce88cb71-2528-4598-a585-5fa2dfd03319",
+    "brain_name": "AP HK - Financial industry"
+  },
+  "document_info": {
+    "id": "bdad8d72-9cfe-49b8-80b0-5b46229642bf",
+    "file_name": "2022_DSBG_ESG_Report_2022_EN.pdf",
+    "content_length": 99111
+  },
+  "extracted_stakeholders": [
+    {
+      "name": "Dah Sing Banking Group Limited",
+      "category": "Internal",
+      "role": "Financial services group focusing on ESG initiatives in Hong Kong and the Greater Bay Area.",
+      "confidence": 95,
+      "hierarchy_level": "Meso"
+    },
+    {
+      "name": "Board of Directors",
+      "category": "Internal",
+      "role": "Oversee ESG framework and strategy implementation.",
+      "confidence": 90,
+      "hierarchy_level": "Meso"
+    },
+    {
+      "name": "ESG Committee",
+      "category": "Internal",
+      "role": "Develop and monitor the Group's ESG strategies and report to the Board.",
+      "confidence": 85,
+      "hierarchy_level": "Meso"
+    },
+    {
+      "name": "Friends of the Earth (HK)",
+      "category": "Partner",
+      "role": "Collaborator on SME ESG Best Practices Recognition Programme.",
+      "confidence": 80,
+      "hierarchy_level": "Meso"
+    },
+    {
+      "name": "Hong Kong Monetary Authority (HKMA)",
+      "category": "Regulator",
+      "role": "Facilitates financial schemes to support SMEs during the pandemic.",
+      "confidence": 90,
+      "hierarchy_level": "Macro"
+    },
+    {
+      "name": "Dah Sing Bank, Limited",
+      "category": "Internal",
+      "role": "Bank under Dah Sing Banking Group focusing on financial services and ESG initiatives.",
+      "confidence": 95,
+      "hierarchy_level": "Meso"
+    },
+    {
+      "name": "Dah Sing Bank (China) Limited",
+      "category": "Internal",
+      "role": "Focuses on expanding green credit business and supporting SMEs.",
+      "confidence": 90,
+      "hierarchy_level": "Meso"
+    },
+    {
+      "name": "SMEs",
+      "category": "Consumer",
+      "role": "Strategic customer segment for the Group, supported in ESG transition and financial services.",
+      "confidence": 85,
+      "hierarchy_level": "Micro"
+    },
+    {
+      "name": "Hong Kong Independent Commission Against Corruption (ICAC)",
+      "category": "Regulator",
+      "role": "Provides training on ethics and corruption prevention.",
+      "confidence": 85,
+      "hierarchy_level": "Macro"
+    },
+    {
+      "name": "Employees",
+      "category": "Internal",
+      "role": "Contribute to the organization's operations and sustainability efforts.",
+      "confidence": 90,
+      "hierarchy_level": "Micro"
+    }
+  ],
+  "extracted_factors": [
+    {
+      "Label": "Green and Sustainable Banking",
+      "Type": "Direct Driver",
+      "Tags": "GSB, ESG",
+      "Description": "The Group's focus on developing green financial products and services to support the transition to a low-carbon economy."
+    },
+    {
+      "Label": "Digitalisation and Customer Experience",
+      "Type": "Direct Driver",
+      "Tags": "Technology, Customer Satisfaction",
+      "Description": "Improving operational impact and customer experience through enhanced digital platforms and technologies."
+    },
+    {
+      "Label": "Climate Risk Management",
+      "Type": "Direct Driver",
+      "Tags": "Environmental, Risk Management",
+      "Description": "The Group's efforts to manage climate-related risks and align with green banking initiatives."
+    },
+    {
+      "Label": "Employee Engagement",
+      "Type": "Direct Driver",
+      "Tags": "Workforce, Training",
+      "Description": "Efforts to engage employees through culture promotion, training, and development initiatives."
+    },
+    {
+      "Label": "Community Engagement",
+      "Type": "Outcome",
+      "Tags": "Social Responsibility, Volunteering",
+      "Description": "The Group's strategy to impact communities through youth education, sports promotion, and volunteering."
+    },
+    {
+      "Label": "Regulatory Compliance",
+      "Type": "Exogenous Driver",
+      "Tags": "Legal, Compliance",
+      "Description": "Adhering to local and international laws and best practices in business and financial operations."
+    }
+  ],
+  "extracted_pain_points": [
+    {
+      "id": "PP-001",
+      "category": "Customer Satisfaction",
+      "description": "Need to enhance customer satisfaction and reinforce customer-centric strategies.",
+      "confidence": 80,
+      "hierarchy_level": "Meso"
+    },
+    {
+      "id": "PP-002",
+      "category": "SME Support",
+      "description": "Challenges in supporting SMEs during their ESG transition and maintaining financial stability during the pandemic.",
+      "confidence": 85,
+      "hierarchy_level": "Micro"
+    },
+    {
+      "id": "PP-003",
+      "category": "Environmental Impact",
+      "description": "Managing and reducing the environmental footprint, including energy consumption and waste generation.",
+      "confidence": 75,
+      "hierarchy_level": "Macro"
+    }
+  ]
+}

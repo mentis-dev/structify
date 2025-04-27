@@ -1,13 +1,22 @@
 import os
 import json
 from typing import Any, List, Dict, Optional
-
+from dotenv import load_dotenv
+from pathlib import Path
 from langchain_community.embeddings import OpenAIEmbeddings
 from supabase.client import Client, create_client
 from supabase.lib.client_options import ClientOptions
 
-from ai_assistant.vector_store.supabase_db import CustomSupabaseVectorStore
+# Import will be done via the run script
+# from ai_assistant.vector_store.supabase_db import CustomSupabaseVectorStore
 
+# Load environment variables
+load_dotenv()
+
+# Set Supabase credentials
+import supabase_db
+SUPABASE_URL = os.getenv("SUPABASE_URL")
+SUPABASE_SERVICE_KEY = os.getenv("SUPABASE_SERVICE_KEY")
 
 def initialize_supabase() -> Client:
     """
@@ -15,9 +24,6 @@ def initialize_supabase() -> Client:
     Returns:
         Supabase client instance.
     """
-    SUPABASE_URL = "http://188.166.5.51:54321"
-    SUPABASE_SERVICE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImV4cCI6MTk4MzgxMjk5Nn0.EGIM96RAZx35lJzdJsyH-qQwv8Hdp7fsn3W0YpN81IU"
-
     if not SUPABASE_URL or not SUPABASE_SERVICE_KEY:
         raise ValueError("Missing required Supabase credentials")
 
@@ -39,6 +45,9 @@ def initialize_vector_store():
     # Initialize Supabase client
     supabase_client = initialize_supabase()
 
+    # This is assuming CustomSupabaseVectorStore is imported correctly
+    from ai_assistant.vector_store.supabase_db import CustomSupabaseVectorStore
+    
     # Create custom vector store
     vector_store = CustomSupabaseVectorStore(
         embedding=embeddings,
@@ -54,8 +63,8 @@ def get_workspaces(supabase: Client) -> List[Dict[str, Any]]:
     Fetch all workspaces from the database.
     """
     response = supabase.table("workspaces").select("*").execute()
-    if response is None or response==[]:
-        print(f"Error fetching workspaces: {response.error.message}")
+    if not hasattr(response, 'data') or response.data is None:
+        print(f"Error fetching workspaces")
         return []
     return response.data or []
 
@@ -66,8 +75,8 @@ def get_brains_per_workspace(supabase: Client, workspace_id: Any) -> List[Dict[s
     """
     # Step 1: Fetch brain_ids from workspaces_brains table
     response = supabase.table("workspaces_brains").select("brain_id").eq("workspace_id", workspace_id).execute()
-    if response is None or response==[]:
-        print(f"Error fetching brain IDs for workspace {workspace_id}: {response.error.message}")
+    if not hasattr(response, 'data') or response.data is None:
+        print(f"Error fetching brain IDs for workspace {workspace_id}")
         return []
 
     brain_ids = [record['brain_id'] for record in response.data]
@@ -77,8 +86,8 @@ def get_brains_per_workspace(supabase: Client, workspace_id: Any) -> List[Dict[s
 
     # Step 2: Fetch brain details from brains table using brain_ids
     brains_response = supabase.table("brains").select("*").in_("brain_id", brain_ids).execute()
-    if brains_response is None or brains_response==[]:
-        print(f"Error fetching brains for workspace {workspace_id}: {brains_response.error.message}")
+    if not hasattr(brains_response, 'data') or brains_response.data is None:
+        print(f"Error fetching brains for workspace {workspace_id}")
         return []
 
     return brains_response.data or []
@@ -89,8 +98,8 @@ def get_documents_per_brain(supabase: Client, brain_id: Any) -> List[Dict[str, A
     Fetch documents associated with a specific brain.
     """
     response = supabase.table("knowledge").select("*").eq("brain_id", brain_id).execute()
-    if response is None or response==[]:
-        print(f"Error fetching documents for brain {brain_id}: {response.error.message}")
+    if not hasattr(response, 'data') or response.data is None:
+        print(f"Error fetching documents for brain {brain_id}")
         return []
     return response.data or []
 

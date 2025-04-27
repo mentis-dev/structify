@@ -1,0 +1,1980 @@
+{
+  "workspace_id": "10f39e32-1633-469d-acbd-5a08c9cf122b",
+  "total_documents": 10,
+  "stakeholders": [
+    {
+      "name": "Edward Moncreiffe",
+      "category": "Internal",
+      "role": "Chief Executive Officer, HSBC Life, advocating for dementia awareness.",
+      "hierarchy_level": "Micro",
+      "confidence": 88,
+      "mentions": 3,
+      "documents": [
+        {
+          "id": "2ba1e6e8-ba14-40b9-9d5c-04049f3643b4",
+          "name": "2019_HSBC_Life Eldercare Programme.pdf",
+          "brain": "AP HK - Financial industry"
+        },
+        {
+          "id": "3194caed-ebe3-4eff-baaf-0dbcbba42ea3",
+          "name": "2019_HSBC_the-cost-of-eldercare-report-english-8may-v5.pdf",
+          "brain": "AP HK - Financial industry"
+        },
+        {
+          "id": "9213ecf6-5841-449a-9730-4e2eb516a794",
+          "name": "2021_HSBC_productive-ageing-in-hong-kong.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "HSBC Life",
+      "category": "Partner",
+      "role": "Insurance provider collaborating to raise awareness and provide dementia screening services.",
+      "hierarchy_level": "Meso",
+      "confidence": 90,
+      "mentions": 2,
+      "documents": [
+        {
+          "id": "2ba1e6e8-ba14-40b9-9d5c-04049f3643b4",
+          "name": "2019_HSBC_Life Eldercare Programme.pdf",
+          "brain": "AP HK - Financial industry"
+        },
+        {
+          "id": "3194caed-ebe3-4eff-baaf-0dbcbba42ea3",
+          "name": "2019_HSBC_the-cost-of-eldercare-report-english-8may-v5.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "Employees",
+      "category": "Internal",
+      "role": "HSBC Life employees benefiting from health screenings and educational sessions.",
+      "hierarchy_level": "Micro",
+      "confidence": 88,
+      "mentions": 2,
+      "documents": [
+        {
+          "id": "2ba1e6e8-ba14-40b9-9d5c-04049f3643b4",
+          "name": "2019_HSBC_Life Eldercare Programme.pdf",
+          "brain": "AP HK - Financial industry"
+        },
+        {
+          "id": "bdad8d72-9cfe-49b8-80b0-5b46229642bf",
+          "name": "2022_DSBG_ESG_Report_2022_EN.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "Fiona Nott",
+      "category": "Influencer",
+      "role": "CEO of The Women's Foundation, advocating for policies supporting caregivers.",
+      "hierarchy_level": "Micro",
+      "confidence": 88,
+      "mentions": 2,
+      "documents": [
+        {
+          "id": "3194caed-ebe3-4eff-baaf-0dbcbba42ea3",
+          "name": "2019_HSBC_the-cost-of-eldercare-report-english-8may-v5.pdf",
+          "brain": "AP HK - Financial industry"
+        },
+        {
+          "id": "9213ecf6-5841-449a-9730-4e2eb516a794",
+          "name": "2021_HSBC_productive-ageing-in-hong-kong.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "DBS Group Holdings Ltd",
+      "category": "Internal",
+      "role": "A leading financial services group in Asia, headquartered in Singapore.",
+      "hierarchy_level": "Meso",
+      "confidence": 98,
+      "mentions": 2,
+      "documents": [
+        {
+          "id": "449d1cfb-5f21-4a52-b13b-e921fb8a4056",
+          "name": "2022_DBS_SR2022.pdf",
+          "brain": "AP HK - Financial industry"
+        },
+        {
+          "id": "81b24867-941a-4742-bccc-3ec2bf3750c2",
+          "name": "2023_DBS_SR2023.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "Monetary Authority of Singapore (MAS)",
+      "category": "Regulator",
+      "role": "Responsible for monetary policies and financial regulations in Singapore.",
+      "hierarchy_level": "Macro",
+      "confidence": 95,
+      "mentions": 2,
+      "documents": [
+        {
+          "id": "449d1cfb-5f21-4a52-b13b-e921fb8a4056",
+          "name": "2022_DBS_SR2022.pdf",
+          "brain": "AP HK - Financial industry"
+        },
+        {
+          "id": "81b24867-941a-4742-bccc-3ec2bf3750c2",
+          "name": "2023_DBS_SR2023.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "Hang Seng Bank",
+      "category": "Internal",
+      "role": "A financial institution dedicated to community investment and environmental sustainability initiatives.",
+      "hierarchy_level": "Meso",
+      "confidence": 95,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "f2260239-74ef-4448-889b-8cec0196f1e9",
+          "name": "2022_Hang Seng Bank ESG report.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "CarbonCare InnoLab",
+      "category": "Partner",
+      "role": "Collaborated with Hang Seng Bank on the Low Carbon Future \u2013 SolarCare Programme.",
+      "hierarchy_level": "Meso",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "f2260239-74ef-4448-889b-8cec0196f1e9",
+          "name": "2022_Hang Seng Bank ESG report.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "The Conservancy Association",
+      "category": "Partner",
+      "role": "Collaborated with Hang Seng Bank for tree planting to enhance biodiversity and sustainability.",
+      "hierarchy_level": "Meso",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "f2260239-74ef-4448-889b-8cec0196f1e9",
+          "name": "2022_Hang Seng Bank ESG report.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "The Community Chest of Hong Kong",
+      "category": "Partner",
+      "role": "Supported by Hang Seng Bank for fundraising and community programmes.",
+      "hierarchy_level": "Meso",
+      "confidence": 95,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "f2260239-74ef-4448-889b-8cec0196f1e9",
+          "name": "2022_Hang Seng Bank ESG report.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "The Hong Kong Family Welfare Society",
+      "category": "Partner",
+      "role": "Partnered with Hang Seng Bank to donate care packs and support COVID hotlines.",
+      "hierarchy_level": "Meso",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "f2260239-74ef-4448-889b-8cec0196f1e9",
+          "name": "2022_Hang Seng Bank ESG report.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "Diana Cesar",
+      "category": "Internal",
+      "role": "Executive Director and Chief Executive of Hang Seng Bank, involved in volunteering and leadership roles.",
+      "hierarchy_level": "Micro",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "f2260239-74ef-4448-889b-8cec0196f1e9",
+          "name": "2022_Hang Seng Bank ESG report.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "Hong Kong Table Tennis Association",
+      "category": "Partner",
+      "role": "Collaborated with Hang Seng Bank to nurture table tennis talents.",
+      "hierarchy_level": "Meso",
+      "confidence": 85,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "f2260239-74ef-4448-889b-8cec0196f1e9",
+          "name": "2022_Hang Seng Bank ESG report.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "HSBC",
+      "category": "Supplier",
+      "role": "Provides age-friendly banking services and safeguards against fraud.",
+      "hierarchy_level": "Meso",
+      "confidence": 95,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "fb20a65e-978c-432c-ade3-d0a847198f4b",
+          "name": "2019_HSBC age-friendly banking.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "Elderly population of Hong Kong",
+      "category": "Consumer",
+      "role": "Receives banking services that cater to age-specific needs.",
+      "hierarchy_level": "Micro",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "fb20a65e-978c-432c-ade3-d0a847198f4b",
+          "name": "2019_HSBC age-friendly banking.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "Census and Statistics Department",
+      "category": "Regulator",
+      "role": "Provides population projections relevant to planning services.",
+      "hierarchy_level": "Macro",
+      "confidence": 80,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "fb20a65e-978c-432c-ade3-d0a847198f4b",
+          "name": "2019_HSBC age-friendly banking.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "Hong Kong\u2019s registered solicitors",
+      "category": "Supplier",
+      "role": "Offers legal advice related to Power of Attorney and legacy planning.",
+      "hierarchy_level": "Micro",
+      "confidence": 85,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "fb20a65e-978c-432c-ade3-d0a847198f4b",
+          "name": "2019_HSBC age-friendly banking.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "Hong Kong Lutheran Social Service (HKLSS)",
+      "category": "Partner",
+      "role": "NGO collaborating with HSBC Life to provide eldercare and dementia services.",
+      "hierarchy_level": "Meso",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "2ba1e6e8-ba14-40b9-9d5c-04049f3643b4",
+          "name": "2019_HSBC_Life Eldercare Programme.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "Health View Bioanalytic",
+      "category": "Supplier",
+      "role": "Provider of the ARIA dementia risk screening system.",
+      "hierarchy_level": "Meso",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "2ba1e6e8-ba14-40b9-9d5c-04049f3643b4",
+          "name": "2019_HSBC_Life Eldercare Programme.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "Dr Annissa Lui",
+      "category": "Internal",
+      "role": "Chief Executive Officer, HKLSS, aiming to make primary healthcare accessible.",
+      "hierarchy_level": "Micro",
+      "confidence": 85,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "2ba1e6e8-ba14-40b9-9d5c-04049f3643b4",
+          "name": "2019_HSBC_Life Eldercare Programme.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "Prof Benny Zee",
+      "category": "Internal",
+      "role": "Founder/CEO of Health View, advocating for dementia risk management.",
+      "hierarchy_level": "Micro",
+      "confidence": 85,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "2ba1e6e8-ba14-40b9-9d5c-04049f3643b4",
+          "name": "2019_HSBC_Life Eldercare Programme.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "Kara Wai",
+      "category": "Influencer",
+      "role": "Award-winning actress sharing personal experiences related to dementia.",
+      "hierarchy_level": "Micro",
+      "confidence": 80,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "2ba1e6e8-ba14-40b9-9d5c-04049f3643b4",
+          "name": "2019_HSBC_Life Eldercare Programme.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "Customers",
+      "category": "Consumer",
+      "role": "Recipients of free dementia screening and assessment services.",
+      "hierarchy_level": "Micro",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "2ba1e6e8-ba14-40b9-9d5c-04049f3643b4",
+          "name": "2019_HSBC_Life Eldercare Programme.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "The Women's Foundation",
+      "category": "Partner",
+      "role": "An organization collaborating to study the cost and need for eldercare in Hong Kong.",
+      "hierarchy_level": "Meso",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "3194caed-ebe3-4eff-baaf-0dbcbba42ea3",
+          "name": "2019_HSBC_the-cost-of-eldercare-report-english-8may-v5.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "Sau Po Centre on Ageing at The University of Hong Kong",
+      "category": "Partner",
+      "role": "A research center focused on gerontology, collaborating on shaping policy directions for eldercare.",
+      "hierarchy_level": "Meso",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "3194caed-ebe3-4eff-baaf-0dbcbba42ea3",
+          "name": "2019_HSBC_the-cost-of-eldercare-report-english-8may-v5.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "World Health Organization (WHO)",
+      "category": "Influencer",
+      "role": "Provides global data and perspectives on aging and life expectancy.",
+      "hierarchy_level": "Macro",
+      "confidence": 85,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "3194caed-ebe3-4eff-baaf-0dbcbba42ea3",
+          "name": "2019_HSBC_the-cost-of-eldercare-report-english-8may-v5.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "Hong Kong Census and Statistics Department",
+      "category": "Regulator",
+      "role": "Provides population data essential for projecting eldercare needs.",
+      "hierarchy_level": "Macro",
+      "confidence": 95,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "3194caed-ebe3-4eff-baaf-0dbcbba42ea3",
+          "name": "2019_HSBC_the-cost-of-eldercare-report-english-8may-v5.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "Dr. Vivian Lou",
+      "category": "Influencer",
+      "role": "Director of Sau Po Centre on Ageing, influencing policy directions on eldercare.",
+      "hierarchy_level": "Micro",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "3194caed-ebe3-4eff-baaf-0dbcbba42ea3",
+          "name": "2019_HSBC_the-cost-of-eldercare-report-english-8may-v5.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "Dr Vivian Lou",
+      "category": "Influencer",
+      "role": "Director, Sau Po Centre on Ageing, The University of Hong Kong",
+      "hierarchy_level": "Meso",
+      "confidence": 85,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "9213ecf6-5841-449a-9730-4e2eb516a794",
+          "name": "2021_HSBC_productive-ageing-in-hong-kong.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "Lam Ching Choi",
+      "category": "Regulator",
+      "role": "Member of the Executive Council of Hong Kong and chairman, Elderly Commission",
+      "hierarchy_level": "Macro",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "9213ecf6-5841-449a-9730-4e2eb516a794",
+          "name": "2021_HSBC_productive-ageing-in-hong-kong.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "Adeline Tan",
+      "category": "Partner",
+      "role": "Wealth business leader, Mercer",
+      "hierarchy_level": "Meso",
+      "confidence": 80,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "9213ecf6-5841-449a-9730-4e2eb516a794",
+          "name": "2021_HSBC_productive-ageing-in-hong-kong.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "Paul Yip",
+      "category": "Influencer",
+      "role": "Chair of Population Health at the Department of Social Work and Social Administration, University of Hong Kong",
+      "hierarchy_level": "Meso",
+      "confidence": 85,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "9213ecf6-5841-449a-9730-4e2eb516a794",
+          "name": "2021_HSBC_productive-ageing-in-hong-kong.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "Rebecca Choy Yung",
+      "category": "Influencer",
+      "role": "Founder and chair, Golden Age Foundation",
+      "hierarchy_level": "Meso",
+      "confidence": 85,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "9213ecf6-5841-449a-9730-4e2eb516a794",
+          "name": "2021_HSBC_productive-ageing-in-hong-kong.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "Retail Investors",
+      "category": "Consumer",
+      "role": "Provide capital for sustainable investments",
+      "hierarchy_level": "Micro",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "db2e2b97-a82e-4998-ad17-f073bdc15404",
+          "name": "2022_SC_Sustainable-Banking-Report-22.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "Standard Chartered",
+      "category": "Internal",
+      "role": "Financial institution supporting sustainable investments",
+      "hierarchy_level": "Meso",
+      "confidence": 95,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "db2e2b97-a82e-4998-ad17-f073bdc15404",
+          "name": "2022_SC_Sustainable-Banking-Report-22.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "Marc Van de Walle",
+      "category": "Internal",
+      "role": "Global Head of Wealth Management at Standard Chartered",
+      "hierarchy_level": "Micro",
+      "confidence": 95,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "db2e2b97-a82e-4998-ad17-f073bdc15404",
+          "name": "2022_SC_Sustainable-Banking-Report-22.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "Governments in 10 Growth Markets",
+      "category": "Regulator",
+      "role": "Facilitate and regulate sustainable investments",
+      "hierarchy_level": "Macro",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "db2e2b97-a82e-4998-ad17-f073bdc15404",
+          "name": "2022_SC_Sustainable-Banking-Report-22.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "ESG Data Providers",
+      "category": "Supplier",
+      "role": "Offer ESG data for investment decisions",
+      "hierarchy_level": "Meso",
+      "confidence": 85,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "db2e2b97-a82e-4998-ad17-f073bdc15404",
+          "name": "2022_SC_Sustainable-Banking-Report-22.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "Financial Industry",
+      "category": "Partner",
+      "role": "Collaboration with governments and organizations to improve sustainable investment market",
+      "hierarchy_level": "Meso",
+      "confidence": 88,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "db2e2b97-a82e-4998-ad17-f073bdc15404",
+          "name": "2022_SC_Sustainable-Banking-Report-22.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "The Bank of East Asia (BEA)",
+      "category": "Supplier",
+      "role": "Serves as a financial institution driving the low carbon transition and managing climate risk.",
+      "hierarchy_level": "Meso",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "4cd632ab-4bbe-489b-9de0-c8561be1e7a7",
+          "name": "2023_BEA ESG Highlights_EN.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "Dr. the Hon. Sir David Li Kwok-po",
+      "category": "Internal",
+      "role": "Executive Chairman of BEA, overseeing the bank's ESG initiatives and strategic direction.",
+      "hierarchy_level": "Micro",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "4cd632ab-4bbe-489b-9de0-c8561be1e7a7",
+          "name": "2023_BEA ESG Highlights_EN.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "Adrian Li",
+      "category": "Internal",
+      "role": "Co-Chief Executive of BEA, involved in sustainability performance and innovation.",
+      "hierarchy_level": "Micro",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "4cd632ab-4bbe-489b-9de0-c8561be1e7a7",
+          "name": "2023_BEA ESG Highlights_EN.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "Brian Li",
+      "category": "Internal",
+      "role": "Co-Chief Executive of BEA, involved in sustainability performance and innovation.",
+      "hierarchy_level": "Micro",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "4cd632ab-4bbe-489b-9de0-c8561be1e7a7",
+          "name": "2023_BEA ESG Highlights_EN.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "BEA Union Investment Management Limited",
+      "category": "Partner",
+      "role": "Part of BEA Group, enhancing sustainable finance and engaging in climate initiatives.",
+      "hierarchy_level": "Meso",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "4cd632ab-4bbe-489b-9de0-c8561be1e7a7",
+          "name": "2023_BEA ESG Highlights_EN.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "Net-Zero Banking Alliance (NZBA)",
+      "category": "Partner",
+      "role": "Global coalition of banks committed to aligning with net zero goals.",
+      "hierarchy_level": "Macro",
+      "confidence": 85,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "4cd632ab-4bbe-489b-9de0-c8561be1e7a7",
+          "name": "2023_BEA ESG Highlights_EN.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "Climate Action 100+",
+      "category": "Partner",
+      "role": "Investor-led initiative to engage major GHG emitters in climate action.",
+      "hierarchy_level": "Macro",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "4cd632ab-4bbe-489b-9de0-c8561be1e7a7",
+          "name": "2023_BEA ESG Highlights_EN.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "Dah Sing Banking Group Limited",
+      "category": "Internal",
+      "role": "Financial services group focusing on ESG initiatives in Hong Kong and the Greater Bay Area.",
+      "hierarchy_level": "Meso",
+      "confidence": 95,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "bdad8d72-9cfe-49b8-80b0-5b46229642bf",
+          "name": "2022_DSBG_ESG_Report_2022_EN.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "Board of Directors",
+      "category": "Internal",
+      "role": "Oversee ESG framework and strategy implementation.",
+      "hierarchy_level": "Meso",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "bdad8d72-9cfe-49b8-80b0-5b46229642bf",
+          "name": "2022_DSBG_ESG_Report_2022_EN.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "ESG Committee",
+      "category": "Internal",
+      "role": "Develop and monitor the Group's ESG strategies and report to the Board.",
+      "hierarchy_level": "Meso",
+      "confidence": 85,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "bdad8d72-9cfe-49b8-80b0-5b46229642bf",
+          "name": "2022_DSBG_ESG_Report_2022_EN.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "Friends of the Earth (HK)",
+      "category": "Partner",
+      "role": "Collaborator on SME ESG Best Practices Recognition Programme.",
+      "hierarchy_level": "Meso",
+      "confidence": 80,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "bdad8d72-9cfe-49b8-80b0-5b46229642bf",
+          "name": "2022_DSBG_ESG_Report_2022_EN.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "Hong Kong Monetary Authority (HKMA)",
+      "category": "Regulator",
+      "role": "Facilitates financial schemes to support SMEs during the pandemic.",
+      "hierarchy_level": "Macro",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "bdad8d72-9cfe-49b8-80b0-5b46229642bf",
+          "name": "2022_DSBG_ESG_Report_2022_EN.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "Dah Sing Bank, Limited",
+      "category": "Internal",
+      "role": "Bank under Dah Sing Banking Group focusing on financial services and ESG initiatives.",
+      "hierarchy_level": "Meso",
+      "confidence": 95,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "bdad8d72-9cfe-49b8-80b0-5b46229642bf",
+          "name": "2022_DSBG_ESG_Report_2022_EN.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "Dah Sing Bank (China) Limited",
+      "category": "Internal",
+      "role": "Focuses on expanding green credit business and supporting SMEs.",
+      "hierarchy_level": "Meso",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "bdad8d72-9cfe-49b8-80b0-5b46229642bf",
+          "name": "2022_DSBG_ESG_Report_2022_EN.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "SMEs",
+      "category": "Consumer",
+      "role": "Strategic customer segment for the Group, supported in ESG transition and financial services.",
+      "hierarchy_level": "Micro",
+      "confidence": 85,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "bdad8d72-9cfe-49b8-80b0-5b46229642bf",
+          "name": "2022_DSBG_ESG_Report_2022_EN.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "Hong Kong Independent Commission Against Corruption (ICAC)",
+      "category": "Regulator",
+      "role": "Provides training on ethics and corruption prevention.",
+      "hierarchy_level": "Macro",
+      "confidence": 85,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "bdad8d72-9cfe-49b8-80b0-5b46229642bf",
+          "name": "2022_DSBG_ESG_Report_2022_EN.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "DBS Bank China",
+      "category": "Internal",
+      "role": "A branch of DBS servicing the Greater China market.",
+      "hierarchy_level": "Meso",
+      "confidence": 80,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "449d1cfb-5f21-4a52-b13b-e921fb8a4056",
+          "name": "2022_DBS_SR2022.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "Digital for Life Fund",
+      "category": "Partner",
+      "role": "A fund aimed at supporting digital readiness and inclusion in Singapore.",
+      "hierarchy_level": "Meso",
+      "confidence": 85,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "449d1cfb-5f21-4a52-b13b-e921fb8a4056",
+          "name": "2022_DBS_SR2022.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "Asia Impact First Fund",
+      "category": "Internal",
+      "role": "Focuses on scaling innovative enterprises tackling social and environmental challenges.",
+      "hierarchy_level": "Meso",
+      "confidence": 85,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "449d1cfb-5f21-4a52-b13b-e921fb8a4056",
+          "name": "2022_DBS_SR2022.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "Singapore Government",
+      "category": "Regulator",
+      "role": "Oversees financial regulations in Singapore.",
+      "hierarchy_level": "Macro",
+      "confidence": 95,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "449d1cfb-5f21-4a52-b13b-e921fb8a4056",
+          "name": "2022_DBS_SR2022.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "The National Environment Agency (NEA)",
+      "category": "Regulator",
+      "role": "Oversees environmental sustainability and initiatives in Singapore.",
+      "hierarchy_level": "Macro",
+      "confidence": 85,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "449d1cfb-5f21-4a52-b13b-e921fb8a4056",
+          "name": "2022_DBS_SR2022.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "Piyush Gupta",
+      "category": "Internal",
+      "role": "CEO of DBS Group Holdings, drives the sustainability strategy and business initiatives.",
+      "hierarchy_level": "Micro",
+      "confidence": 100,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "81b24867-941a-4742-bccc-3ec2bf3750c2",
+          "name": "2023_DBS_SR2023.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "H&M Group",
+      "category": "Partner",
+      "role": "Collaborates with DBS to provide sustainable financing solutions in the fashion supply chain.",
+      "hierarchy_level": "Meso",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "81b24867-941a-4742-bccc-3ec2bf3750c2",
+          "name": "2023_DBS_SR2023.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "CLP Power",
+      "category": "Partner",
+      "role": "Collaborates with DBS to support SMEs in Hong Kong's low-carbon transition.",
+      "hierarchy_level": "Meso",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "81b24867-941a-4742-bccc-3ec2bf3750c2",
+          "name": "2023_DBS_SR2023.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "S&P Global",
+      "category": "Influencer",
+      "role": "Provides methodologies for climate scenarios used by DBS for ESG assessments.",
+      "hierarchy_level": "Macro",
+      "confidence": 85,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "81b24867-941a-4742-bccc-3ec2bf3750c2",
+          "name": "2023_DBS_SR2023.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    },
+    {
+      "name": "Global Reporting Initiative (GRI)",
+      "category": "Partner",
+      "role": "Sets standards for sustainability reporting that DBS uses.",
+      "hierarchy_level": "Macro",
+      "confidence": 85,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "81b24867-941a-4742-bccc-3ec2bf3750c2",
+          "name": "2023_DBS_SR2023.pdf",
+          "brain": "AP HK - Financial industry"
+        }
+      ]
+    }
+  ],
+  "factors": [
+    {
+      "Label": "Community Sponsorship",
+      "Type": "Direct Driver",
+      "Tags": "Community, Sponsorship",
+      "Description": "Hang Seng Bank allocates resources for community sponsorship programmes to support local initiatives.",
+      "source_document": {
+        "id": "f2260239-74ef-4448-889b-8cec0196f1e9",
+        "name": "2022_Hang Seng Bank ESG report.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "Label": "Environmental Sustainability",
+      "Type": "Indirect Driver",
+      "Tags": "Sustainability, Climate Change",
+      "Description": "Hang Seng Bank's commitment to environmental sustainability influences its investment and partnership strategies.",
+      "source_document": {
+        "id": "f2260239-74ef-4448-889b-8cec0196f1e9",
+        "name": "2022_Hang Seng Bank ESG report.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "Label": "Youth Development and Education",
+      "Type": "Direct Driver",
+      "Tags": "Youth, Education",
+      "Description": "Hang Seng Bank focuses on youth development by providing educational programmes and career planning support.",
+      "source_document": {
+        "id": "f2260239-74ef-4448-889b-8cec0196f1e9",
+        "name": "2022_Hang Seng Bank ESG report.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "Label": "COVID-19 Response",
+      "Type": "Outcome",
+      "Tags": "Pandemic, COVID-19",
+      "Description": "Hang Seng Bank's response to COVID-19 included donations and community support initiatives.",
+      "source_document": {
+        "id": "f2260239-74ef-4448-889b-8cec0196f1e9",
+        "name": "2022_Hang Seng Bank ESG report.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "Label": "Digitalisation of Banking Services",
+      "Type": "Direct Driver",
+      "Tags": "Digitalisation, Banking",
+      "Description": "Hang Seng Bank's strategic focus on digitalisation aims to enhance customer experience and operational efficiency.",
+      "source_document": {
+        "id": "f2260239-74ef-4448-889b-8cec0196f1e9",
+        "name": "2022_Hang Seng Bank ESG report.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "Label": "Rising Elderly Population",
+      "Type": "Exogenous Driver",
+      "Tags": "demographics",
+      "Description": "Hong Kong's elderly population is expected to increase significantly, impacting the demand for age-friendly banking services.",
+      "source_document": {
+        "id": "fb20a65e-978c-432c-ade3-d0a847198f4b",
+        "name": "2019_HSBC age-friendly banking.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "Label": "Fraud and Scam Risks",
+      "Type": "Direct Driver",
+      "Tags": "security",
+      "Description": "The prevalence of scams and fraud necessitates strong security measures and consumer awareness.",
+      "source_document": {
+        "id": "fb20a65e-978c-432c-ade3-d0a847198f4b",
+        "name": "2019_HSBC age-friendly banking.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "Label": "Digital Banking Adoption",
+      "Type": "Direct Driver",
+      "Tags": "technology",
+      "Description": "Digital banking provides convenient financial management but also requires users to be tech-savvy and aware of online safety.",
+      "source_document": {
+        "id": "fb20a65e-978c-432c-ade3-d0a847198f4b",
+        "name": "2019_HSBC age-friendly banking.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "Label": "Legacy Planning Needs",
+      "Type": "Outcome",
+      "Tags": "legal",
+      "Description": "Increasing awareness and need for estate planning drives demand for related legal services.",
+      "source_document": {
+        "id": "fb20a65e-978c-432c-ade3-d0a847198f4b",
+        "name": "2019_HSBC age-friendly banking.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "Label": "Rising Eldercare Costs",
+      "Type": "Indirect Driver",
+      "Tags": "financial burden, economy",
+      "Description": "The cost of caregiving in Hong Kong is projected to rise significantly, influencing the development of preventive measures and insurance products.",
+      "source_document": {
+        "id": "2ba1e6e8-ba14-40b9-9d5c-04049f3643b4",
+        "name": "2019_HSBC_Life Eldercare Programme.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "Label": "Prevalence of Dementia",
+      "Type": "Direct Driver",
+      "Tags": "health, elderly, disease prevalence",
+      "Description": "Increasing rates of dementia among the elderly is a driver for healthcare interventions and awareness campaigns.",
+      "source_document": {
+        "id": "2ba1e6e8-ba14-40b9-9d5c-04049f3643b4",
+        "name": "2019_HSBC_Life Eldercare Programme.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "Label": "Awareness of Dementia and Preventive Measures",
+      "Type": "Outcome",
+      "Tags": "health education, awareness campaigns",
+      "Description": "Efforts to raise awareness around dementia and encourage preventive measures are resulting from partnerships and public-private collaborations.",
+      "source_document": {
+        "id": "2ba1e6e8-ba14-40b9-9d5c-04049f3643b4",
+        "name": "2019_HSBC_Life Eldercare Programme.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "Label": "Collaboration with NGOs and Private Sector",
+      "Type": "Direct Driver",
+      "Tags": "partnership, community engagement",
+      "Description": "Public-private partnerships aim to provide more resources and access to healthcare for the elderly, targeting dementia and eldercare.",
+      "source_document": {
+        "id": "2ba1e6e8-ba14-40b9-9d5c-04049f3643b4",
+        "name": "2019_HSBC_Life Eldercare Programme.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "Label": "Increasing Elderly Population",
+      "Type": "Exogenous Driver",
+      "Tags": "Demographics, Aging",
+      "Description": "The aging population in Hong Kong is increasing, with projections showing a rise from 1.27 million in 2018 to 2.61 million by 2060. This affects the demand for eldercare services.",
+      "source_document": {
+        "id": "3194caed-ebe3-4eff-baaf-0dbcbba42ea3",
+        "name": "2019_HSBC_the-cost-of-eldercare-report-english-8may-v5.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "Label": "Projected Societal Costs",
+      "Type": "Outcome",
+      "Tags": "Financial, Societal Impact",
+      "Description": "The cost of eldercare is rising dramatically, projected to increase from HK$38.8 billion in 2018 to HK$222.4 billion by 2060, affecting society at large.",
+      "source_document": {
+        "id": "3194caed-ebe3-4eff-baaf-0dbcbba42ea3",
+        "name": "2019_HSBC_the-cost-of-eldercare-report-english-8may-v5.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "Label": "Workforce Participation Decline",
+      "Type": "Direct Driver",
+      "Tags": "Employment, Gender",
+      "Description": "The need for eldercare is leading to a decline in workforce participation, especially among women, affecting career advancement and gender diversity.",
+      "source_document": {
+        "id": "3194caed-ebe3-4eff-baaf-0dbcbba42ea3",
+        "name": "2019_HSBC_the-cost-of-eldercare-report-english-8may-v5.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "Label": "Public-Private Partnerships",
+      "Type": "Direct Driver",
+      "Tags": "Collaboration, Solutions",
+      "Description": "Public-private partnerships are seen as a critical solution for addressing eldercare challenges by providing quality and cost-effective services.",
+      "source_document": {
+        "id": "3194caed-ebe3-4eff-baaf-0dbcbba42ea3",
+        "name": "2019_HSBC_the-cost-of-eldercare-report-english-8may-v5.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "Label": "Female Workforce Impact",
+      "Type": "Outcome",
+      "Tags": "Gender, Employment",
+      "Description": "The burden of eldercare disproportionately affects women, leading to lower workforce participation rates and impacting gender diversity in management.",
+      "source_document": {
+        "id": "3194caed-ebe3-4eff-baaf-0dbcbba42ea3",
+        "name": "2019_HSBC_the-cost-of-eldercare-report-english-8may-v5.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "Label": "Rising Life Expectancy",
+      "Type": "Exogenous Driver",
+      "Tags": "Longevity, Ageing Population",
+      "Description": "Hong Kong has one of the highest life expectancies, which increases the years individuals spend in retirement.",
+      "source_document": {
+        "id": "9213ecf6-5841-449a-9730-4e2eb516a794",
+        "name": "2021_HSBC_productive-ageing-in-hong-kong.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "Label": "Gender Differences in Retirement Preparation",
+      "Type": "Direct Driver",
+      "Tags": "Gender Bias, Financial Planning",
+      "Description": "Survey indicates that women plan less for retirement than men, affecting their financial security in later years.",
+      "source_document": {
+        "id": "9213ecf6-5841-449a-9730-4e2eb516a794",
+        "name": "2021_HSBC_productive-ageing-in-hong-kong.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "Label": "Medical Inflation",
+      "Type": "Direct Driver",
+      "Tags": "Healthcare Costs",
+      "Description": "Medical costs are rising at a rate faster than general inflation, affecting the financial preparedness of the elderly.",
+      "source_document": {
+        "id": "9213ecf6-5841-449a-9730-4e2eb516a794",
+        "name": "2021_HSBC_productive-ageing-in-hong-kong.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "Label": "Social Isolation",
+      "Type": "Outcome",
+      "Tags": "Pandemic Impact, Loneliness",
+      "Description": "Social isolation has increased due to COVID-19, affecting both mental health and social engagement among the elderly.",
+      "source_document": {
+        "id": "9213ecf6-5841-449a-9730-4e2eb516a794",
+        "name": "2021_HSBC_productive-ageing-in-hong-kong.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "Label": "Retirement Age Increase",
+      "Type": "Direct Driver",
+      "Tags": "Employment Policy, Workforce",
+      "Description": "The retirement age in Hong Kong has been increased to 65, affecting workforce dynamics and opportunities for younger workers.",
+      "source_document": {
+        "id": "9213ecf6-5841-449a-9730-4e2eb516a794",
+        "name": "2021_HSBC_productive-ageing-in-hong-kong.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "Label": "USD8.2tn Mobilization",
+      "Type": "Outcome",
+      "Tags": "sustainable investments",
+      "Description": "Potential to mobilize USD8.2tn of retail investor capital into sustainable investments to address ESG objectives.",
+      "source_document": {
+        "id": "db2e2b97-a82e-4998-ad17-f073bdc15404",
+        "name": "2022_SC_Sustainable-Banking-Report-22.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "Label": "Climate Change Concern",
+      "Type": "Direct Driver",
+      "Tags": "environment, carbon emissions",
+      "Description": "Top priority for investors, driving demand for investments in climate-themed funds and solutions.",
+      "source_document": {
+        "id": "db2e2b97-a82e-4998-ad17-f073bdc15404",
+        "name": "2022_SC_Sustainable-Banking-Report-22.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "Label": "Transparency and Reporting",
+      "Type": "Direct Driver",
+      "Tags": "ESG compliance, reporting",
+      "Description": "Need for more transparency in ESG investment selection and performance reporting to enhance investor confidence.",
+      "source_document": {
+        "id": "db2e2b97-a82e-4998-ad17-f073bdc15404",
+        "name": "2022_SC_Sustainable-Banking-Report-22.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "Label": "Market Barriers",
+      "Type": "Direct Driver",
+      "Tags": "accessibility, comprehension",
+      "Description": "Challenges in accessing sustainable investments include lack of transparency, complex information, and limited comparability.",
+      "source_document": {
+        "id": "db2e2b97-a82e-4998-ad17-f073bdc15404",
+        "name": "2022_SC_Sustainable-Banking-Report-22.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "Label": "Growing Wealth",
+      "Type": "Exogenous Driver",
+      "Tags": "economic growth",
+      "Description": "Increasing personal wealth in key markets that can be channeled into sustainable investments.",
+      "source_document": {
+        "id": "db2e2b97-a82e-4998-ad17-f073bdc15404",
+        "name": "2022_SC_Sustainable-Banking-Report-22.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "Label": "Global Climate Challenge",
+      "Type": "Exogenous Driver",
+      "Tags": "Climate Change, Temperature Rise",
+      "Description": "Rising global temperatures and frequent extreme weather events underscore the urgency for climate action.",
+      "source_document": {
+        "id": "4cd632ab-4bbe-489b-9de0-c8561be1e7a7",
+        "name": "2023_BEA ESG Highlights_EN.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "Label": "Financed Emissions",
+      "Type": "Direct Driver",
+      "Tags": "Carbon Footprint, Emissions Measurement",
+      "Description": "BEA's financed emissions constitute 99% of its carbon footprint, driving its net zero initiatives.",
+      "source_document": {
+        "id": "4cd632ab-4bbe-489b-9de0-c8561be1e7a7",
+        "name": "2023_BEA ESG Highlights_EN.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "Label": "Net Zero Targets",
+      "Type": "Outcome",
+      "Tags": "Carbon Reduction, Sustainability Goals",
+      "Description": "Achieving net zero targets involves reducing emissions in key sectors and expanding green finance capabilities.",
+      "source_document": {
+        "id": "4cd632ab-4bbe-489b-9de0-c8561be1e7a7",
+        "name": "2023_BEA ESG Highlights_EN.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "Label": "Green and Sustainable Finance (GSF)",
+      "Type": "Direct Driver",
+      "Tags": "Sustainable Lending, ESG Investments",
+      "Description": "BEA is expanding its GSF offerings, contributing to clients' transition to low-carbon operations.",
+      "source_document": {
+        "id": "4cd632ab-4bbe-489b-9de0-c8561be1e7a7",
+        "name": "2023_BEA ESG Highlights_EN.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "Label": "Climate Risk Management",
+      "Type": "Direct Driver",
+      "Tags": "Risk Assessment, Climate Adaptation",
+      "Description": "BEA is enhancing its climate risk management framework to mitigate financial risks associated with climate change.",
+      "source_document": {
+        "id": "4cd632ab-4bbe-489b-9de0-c8561be1e7a7",
+        "name": "2023_BEA ESG Highlights_EN.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "Label": "Green and Sustainable Banking",
+      "Type": "Direct Driver",
+      "Tags": "GSB, ESG",
+      "Description": "The Group's focus on developing green financial products and services to support the transition to a low-carbon economy.",
+      "source_document": {
+        "id": "bdad8d72-9cfe-49b8-80b0-5b46229642bf",
+        "name": "2022_DSBG_ESG_Report_2022_EN.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "Label": "Digitalisation and Customer Experience",
+      "Type": "Direct Driver",
+      "Tags": "Technology, Customer Satisfaction",
+      "Description": "Improving operational impact and customer experience through enhanced digital platforms and technologies.",
+      "source_document": {
+        "id": "bdad8d72-9cfe-49b8-80b0-5b46229642bf",
+        "name": "2022_DSBG_ESG_Report_2022_EN.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "Label": "Employee Engagement",
+      "Type": "Direct Driver",
+      "Tags": "Workforce, Training",
+      "Description": "Efforts to engage employees through culture promotion, training, and development initiatives.",
+      "source_document": {
+        "id": "bdad8d72-9cfe-49b8-80b0-5b46229642bf",
+        "name": "2022_DSBG_ESG_Report_2022_EN.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "Label": "Community Engagement",
+      "Type": "Outcome",
+      "Tags": "Social Responsibility, Volunteering",
+      "Description": "The Group's strategy to impact communities through youth education, sports promotion, and volunteering.",
+      "source_document": {
+        "id": "bdad8d72-9cfe-49b8-80b0-5b46229642bf",
+        "name": "2022_DSBG_ESG_Report_2022_EN.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "Label": "Regulatory Compliance",
+      "Type": "Exogenous Driver",
+      "Tags": "Legal, Compliance",
+      "Description": "Adhering to local and international laws and best practices in business and financial operations.",
+      "source_document": {
+        "id": "bdad8d72-9cfe-49b8-80b0-5b46229642bf",
+        "name": "2022_DSBG_ESG_Report_2022_EN.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "Label": "Rising Inflation",
+      "Type": "Exogenous Driver",
+      "Tags": "Inflation, Economic Activity",
+      "Description": "Inflation increased significantly due to global crises, impacting cost-of-living for many.",
+      "source_document": {
+        "id": "449d1cfb-5f21-4a52-b13b-e921fb8a4056",
+        "name": "2022_DBS_SR2022.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "Label": "Climate Change",
+      "Type": "Exogenous Driver",
+      "Tags": "Environmental Risks, Weather Events",
+      "Description": "Environmental crises such as extreme weather events led to increased awareness and action towards climate change.",
+      "source_document": {
+        "id": "449d1cfb-5f21-4a52-b13b-e921fb8a4056",
+        "name": "2022_DBS_SR2022.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "Label": "Net-Zero Commitment",
+      "Type": "Direct Driver",
+      "Tags": "Carbon Neutrality, Environmental Goals",
+      "Description": "DBS\u2019s commitment to achieve net-zero emissions by 2050, guiding its banking activities and sustainability agenda.",
+      "source_document": {
+        "id": "449d1cfb-5f21-4a52-b13b-e921fb8a4056",
+        "name": "2022_DBS_SR2022.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "Label": "Sustainable Financing Growth",
+      "Type": "Outcome",
+      "Tags": "Financial Support, Green Initiatives",
+      "Description": "DBS's goal to boost sustainable financing to grow investments in sustainable sectors and projects.",
+      "source_document": {
+        "id": "449d1cfb-5f21-4a52-b13b-e921fb8a4056",
+        "name": "2022_DBS_SR2022.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "Label": "Technological Innovation",
+      "Type": "Indirect Driver",
+      "Tags": "Digital Banking, Customer Engagement",
+      "Description": "DBS\u2019s focus on leveraging digital technology to enhance customer service and financial operations.",
+      "source_document": {
+        "id": "449d1cfb-5f21-4a52-b13b-e921fb8a4056",
+        "name": "2022_DBS_SR2022.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "Label": "Climate Change Regulations",
+      "Type": "Exogenous Driver",
+      "Description": "The financial and governance impacts from changing climate regulations and the need to comply with guidelines like TCFD and MAS frameworks.",
+      "Tags": "Climate, Regulations, Compliance",
+      "source_document": {
+        "id": "81b24867-941a-4742-bccc-3ec2bf3750c2",
+        "name": "2023_DBS_SR2023.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "Label": "Financial Inclusion Initiatives",
+      "Type": "Direct Driver",
+      "Description": "Efforts by DBS to provide banking access to underbanked segments such as work permit holders and small businesses.",
+      "Tags": "Banking, Access, Inclusion",
+      "source_document": {
+        "id": "81b24867-941a-4742-bccc-3ec2bf3750c2",
+        "name": "2023_DBS_SR2023.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "Label": "Decarbonisation Goals",
+      "Type": "Direct Driver",
+      "Description": "DBS's commitment to achieve net-zero emissions for prioritized sectors such as Power, Oil & Gas, and Shipping.",
+      "Tags": "Colimate, Decarbonization, Net Zero",
+      "source_document": {
+        "id": "81b24867-941a-4742-bccc-3ec2bf3750c2",
+        "name": "2023_DBS_SR2023.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "Label": "Renewable Energy Investments",
+      "Type": "Direct Driver",
+      "Description": "DBS's strategic investment in renewable energy to increase sustainability and energy efficiency in operations.",
+      "Tags": "Renewable Energy, Investment, Sustainability",
+      "source_document": {
+        "id": "81b24867-941a-4742-bccc-3ec2bf3750c2",
+        "name": "2023_DBS_SR2023.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "Label": "Sustainable Procurement",
+      "Type": "Indirect Driver",
+      "Description": "Enhancements to procurement policies to include restorative principles and human rights considerations.",
+      "Tags": "Sustainability, Procurement, Policy",
+      "source_document": {
+        "id": "81b24867-941a-4742-bccc-3ec2bf3750c2",
+        "name": "2023_DBS_SR2023.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    }
+  ],
+  "pain_points": [
+    {
+      "id": "PP-001",
+      "category": "Financial Barriers",
+      "description": "Challenges in ensuring equitable access to financial literacy and services among disadvantaged groups.",
+      "confidence": 85,
+      "hierarchy_level": "Micro",
+      "source_document": {
+        "id": "f2260239-74ef-4448-889b-8cec0196f1e9",
+        "name": "2022_Hang Seng Bank ESG report.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "id": "PP-002",
+      "category": "Climate Change",
+      "description": "Addressing climate change through sustainability initiatives and partnerships.",
+      "confidence": 90,
+      "hierarchy_level": "Macro",
+      "source_document": {
+        "id": "f2260239-74ef-4448-889b-8cec0196f1e9",
+        "name": "2022_Hang Seng Bank ESG report.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "id": "PP-003",
+      "category": "Youth Empowerment",
+      "description": "Enhancing future skills and employability for youth in an ever-changing world.",
+      "confidence": 90,
+      "hierarchy_level": "Micro",
+      "source_document": {
+        "id": "f2260239-74ef-4448-889b-8cec0196f1e9",
+        "name": "2022_Hang Seng Bank ESG report.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "id": "PP-004",
+      "category": "Financial Security",
+      "description": "Increased vulnerability to scams and fraud among the elderly population.",
+      "confidence": 90,
+      "hierarchy_level": "Micro",
+      "source_document": {
+        "id": "fb20a65e-978c-432c-ade3-d0a847198f4b",
+        "name": "2019_HSBC age-friendly banking.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "id": "PP-005",
+      "category": "Digital Accessibility",
+      "description": "Challenges faced by elderly consumers in adopting digital banking services.",
+      "confidence": 85,
+      "hierarchy_level": "Micro",
+      "source_document": {
+        "id": "fb20a65e-978c-432c-ade3-d0a847198f4b",
+        "name": "2019_HSBC age-friendly banking.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "id": "PP-006",
+      "category": "Legal Guidance",
+      "description": "Need for legal advice and planning related to powers of attorney and legacy planning.",
+      "confidence": 80,
+      "hierarchy_level": "Micro",
+      "source_document": {
+        "id": "fb20a65e-978c-432c-ade3-d0a847198f4b",
+        "name": "2019_HSBC age-friendly banking.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "id": "PP-007",
+      "category": "Healthcare Access",
+      "description": "Limited access to primary healthcare services and dementia screening for the elderly population.",
+      "confidence": 85,
+      "hierarchy_level": "Meso",
+      "source_document": {
+        "id": "2ba1e6e8-ba14-40b9-9d5c-04049f3643b4",
+        "name": "2019_HSBC_Life Eldercare Programme.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "id": "PP-008",
+      "category": "Financial Barriers",
+      "description": "The financial burden of caregiving and dementia management on families and society.",
+      "confidence": 90,
+      "hierarchy_level": "Macro",
+      "source_document": {
+        "id": "2ba1e6e8-ba14-40b9-9d5c-04049f3643b4",
+        "name": "2019_HSBC_Life Eldercare Programme.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "id": "PP-009",
+      "category": "Disease Management",
+      "description": "Challenges in early detection and management of dementia risks.",
+      "confidence": 85,
+      "hierarchy_level": "Meso",
+      "source_document": {
+        "id": "2ba1e6e8-ba14-40b9-9d5c-04049f3643b4",
+        "name": "2019_HSBC_Life Eldercare Programme.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "id": "PP-010",
+      "category": "Financial Barriers",
+      "description": "The increasing cost of eldercare is a significant financial burden on society, employers, and individuals.",
+      "confidence": 95,
+      "hierarchy_level": "Macro",
+      "source_document": {
+        "id": "3194caed-ebe3-4eff-baaf-0dbcbba42ea3",
+        "name": "2019_HSBC_the-cost-of-eldercare-report-english-8may-v5.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "id": "PP-011",
+      "category": "Workforce Participation",
+      "description": "High number of caregivers leaving the workforce, especially women, reducing overall workforce participation.",
+      "confidence": 90,
+      "hierarchy_level": "Meso",
+      "source_document": {
+        "id": "3194caed-ebe3-4eff-baaf-0dbcbba42ea3",
+        "name": "2019_HSBC_the-cost-of-eldercare-report-english-8may-v5.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "id": "PP-012",
+      "category": "Gender Disparity",
+      "description": "Caregiving responsibilities are disproportionately affecting women, contributing to gender disparity in workplaces.",
+      "confidence": 85,
+      "hierarchy_level": "Macro",
+      "source_document": {
+        "id": "3194caed-ebe3-4eff-baaf-0dbcbba42ea3",
+        "name": "2019_HSBC_the-cost-of-eldercare-report-english-8may-v5.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "id": "PP-013",
+      "category": "Caregiver Support",
+      "description": "Insufficient support and resources for caregivers, leading to stress and financial strain.",
+      "confidence": 85,
+      "hierarchy_level": "Meso",
+      "source_document": {
+        "id": "3194caed-ebe3-4eff-baaf-0dbcbba42ea3",
+        "name": "2019_HSBC_the-cost-of-eldercare-report-english-8may-v5.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "id": "PP-014",
+      "category": "Financial Barriers",
+      "description": "Many Hong Kong residents feel there is insufficient financial support from the government for productive ageing.",
+      "confidence": 95,
+      "hierarchy_level": "Meso",
+      "source_document": {
+        "id": "9213ecf6-5841-449a-9730-4e2eb516a794",
+        "name": "2021_HSBC_productive-ageing-in-hong-kong.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "id": "PP-015",
+      "category": "Healthcare Access",
+      "description": "Rising medical costs and lack of sufficient insurance coverage are major concerns for the elderly.",
+      "confidence": 90,
+      "hierarchy_level": "Meso",
+      "source_document": {
+        "id": "9213ecf6-5841-449a-9730-4e2eb516a794",
+        "name": "2021_HSBC_productive-ageing-in-hong-kong.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "id": "PP-016",
+      "category": "Social Isolation",
+      "description": "Social isolation and loneliness among the elderly have been exacerbated by the COVID-19 pandemic.",
+      "confidence": 90,
+      "hierarchy_level": "Micro",
+      "source_document": {
+        "id": "9213ecf6-5841-449a-9730-4e2eb516a794",
+        "name": "2021_HSBC_productive-ageing-in-hong-kong.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "id": "PP-017",
+      "category": "Gender Inequality",
+      "description": "Women are more financially vulnerable in retirement due to reliance on spouses and traditional social roles.",
+      "confidence": 85,
+      "hierarchy_level": "Meso",
+      "source_document": {
+        "id": "9213ecf6-5841-449a-9730-4e2eb516a794",
+        "name": "2021_HSBC_productive-ageing-in-hong-kong.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "id": "PP-018",
+      "category": "Financial Barriers",
+      "description": "Challenges in accessing sustainable investments due to lack of transparency and complex information.",
+      "confidence": 85,
+      "hierarchy_level": "Meso",
+      "source_document": {
+        "id": "db2e2b97-a82e-4998-ad17-f073bdc15404",
+        "name": "2022_SC_Sustainable-Banking-Report-22.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "id": "PP-019",
+      "category": "ESG Reporting",
+      "description": "Need for standardization in ESG data to facilitate investor decision-making and prevent greenwashing.",
+      "confidence": 90,
+      "hierarchy_level": "Macro",
+      "source_document": {
+        "id": "db2e2b97-a82e-4998-ad17-f073bdc15404",
+        "name": "2022_SC_Sustainable-Banking-Report-22.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "id": "PP-020",
+      "category": "Market Accessibility",
+      "description": "Limited sustainable investment opportunities available to retail investors affecting adoption rates.",
+      "confidence": 88,
+      "hierarchy_level": "Meso",
+      "source_document": {
+        "id": "db2e2b97-a82e-4998-ad17-f073bdc15404",
+        "name": "2022_SC_Sustainable-Banking-Report-22.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "id": "PP-021",
+      "category": "Investor Education",
+      "description": "Need for enhanced investor education to improve comprehension of sustainable investing benefits.",
+      "confidence": 80,
+      "hierarchy_level": "Micro",
+      "source_document": {
+        "id": "db2e2b97-a82e-4998-ad17-f073bdc15404",
+        "name": "2022_SC_Sustainable-Banking-Report-22.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "id": "PP-022",
+      "category": "Environmental Impact",
+      "description": "Frequent and intense climate-induced events like super typhoons and record rainfall challenge economic stability.",
+      "confidence": 85,
+      "hierarchy_level": "Macro",
+      "source_document": {
+        "id": "4cd632ab-4bbe-489b-9de0-c8561be1e7a7",
+        "name": "2023_BEA ESG Highlights_EN.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "id": "PP-023",
+      "category": "Carbon Emissions",
+      "description": "Financed emissions majorly contribute to BEA's carbon footprint, necessitating robust reduction strategies.",
+      "confidence": 90,
+      "hierarchy_level": "Meso",
+      "source_document": {
+        "id": "4cd632ab-4bbe-489b-9de0-c8561be1e7a7",
+        "name": "2023_BEA ESG Highlights_EN.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "id": "PP-024",
+      "category": "Sustainability Implementation",
+      "description": "Setting and achieving carbon reduction targets in various sectors involves complex measurement and strategy development.",
+      "confidence": 85,
+      "hierarchy_level": "Meso",
+      "source_document": {
+        "id": "4cd632ab-4bbe-489b-9de0-c8561be1e7a7",
+        "name": "2023_BEA ESG Highlights_EN.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "id": "PP-025",
+      "category": "Customer Satisfaction",
+      "description": "Need to enhance customer satisfaction and reinforce customer-centric strategies.",
+      "confidence": 80,
+      "hierarchy_level": "Meso",
+      "source_document": {
+        "id": "bdad8d72-9cfe-49b8-80b0-5b46229642bf",
+        "name": "2022_DSBG_ESG_Report_2022_EN.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "id": "PP-026",
+      "category": "SME Support",
+      "description": "Challenges in supporting SMEs during their ESG transition and maintaining financial stability during the pandemic.",
+      "confidence": 85,
+      "hierarchy_level": "Micro",
+      "source_document": {
+        "id": "bdad8d72-9cfe-49b8-80b0-5b46229642bf",
+        "name": "2022_DSBG_ESG_Report_2022_EN.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "id": "PP-027",
+      "category": "Environmental Impact",
+      "description": "Managing and reducing the environmental footprint, including energy consumption and waste generation.",
+      "confidence": 75,
+      "hierarchy_level": "Macro",
+      "source_document": {
+        "id": "bdad8d72-9cfe-49b8-80b0-5b46229642bf",
+        "name": "2022_DSBG_ESG_Report_2022_EN.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "id": "PP-028",
+      "category": "Economic Challenges",
+      "description": "Global economic instability due to geopolitical tensions and crises like the Russia-Ukraine war.",
+      "confidence": 90,
+      "source_document": {
+        "id": "449d1cfb-5f21-4a52-b13b-e921fb8a4056",
+        "name": "2022_DBS_SR2022.pdf",
+        "brain": "AP HK - Financial industry"
+      },
+      "hierarchy_level": "Meso"
+    },
+    {
+      "id": "PP-029",
+      "category": "Environmental Risks",
+      "description": "Increased frequency of extreme weather events causing harm to communities globally.",
+      "confidence": 95,
+      "source_document": {
+        "id": "449d1cfb-5f21-4a52-b13b-e921fb8a4056",
+        "name": "2022_DBS_SR2022.pdf",
+        "brain": "AP HK - Financial industry"
+      },
+      "hierarchy_level": "Meso"
+    },
+    {
+      "id": "PP-030",
+      "category": "Regulatory Pressures",
+      "description": "Emerging regulatory pressures require adaptation by financial institutions regarding climate-related disclosures.",
+      "confidence": 85,
+      "source_document": {
+        "id": "449d1cfb-5f21-4a52-b13b-e921fb8a4056",
+        "name": "2022_DBS_SR2022.pdf",
+        "brain": "AP HK - Financial industry"
+      },
+      "hierarchy_level": "Meso"
+    },
+    {
+      "id": "PP-031",
+      "category": "Supply Chain Disruptions",
+      "description": "Global supply chain disruptions have been exacerbated by geopolitical events and crises.",
+      "confidence": 90,
+      "source_document": {
+        "id": "449d1cfb-5f21-4a52-b13b-e921fb8a4056",
+        "name": "2022_DBS_SR2022.pdf",
+        "brain": "AP HK - Financial industry"
+      },
+      "hierarchy_level": "Meso"
+    },
+    {
+      "id": "PP-032",
+      "category": "Climate Risks",
+      "description": "Financial and credit risk associated with clients not meeting climate targets.",
+      "confidence": 90,
+      "hierarchy_level": "Meso",
+      "source_document": {
+        "id": "81b24867-941a-4742-bccc-3ec2bf3750c2",
+        "name": "2023_DBS_SR2023.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "id": "PP-033",
+      "category": "Technological Disruptions",
+      "description": "Technology disruptions that affected service reliability, leading to a roadmap for enhanced resilience.",
+      "confidence": 85,
+      "hierarchy_level": "Meso",
+      "source_document": {
+        "id": "81b24867-941a-4742-bccc-3ec2bf3750c2",
+        "name": "2023_DBS_SR2023.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "id": "PP-034",
+      "category": "Supply Chain Constraints",
+      "description": "Challenges in managing a sustainable supply chain due to external constraints like geopolitical influences.",
+      "confidence": 85,
+      "hierarchy_level": "Meso",
+      "source_document": {
+        "id": "81b24867-941a-4742-bccc-3ec2bf3750c2",
+        "name": "2023_DBS_SR2023.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "id": "PP-035",
+      "category": "Regulatory Compliance",
+      "description": "Maintaining compliance with evolving climate and financial regulations poses a constant challenge.",
+      "confidence": 88,
+      "hierarchy_level": "Meso",
+      "source_document": {
+        "id": "81b24867-941a-4742-bccc-3ec2bf3750c2",
+        "name": "2023_DBS_SR2023.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    },
+    {
+      "id": "PP-036",
+      "category": "Scam Protection",
+      "description": "Need for enhanced measures to protect customers from evolving scam and fraud tactics.",
+      "confidence": 90,
+      "hierarchy_level": "Micro",
+      "source_document": {
+        "id": "81b24867-941a-4742-bccc-3ec2bf3750c2",
+        "name": "2023_DBS_SR2023.pdf",
+        "brain": "AP HK - Financial industry"
+      }
+    }
+  ]
+}

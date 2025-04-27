@@ -1,0 +1,91 @@
+{
+  "brain_info": {
+    "brain_id": "b532d371-eb19-43da-97ae-61cdc19900f1",
+    "brain_name": "Deforestation - Academia voice"
+  },
+  "document_info": {
+    "id": "6183e121-5244-493e-981e-4e82e8215a20",
+    "file_name": "12. Patterns of infringement, risk, and impact driven by coal mining.pdf",
+    "content_length": 68832
+  },
+  "extracted_stakeholders": [
+    {
+      "name": "Government of Indonesia",
+      "category": "Regulator",
+      "role": "Responsible for creating and enforcing mining regulations and policies.",
+      "confidence": 95
+    },
+    {
+      "name": "East Kalimantan Provincial Government",
+      "category": "Regulator",
+      "role": "Provincial authority managing mining operations and permits.",
+      "confidence": 90
+    },
+    {
+      "name": "JATAM (Mining Advocacy Network)",
+      "category": "Influencer",
+      "role": "NGO involved in advocacy and activism against poor coal mining governance.",
+      "confidence": 85
+    },
+    {
+      "name": "Tessa Toumbourou",
+      "category": "Researcher",
+      "role": "Contributor to the study, focusing on environmental social science.",
+      "confidence": 90
+    },
+    {
+      "name": "Anthrop Warner",
+      "category": "Researcher",
+      "role": "Contributor to the study, focusing on environmental impacts.",
+      "confidence": 90
+    },
+    {
+      "name": "Coal Mining Companies",
+      "category": "Supplier",
+      "role": "Entities engaged in coal extraction and mining operations in East Kalimantan.",
+      "confidence": 95
+    },
+    {
+      "name": "Local Communities in East Kalimantan",
+      "category": "Consumer",
+      "role": "Communities impacted by coal mining, facing environmental and social challenges.",
+      "confidence": 90
+    }
+  ],
+  "extracted_factors": [
+    {
+      "Label": "Improper Permit Granting",
+      "Type": "Direct Driver",
+      "Tags": "Regulatory Violations",
+      "Description": "The study highlights improper permit granting as a primary cause of deforestation, regulatory violations, and mining infringements in East Kalimantan."
+    },
+    {
+      "Label": "Deforestation due to Coal Mining",
+      "Type": "Outcome",
+      "Tags": "Environmental Impact, Land Use Change",
+      "Description": "Deforestation is a consequence of coal mining expansion, causing significant loss of forests in East Kalimantan."
+    },
+    {
+      "Label": "Human Safety Hazards",
+      "Type": "Outcome",
+      "Tags": "Social Impact, Coal Mining",
+      "Description": "The presence of water-filled mining pits poses drowning hazards, notably affecting children and adjacent communities."
+    },
+    {
+      "Label": "Regulatory Infringements",
+      "Type": "Direct Driver",
+      "Description": "The mining activities often violate regulatory boundaries, posing environmental and social risks."
+    },
+    {
+      "Label": "Lacking Reclamation",
+      "Type": "Direct Driver",
+      "Description": "Insufficient backfilling and reclamation of inactive mine pits increase environmental degradation and safety risks."
+    },
+    {
+      "Label": "Social Inequality",
+      "Type": "Outcome",
+      "Tags": "Economic Inequality, Resource Extraction",
+      "Description": "The economic benefits of resource extraction have sharpened social inequality in East Kalimantan."
+    }
+  ]
+}

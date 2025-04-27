@@ -1,0 +1,124 @@
+{
+  "brain_info": {
+    "brain_id": "ce88cb71-2528-4598-a585-5fa2dfd03319",
+    "brain_name": "AP HK - Financial industry"
+  },
+  "document_info": {
+    "id": "9213ecf6-5841-449a-9730-4e2eb516a794",
+    "file_name": "2021_HSBC_productive-ageing-in-hong-kong.pdf",
+    "content_length": 41479
+  },
+  "extracted_stakeholders": [
+    {
+      "name": "Edward Moncreiffe",
+      "category": "Internal",
+      "role": "Hong Kong Chief Executive Officer, HSBC Life (International) Limited",
+      "confidence": 90,
+      "hierarchy_level": "Micro"
+    },
+    {
+      "name": "Dr Vivian Lou",
+      "category": "Influencer",
+      "role": "Director, Sau Po Centre on Ageing, The University of Hong Kong",
+      "confidence": 85,
+      "hierarchy_level": "Meso"
+    },
+    {
+      "name": "Fiona Nott",
+      "category": "Influencer",
+      "role": "Chief Executive Officer, The Women\u2019s Foundation",
+      "confidence": 85,
+      "hierarchy_level": "Meso"
+    },
+    {
+      "name": "Lam Ching Choi",
+      "category": "Regulator",
+      "role": "Member of the Executive Council of Hong Kong and chairman, Elderly Commission",
+      "confidence": 90,
+      "hierarchy_level": "Macro"
+    },
+    {
+      "name": "Adeline Tan",
+      "category": "Partner",
+      "role": "Wealth business leader, Mercer",
+      "confidence": 80,
+      "hierarchy_level": "Meso"
+    },
+    {
+      "name": "Paul Yip",
+      "category": "Influencer",
+      "role": "Chair of Population Health at the Department of Social Work and Social Administration, University of Hong Kong",
+      "confidence": 85,
+      "hierarchy_level": "Meso"
+    },
+    {
+      "name": "Rebecca Choy Yung",
+      "category": "Influencer",
+      "role": "Founder and chair, Golden Age Foundation",
+      "confidence": 85,
+      "hierarchy_level": "Meso"
+    }
+  ],
+  "extracted_factors": [
+    {
+      "Label": "Rising Life Expectancy",
+      "Type": "Exogenous Driver",
+      "Tags": "Longevity, Ageing Population",
+      "Description": "Hong Kong has one of the highest life expectancies, which increases the years individuals spend in retirement."
+    },
+    {
+      "Label": "Gender Differences in Retirement Preparation",
+      "Type": "Direct Driver",
+      "Tags": "Gender Bias, Financial Planning",
+      "Description": "Survey indicates that women plan less for retirement than men, affecting their financial security in later years."
+    },
+    {
+      "Label": "Medical Inflation",
+      "Type": "Direct Driver",
+      "Tags": "Healthcare Costs",
+      "Description": "Medical costs are rising at a rate faster than general inflation, affecting the financial preparedness of the elderly."
+    },
+    {
+      "Label": "Social Isolation",
+      "Type": "Outcome",
+      "Tags": "Pandemic Impact, Loneliness",
+      "Description": "Social isolation has increased due to COVID-19, affecting both mental health and social engagement among the elderly."
+    },
+    {
+      "Label": "Retirement Age Increase",
+      "Type": "Direct Driver",
+      "Tags": "Employment Policy, Workforce",
+      "Description": "The retirement age in Hong Kong has been increased to 65, affecting workforce dynamics and opportunities for younger workers."
+    }
+  ],
+  "extracted_pain_points": [
+    {
+      "id": "PP-001",
+      "category": "Financial Barriers",
+      "description": "Many Hong Kong residents feel there is insufficient financial support from the government for productive ageing.",
+      "confidence": 95,
+      "hierarchy_level": "Meso"
+    },
+    {
+      "id": "PP-002",
+      "category": "Healthcare Access",
+      "description": "Rising medical costs and lack of sufficient insurance coverage are major concerns for the elderly.",
+      "confidence": 90,
+      "hierarchy_level": "Meso"
+    },
+    {
+      "id": "PP-003",
+      "category": "Social Isolation",
+      "description": "Social isolation and loneliness among the elderly have been exacerbated by the COVID-19 pandemic.",
+      "confidence": 90,
+      "hierarchy_level": "Micro"
+    },
+    {
+      "id": "PP-004",
+      "category": "Gender Inequality",
+      "description": "Women are more financially vulnerable in retirement due to reliance on spouses and traditional social roles.",
+      "confidence": 85,
+      "hierarchy_level": "Meso"
+    }
+  ]
+}

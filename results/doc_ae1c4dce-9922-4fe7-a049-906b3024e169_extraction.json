@@ -1,0 +1,179 @@
+{
+  "brain_info": {
+    "brain_id": "b532d371-eb19-43da-97ae-61cdc19900f1",
+    "brain_name": "Deforestation - Academia voice"
+  },
+  "document_info": {
+    "id": "ae1c4dce-9922-4fe7-a049-906b3024e169",
+    "file_name": "07. How well does the implementation of corporate zero-deforestation commitments in Indonesia.pdf",
+    "content_length": 65235
+  },
+  "extracted_stakeholders": [
+    {
+      "name": "Adelina Chandra",
+      "category": "Influencer",
+      "role": "Lead author and researcher contributing to the study on zero-deforestation commitments in Indonesia.",
+      "confidence": 95
+    },
+    {
+      "name": "Rachael D Garrett",
+      "category": "Influencer",
+      "role": "Researcher and contributor to the study on zero-deforestation commitments.",
+      "confidence": 90
+    },
+    {
+      "name": "Kimberly M Carlson",
+      "category": "Influencer",
+      "role": "Researcher and contributor to the study on zero-deforestation commitments.",
+      "confidence": 90
+    },
+    {
+      "name": "Robert Heilmayr",
+      "category": "Influencer",
+      "role": "Researcher and contributor to the study on zero-deforestation commitments.",
+      "confidence": 90
+    },
+    {
+      "name": "Matthieu Stigler",
+      "category": "Influencer",
+      "role": "Researcher and contributor to the study on zero-deforestation commitments.",
+      "confidence": 85
+    },
+    {
+      "name": "Jason J Benedict",
+      "category": "Influencer",
+      "role": "Researcher and contributor to the study on zero-deforestation commitments.",
+      "confidence": 85
+    },
+    {
+      "name": "Janina Grabs",
+      "category": "Influencer",
+      "role": "Researcher and contributor to the study on zero-deforestation commitments.",
+      "confidence": 90
+    },
+    {
+      "name": "ETH Z\u00fcrich",
+      "category": "Internal",
+      "role": "Department involved in the research.",
+      "confidence": 80
+    },
+    {
+      "name": "University of Cambridge",
+      "category": "Internal",
+      "role": "Institution involved in the research.",
+      "confidence": 80
+    },
+    {
+      "name": "New York University",
+      "category": "Internal",
+      "role": "Institution involved in the research.",
+      "confidence": 80
+    },
+    {
+      "name": "University of California, Santa Barbara",
+      "category": "Internal",
+      "role": "Institution involved in the research.",
+      "confidence": 80
+    },
+    {
+      "name": "Universitat Ramon Llull, ESADE Business School",
+      "category": "Internal",
+      "role": "Institution involved in the research.",
+      "confidence": 80
+    },
+    {
+      "name": "Companies in the palm oil sector",
+      "category": "Supplier",
+      "role": "Entities implementing zero-deforestation commitments.",
+      "confidence": 95
+    },
+    {
+      "name": "Smallholder farmers",
+      "category": "Consumer",
+      "role": "Affected parties by zero-deforestation commitments and inclusion programs.",
+      "confidence": 95
+    },
+    {
+      "name": "European Union (EU)",
+      "category": "Regulator",
+      "role": "Entity responsible for the EU Deforestation Regulation setting mandatory due diligence requirements.",
+      "confidence": 95
+    },
+    {
+      "name": "NGOs and civil society organizations",
+      "category": "Influencer",
+      "role": "Apply pressure on companies to adopt zero-deforestation commitments.",
+      "confidence": 90
+    },
+    {
+      "name": "RSPO (Roundtable on Sustainable Palm Oil)",
+      "category": "Partner",
+      "role": "Certification body verifying adherence to sustainable palm oil standards.",
+      "confidence": 85
+    }
+  ],
+  "extracted_factors": [
+    {
+      "Label": "Corporate Zero-Deforestation Commitments (ZDCs)",
+      "Type": "Direct Driver",
+      "Tags": "sustainability, corporate responsibility",
+      "Description": "Commitments made by companies to not purchase products sourced from land cleared of forests. These commitments aim to halt deforestation and include environmental and social targets."
+    },
+    {
+      "Label": "Traceability",
+      "Type": "Direct Driver",
+      "Tags": "supply chain, transparency",
+      "Description": "The ability to track the origin of palm oil in the supply chain to ensure compliance with zero-deforestation commitments."
+    },
+    {
+      "Label": "Smallholder Inclusion",
+      "Type": "Direct Driver",
+      "Tags": "equity, socioeconomics",
+      "Description": "Efforts to incorporate smallholder farmers into zero-deforestation initiatives, addressing their socio-economic needs and preventing exclusion."
+    },
+    {
+      "Label": "Spatial and Functional Fit",
+      "Type": "Outcome",
+      "Tags": "policy implementation, geography",
+      "Description": "The alignment between the geographic scope of zero-deforestation commitments and the actual ecological and social contexts they affect."
+    },
+    {
+      "Label": "EU Deforestation Regulation",
+      "Type": "Exogenous Driver",
+      "Tags": "regulation, compliance",
+      "Description": "Regulatory framework by the European Union requiring due diligence in the supply chains of forest-risk commodities."
+    },
+    {
+      "Label": "Deforestation Risk",
+      "Type": "Indirect Driver",
+      "Tags": "forest conservation, environmental risk",
+      "Description": "The likelihood of forests being cleared for agricultural expansion, primarily driven by commodity demands like palm oil."
+    }
+  ],
+  "extracted_pain_points": [
+    {
+      "id": "PP-001",
+      "category": "Traceability",
+      "description": "Many companies struggle with achieving full traceability in their supply chains, especially to the plantation level.",
+      "confidence": 95
+    },
+    {
+      "id": "PP-002",
+      "category": "Smallholder Inclusion",
+      "description": "Efforts to include smallholder farmers are insufficient, leading to potential exclusion from international markets.",
+      "confidence": 90
+    },
+    {
+      "id": "PP-003",
+      "category": "Policy Implementation",
+      "description": "High-quality ZDCs often do not align with areas needing protection due to differences in risk levels and forest vulnerability.",
+      "confidence": 85
+    },
+    {
+      "id": "PP-004",
+      "category": "Compliance Support",
+      "description": "Lack of programs for supporting high-risk mills to comply with zero-deforestation commitments.",
+      "confidence": 90
+    }
+  ]
+}

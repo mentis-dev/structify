@@ -1,0 +1,86 @@
+{
+  "brain_info": {
+    "brain_id": "b532d371-eb19-43da-97ae-61cdc19900f1",
+    "brain_name": "Deforestation - Academia voice"
+  },
+  "document_info": {
+    "id": "6bb6cda1-51ca-4522-8560-3497972ad1b7",
+    "file_name": "08. The Effect of Coal Mining Activities on Soil Surface Temperatures in Forested Areas.pdf",
+    "content_length": 17152
+  },
+  "extracted_stakeholders": [
+    {
+      "name": "Lambung Mangkurat University",
+      "category": "Partner",
+      "role": "Conducting the research on the impact of coal mining activities on soil surface temperatures.",
+      "confidence": 95
+    },
+    {
+      "name": "Doctoral Program of Environmental Science",
+      "category": "Internal",
+      "role": "One of the research departments involved in the study.",
+      "confidence": 90
+    },
+    {
+      "name": "Chemistry Department, Mathematics and Natural Science",
+      "category": "Internal",
+      "role": "Department involved in the research, likely providing scientific analysis and data interpretation.",
+      "confidence": 90
+    },
+    {
+      "name": "Chemical Engineering Department, Faculty of Engineering",
+      "category": "Internal",
+      "role": "Department involved in the research, possibly providing technical insight or data collection methods.",
+      "confidence": 90
+    },
+    {
+      "name": "Faculty of Forestry",
+      "category": "Internal",
+      "role": "Involved due to the focus on forested areas and their ecological roles.",
+      "confidence": 90
+    },
+    {
+      "name": "LANDSAT-8",
+      "category": "Supplier",
+      "role": "Provides satellite imagery data for analysis.",
+      "confidence": 95
+    }
+  ],
+  "extracted_factors": [
+    {
+      "Label": "Increased Land Surface Temperature (LST)",
+      "Type": "Direct Driver",
+      "Tags": "Environmental Impact, Coal Mining",
+      "Description": "A result of coal mining activities, leading to higher surface temperatures in adjacent forested areas.",
+      "confidence": 95
+    },
+    {
+      "Label": "Change in Vegetation (NDVI)",
+      "Type": "Outcome",
+      "Tags": "Ecosystem Change, Remote Sensing",
+      "Description": "Changes in Normalized Difference Vegetation Index indicate alteration in vegetation health and density around mining areas.",
+      "confidence": 95
+    },
+    {
+      "Label": "Soil Degradation",
+      "Type": "Indirect Driver",
+      "Tags": "Environmental Consequences, Mining",
+      "Description": "Mining leads to degradation of soil properties, affecting microbial communities and nutrient levels.",
+      "confidence": 90
+    },
+    {
+      "Label": "Deforestation",
+      "Type": "Outcome",
+      "Tags": "Habitat Loss, Mining",
+      "Description": "An outcome of coal mining activities, leading to the loss of forested areas and disruption of ecosystems.",
+      "confidence": 95
+    },
+    {
+      "Label": "Groundwater Pollution",
+      "Type": "Direct Driver",
+      "Tags": "Water Quality, Mining Activities",
+      "Description": "Coal mining activities pollute groundwater, affecting surrounding ecosystems.",
+      "confidence": 90
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "brain_info": {
+    "brain_id": "ce88cb71-2528-4598-a585-5fa2dfd03319",
+    "brain_name": "AP HK - Financial industry"
+  },
+  "document_info": {
+    "id": "3194caed-ebe3-4eff-baaf-0dbcbba42ea3",
+    "file_name": "2019_HSBC_the-cost-of-eldercare-report-english-8may-v5.pdf",
+    "content_length": 23103
+  },
+  "extracted_stakeholders": [
+    {
+      "name": "The Women's Foundation",
+      "category": "Partner",
+      "role": "An organization collaborating to study the cost and need for eldercare in Hong Kong.",
+      "confidence": 90,
+      "hierarchy_level": "Meso"
+    },
+    {
+      "name": "Sau Po Centre on Ageing at The University of Hong Kong",
+      "category": "Partner",
+      "role": "A research center focused on gerontology, collaborating on shaping policy directions for eldercare.",
+      "confidence": 90,
+      "hierarchy_level": "Meso"
+    },
+    {
+      "name": "HSBC Life",
+      "category": "Partner",
+      "role": "An insurance company collaborating to develop models projecting the cost of eldercare.",
+      "confidence": 90,
+      "hierarchy_level": "Macro"
+    },
+    {
+      "name": "World Health Organization (WHO)",
+      "category": "Influencer",
+      "role": "Provides global data and perspectives on aging and life expectancy.",
+      "confidence": 85,
+      "hierarchy_level": "Macro"
+    },
+    {
+      "name": "Hong Kong Census and Statistics Department",
+      "category": "Regulator",
+      "role": "Provides population data essential for projecting eldercare needs.",
+      "confidence": 95,
+      "hierarchy_level": "Macro"
+    },
+    {
+      "name": "Dr. Vivian Lou",
+      "category": "Influencer",
+      "role": "Director of Sau Po Centre on Ageing, influencing policy directions on eldercare.",
+      "confidence": 90,
+      "hierarchy_level": "Micro"
+    },
+    {
+      "name": "Fiona Nott",
+      "category": "Influencer",
+      "role": "CEO of The Women's Foundation, advocating for policies supporting caregivers.",
+      "confidence": 90,
+      "hierarchy_level": "Micro"
+    },
+    {
+      "name": "Edward Moncreiffe",
+      "category": "Internal",
+      "role": "HK Chief Executive Officer of HSBC Life, supporting eldercare solutions.",
+      "confidence": 90,
+      "hierarchy_level": "Micro"
+    }
+  ],
+  "extracted_factors": [
+    {
+      "Label": "Increasing Elderly Population",
+      "Type": "Exogenous Driver",
+      "Tags": "Demographics, Aging",
+      "Description": "The aging population in Hong Kong is increasing, with projections showing a rise from 1.27 million in 2018 to 2.61 million by 2060. This affects the demand for eldercare services."
+    },
+    {
+      "Label": "Projected Societal Costs",
+      "Type": "Outcome",
+      "Tags": "Financial, Societal Impact",
+      "Description": "The cost of eldercare is rising dramatically, projected to increase from HK$38.8 billion in 2018 to HK$222.4 billion by 2060, affecting society at large."
+    },
+    {
+      "Label": "Workforce Participation Decline",
+      "Type": "Direct Driver",
+      "Tags": "Employment, Gender",
+      "Description": "The need for eldercare is leading to a decline in workforce participation, especially among women, affecting career advancement and gender diversity."
+    },
+    {
+      "Label": "Public-Private Partnerships",
+      "Type": "Direct Driver",
+      "Tags": "Collaboration, Solutions",
+      "Description": "Public-private partnerships are seen as a critical solution for addressing eldercare challenges by providing quality and cost-effective services."
+    },
+    {
+      "Label": "Female Workforce Impact",
+      "Type": "Outcome",
+      "Tags": "Gender, Employment",
+      "Description": "The burden of eldercare disproportionately affects women, leading to lower workforce participation rates and impacting gender diversity in management."
+    }
+  ],
+  "extracted_pain_points": [
+    {
+      "id": "PP-001",
+      "category": "Financial Barriers",
+      "description": "The increasing cost of eldercare is a significant financial burden on society, employers, and individuals.",
+      "confidence": 95,
+      "hierarchy_level": "Macro"
+    },
+    {
+      "id": "PP-002",
+      "category": "Workforce Participation",
+      "description": "High number of caregivers leaving the workforce, especially women, reducing overall workforce participation.",
+      "confidence": 90,
+      "hierarchy_level": "Meso"
+    },
+    {
+      "id": "PP-003",
+      "category": "Gender Disparity",
+      "description": "Caregiving responsibilities are disproportionately affecting women, contributing to gender disparity in workplaces.",
+      "confidence": 85,
+      "hierarchy_level": "Macro"
+    },
+    {
+      "id": "PP-004",
+      "category": "Caregiver Support",
+      "description": "Insufficient support and resources for caregivers, leading to stress and financial strain.",
+      "confidence": 85,
+      "hierarchy_level": "Meso"
+    }
+  ]
+}

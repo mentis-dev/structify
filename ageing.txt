@@ -1,0 +1,38 @@
+Processed 10 documents
+Identified 66 unique stakeholders
+
+Top stakeholders:
+1. Edward Moncreiffe (Internal) - 93% confidence
+2. HSBC Life (International) Limited (Supplier) - 88% confidence
+3. HSBC Life (Internal) - 95% confidence
+4. Fiona Nott (Internal) - 95% confidence
+5. Hong Kong Monetary Authority (HKMA) (Regulator) - 88% confidence
+
+Identified 50 factors
+
+Top factors:
+1. Community Investment (Direct Driver)
+   Hang Seng's strategic focus on community investment underpinned by pillars such as care for the comm...
+2. Climate Change Initiatives (Direct Driver)
+   Hang Seng's commitment to addressing climate change through programs like the SolarCare Programme an...
+3. Youth Education and Empowerment (Direct Driver)
+   Initiatives aimed at developing future skills among youths through financial literacy and career pla...
+4. COVID-19 Community Support (Exogenous Driver)
+   Hang Seng's response to the COVID-19 pandemic through support programs and care packs for the commun...
+5. Digital Inclusion and Access (Indirect Driver)
+   Efforts to enhance digital inclusion through donations of second-hand laptops and digital banking se...
+
+Identified 39 pain points
+
+Top pain points:
+1. PP-001 - Youth Development (85%)
+   Only 30% of high school students are keeping themselves updated with information to pursue future education or career aspirations.
+2. PP-002 - Digital Literacy (80%)
+   Need for enhanced skills in digital literacy among disadvantaged groups.
+3. PP-003 - Climate Action (80%)
+   Continued reliance on climate action initiatives to build community resilience against climate change.
+4. PP-004 - Financial Security (90%)
+   Customers face risks from scams and fraud, requiring vigilance and awareness to protect their finances.
+5. PP-005 - Digital Literacy (85%)
+   Some older customers struggle with digital banking due to unfamiliarity with technology.
+

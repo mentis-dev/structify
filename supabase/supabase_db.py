@@ -7,28 +7,31 @@ from supabase.client import Client, create_client
 from langchain_community.vectorstores import SupabaseVectorStore
 from langchain_core.documents import Document
 from langchain_core.embeddings import Embeddings
-from supabase.client import Client
 from supabase.lib.client_options import ClientOptions
 import warnings
 from langchain_community.embeddings import OpenAIEmbeddings
+
+# These will be set by the run script
+SUPABASE_URL = None
+SUPABASE_SERVICE_KEY = None
 
 def initialize_supabase():
     """
     Initialize Supabase client with proper authentication
     Returns: Supabase client instance
     """
-
-    SUPABASE_URL = "http://188.166.5.51:54321"
-    SUPABASE_SERVICE_KEY ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImV4cCI6MTk4MzgxMjk5Nn0.EGIM96RAZx35lJzdJsyH-qQwv8Hdp7fsn3W0YpN81IU"
-
     if not SUPABASE_URL or not SUPABASE_SERVICE_KEY:
         raise ValueError("Missing required Supabase credentials")
 
-    return create_client(SUPABASE_URL, SUPABASE_SERVICE_KEY, options=ClientOptions(
-    postgrest_client_timeout=1000,
-    storage_client_timeout=1000,
-    schema="public",
-  ))
+    return create_client(
+        SUPABASE_URL, 
+        SUPABASE_SERVICE_KEY, 
+        options=ClientOptions(
+            postgrest_client_timeout=1000,
+            storage_client_timeout=1000,
+            schema="public",
+        )
+    )
 
 
 def initialize_vector_store():
@@ -49,7 +52,6 @@ def initialize_vector_store():
 
 
 def get_workspace_id(supabase, name):
-
     return supabase.table("workspaces").select("*").eq("name", name).execute().data
 
 def get_brains_per_workspace(supabase, workspace_id):
@@ -59,7 +61,17 @@ def get_documents_per_brain(supabase, brain_id):
     return supabase.table("knowledge").select("*").eq("brain_id", brain_id).execute().data
 
 def get_document_data(supabase, document_id, batch_size=50):
-    vector_ids= supabase.table("brains_vectors").select("vector_id").eq("knowledge_id", document_id).order("order", desc=False).execute().data
+    # Handle both single ID and list of IDs
+    if isinstance(document_id, list):
+        all_texts = []
+        for doc_id in document_id:
+            result = get_document_data(supabase, doc_id, batch_size)
+            if result:
+                all_texts.append(result)
+        return "\n\n---\n\n".join(all_texts)
+    
+    # Single document_id
+    vector_ids = supabase.table("brains_vectors").select("vector_id").eq("knowledge_id", document_id).order("order", desc=False).execute().data
 
     texts = []
     for i in range(0, len(vector_ids), batch_size):
@@ -67,11 +79,7 @@ def get_document_data(supabase, document_id, batch_size=50):
         batch_results = supabase.table("vectors").select("content").in_("id", [vector_id['vector_id'] for vector_id in batch]).execute().data
         texts.extend(batch_results)
 
-
-
-
     return "\n".join([text['content'] for text in texts])
-
 
 
 def decode_string(s):
@@ -83,7 +91,7 @@ def decode_string(s):
     """
     # Replace literal "\\n" with "\n"
     s = s.replace('\\n', '\n')
-    # Decode Unicode escape sequences (e.g., "\\u2019" to "’")
+    # Decode Unicode escape sequences (e.g., "\\u2019" to "'")
     s = codecs.decode(s, 'unicode_escape')
     return s
 
@@ -285,17 +293,29 @@ class CustomSupabaseVectorStore(SupabaseVectorStore):
 
 
 def main():
-    from ai_assistant.vector_store.select_data import (
-        get_selection,
-        display_list,
-        filter_unique_items,
-    get_workspaces
-    )
+    try:
+        from select_data import (
+            get_selection,
+            display_list,
+            filter_unique_items,
+            get_workspaces
+        )
+    except ImportError:
+        print("Could not import from select_data, make sure paths are correct")
+        return
+        
     supabase = initialize_supabase()
-
-
-    get_document_data(supabase, 'e846d975-9784-43ef-bf20-7328b5fe301c')
-    # Step 1: Fetch and Display Workspaces
+    
+    # Test getting document data
+    test_doc_id = 'e846d975-9784-43ef-bf20-7328b5fe301c'
+    print(f"Testing document retrieval for ID: {test_doc_id}")
+    try:
+        doc_data = get_document_data(supabase, test_doc_id)
+        print(f"Successfully retrieved document data (length: {len(doc_data) if doc_data else 0})")
+    except Exception as e:
+        print(f"Error retrieving document: {e}")
+    
+    # Rest of the function remains the same
     print("Fetching workspaces...")
     workspaces = get_workspaces(supabase)
     if not workspaces:
@@ -364,9 +384,8 @@ def main():
     for doc in selected_documents:
         print(f"- {doc.get('file_name', 'N/A')} - {doc.get('id', 'N/A')}")
 
-    print(get_document_data(supabase, [doc['id'] for doc in selected_documents]))
-    # Optionally, process the selected documents further here
-    # For example, display their content or perform other operations
+    doc_contents = get_document_data(supabase, [doc['id'] for doc in selected_documents])
+    print(f"Retrieved {len(doc_contents) if doc_contents else 0} characters of document content")
 
 
 if __name__ == "__main__":

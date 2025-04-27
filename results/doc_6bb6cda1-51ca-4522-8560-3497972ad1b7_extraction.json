@@ -1,0 +1,71 @@
+{
+  "brain_info": {
+    "brain_id": "b532d371-eb19-43da-97ae-61cdc19900f1",
+    "brain_name": "Deforestation - Academia voice"
+  },
+  "document_info": {
+    "id": "6bb6cda1-51ca-4522-8560-3497972ad1b7",
+    "file_name": "08. The Effect of Coal Mining Activities on Soil Surface Temperatures in Forested Areas.pdf",
+    "content_length": 17152
+  },
+  "extracted_stakeholders": [
+    {
+      "name": "Lambung Mangkurat University",
+      "category": "Partner",
+      "role": "Conducting research on the environmental impact of coal mining activities.",
+      "confidence": 95
+    },
+    {
+      "name": "LANDSAT",
+      "category": "Supplier",
+      "role": "Providing satellite imagery data for research analytics.",
+      "confidence": 90
+    },
+    {
+      "name": "La Taati",
+      "category": "Internal",
+      "role": "Lead researcher in the study on coal mining activities and their environmental impact.",
+      "confidence": 85
+    }
+  ],
+  "extracted_factors": [
+    {
+      "Label": "Increased Land Surface Temperature",
+      "Type": "Direct Driver",
+      "Tags": "LST, Coal Mining Impact",
+      "Description": "The study shows that coal mining activities directly increase the temperature of the land surface, affecting soil and vegetation."
+    },
+    {
+      "Label": "Deforestation",
+      "Type": "Direct Driver",
+      "Tags": "Forest Loss, Environmental Impact",
+      "Description": "Due to coal mining, forests are cleared, reducing carbon sinks and affecting climate regulation."
+    },
+    {
+      "Label": "Environmental Degradation",
+      "Type": "Outcome",
+      "Tags": "Soil Degradation, Water Pollution",
+      "Description": "Coal mining activities result in soil degradation, water cycle disruption, and pollute groundwater."
+    }
+  ],
+  "extracted_pain_points": [
+    {
+      "id": "PP-001",
+      "category": "Environmental Impact",
+      "description": "Coal mining activities significantly increase surface temperatures, affecting local ecosystems.",
+      "confidence": 90
+    },
+    {
+      "id": "PP-002",
+      "category": "Climate Disruption",
+      "description": "Deforestation due to mining leads to climate imbalance and reduces carbon storage capacity.",
+      "confidence": 85
+    },
+    {
+      "id": "PP-003",
+      "category": "Water Pollution",
+      "description": "Mining activities pollute groundwater, affecting local water quality and biodiversity.",
+      "confidence": 80
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "brain_info": {
+    "brain_id": "b532d371-eb19-43da-97ae-61cdc19900f1",
+    "brain_name": "Deforestation - Academia voice"
+  },
+  "document_info": {
+    "id": "867a7370-d777-4d6a-9472-65d2e89afac5",
+    "file_name": "61. 7880-infobrief.pdf",
+    "content_length": 53852
+  },
+  "extracted_stakeholders": [
+    {
+      "name": "CIFOR (Center for International Forestry Research)",
+      "category": "Influencer",
+      "role": "Conducts research and provides information on forest research and REDD+ implementation.",
+      "confidence": 95
+    },
+    {
+      "name": "KLHK (Ministry of Environment and Forestry)",
+      "category": "Internal",
+      "role": "Responsible for national REDD+ strategies and implementation",
+      "confidence": 95
+    },
+    {
+      "name": "Norwegian Government",
+      "category": "Partner",
+      "role": "Provides financial support for REDD+ initiatives in Indonesia",
+      "confidence": 85
+    },
+    {
+      "name": "Green Climate Fund (GCF)",
+      "category": "Partner",
+      "role": "Provides performance-based payments for emissions reductions.",
+      "confidence": 85
+    },
+    {
+      "name": "United Nations Framework Convention on Climate Change (UNFCCC)",
+      "category": "Regulator",
+      "role": "Sets international framework and goals for climate actions, including REDD+",
+      "confidence": 90
+    },
+    {
+      "name": "BP REDD+",
+      "category": "Internal",
+      "role": "National REDD+ agency in Indonesia",
+      "confidence": 90
+    },
+    {
+      "name": "Peat Restoration Agency (BRG)",
+      "category": "Internal",
+      "role": "Agency focused on peatland restoration following 2015 fires",
+      "confidence": 85
+    },
+    {
+      "name": "East Kalimantan Provincial Government",
+      "category": "Internal",
+      "role": "Implementing province-wide emissions reduction programs",
+      "confidence": 90
+    },
+    {
+      "name": "Governor's Climate and Forest Task Force (GCF-TF)",
+      "category": "Partner",
+      "role": "Supports jurisdictional REDD+ programs across various regions",
+      "confidence": 85
+    },
+    {
+      "name": "World Bank-led Forest Carbon Partnership Facility (FCPF)",
+      "category": "Partner",
+      "role": "Supports forest carbon projects and emissions reduction initiatives",
+      "confidence": 85
+    }
+  ],
+  "extracted_factors": [
+    {
+      "Label": "Political Turnover and REDD+ Continuity",
+      "Type": "Indirect Driver",
+      "Tags": "Political Stability, Policy Longevity",
+      "Description": "The implementation of REDD+ is susceptible to changes in political administration, hindering continuity and progress.",
+      "confidence": 90
+    },
+    {
+      "Label": "Institutionalization of REDD+",
+      "Type": "Direct Driver",
+      "Tags": "Policy Integration, Regulatory Framework",
+      "Description": "REDD+ needs to be embedded in national and regional laws and regulations to ensure its sustainability and effectiveness.",
+      "confidence": 85
+    },
+    {
+      "Label": "Socioeconomic and Political Drivers of Deforestation",
+      "Type": "Exogenous Driver",
+      "Description": "Underlying drivers such as agricultural expansion and unclear land rights contribute to deforestation and need addressing for REDD+ to be successful.",
+      "confidence": 95
+    },
+    {
+      "Label": "Global Climate Architecture and REDD+",
+      "Type": "Exogenous Driver",
+      "Tags": "Paris Agreement, NDCs",
+      "Description": "Global frameworks like the Paris Agreement influence national REDD+ commitments and actions.",
+      "confidence": 90
+    },
+    {
+      "Label": "REDD+ Payments for Emission Reductions",
+      "Type": "Outcome",
+      "Tags": "Financial Incentives, Emissions Reductions",
+      "Description": "Indonesia's receipt of REDD+ payments for reduced emissions indicates measurable progress in emissions reductions.",
+      "confidence": 85
+    },
+    {
+      "Label": "Business-as-Usual Practices",
+      "Type": "Direct Driver",
+      "Description": "The persistence of traditional land-use practices that favor deforestation over sustainable conservation efforts.",
+      "confidence": 90
+    }
+  ],
+  "extracted_pain_points": [
+    {
+      "id": "PP-001",
+      "category": "Political Instability",
+      "description": "REDD+ initiatives are vulnerable to political changes, which can lead to organizational dissolution or changes in policy priorities.",
+      "confidence": 90
+    },
+    {
+      "id": "PP-002",
+      "category": "Socioeconomic Barriers",
+      "description": "Insufficient addressing of socioeconomic drivers of deforestation poses a challenge for REDD+ mechanisms.",
+      "confidence": 85
+    },
+    {
+      "id": "PP-003",
+      "category": "Technical Capacity Challenges",
+      "description": "Weak human and technical capacity for monitoring and reporting REDD+ outcomes at subnational levels.",
+      "confidence": 85
+    },
+    {
+      "id": "PP-004",
+      "category": "Legal and Land Rights Issues",
+      "description": "Unclear land rights and allotments impede REDD+ effectiveness and lead to conflicts.",
+      "confidence": 90
+    }
+  ]
+}

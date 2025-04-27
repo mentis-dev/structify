@@ -1,0 +1,131 @@
+{
+  "brain_info": {
+    "brain_id": "b532d371-eb19-43da-97ae-61cdc19900f1",
+    "brain_name": "Deforestation - Academia voice"
+  },
+  "document_info": {
+    "id": "8b3b3207-5bfe-47e9-ab0b-84150660e68d",
+    "file_name": "09. Impact of Increasing Nickel Production on Forest and Environment.pdf",
+    "content_length": 100972
+  },
+  "extracted_stakeholders": [
+    {
+      "name": "University of Lampung",
+      "category": "Internal",
+      "role": "Provides academic and research support for environmental studies",
+      "confidence": 95.0
+    },
+    {
+      "name": "Regional Research and Development Agency, Lampung Province",
+      "category": "Internal",
+      "role": "Conducts regional research and development",
+      "confidence": 90.0
+    },
+    {
+      "name": "PT Vale Indonesia",
+      "category": "Competitor",
+      "role": "Global leader in nickel ore production, involved in nickel mining in Indonesia",
+      "confidence": 85.0
+    },
+    {
+      "name": "Kementerian Energi dan Sumber Daya Mineral (ESDM)",
+      "category": "Regulator",
+      "role": "Provides regulations and licenses for mining operations",
+      "confidence": 95.0
+    },
+    {
+      "name": "PT Aneka Tambang Tbk",
+      "category": "Supplier",
+      "role": "Operates smelters and involved in exports of nickel",
+      "confidence": 90.0
+    },
+    {
+      "name": "Indonesian Government",
+      "category": "Regulator",
+      "role": "Regulates mining activities and national policies",
+      "confidence": 95.0
+    },
+    {
+      "name": "WALHI",
+      "category": "Influencer",
+      "role": "Environmental organization addressing environmental impacts of mining",
+      "confidence": 90.0
+    },
+    {
+      "name": "International Energy Association (IEA)",
+      "category": "Influencer",
+      "role": "Provides global energy demand forecasts",
+      "confidence": 85.0
+    }
+  ],
+  "extracted_factors": [
+    {
+      "Label": "Nickel Mining Expansion",
+      "Type": "Direct Driver",
+      "Tags": "Mining Activities, Nickel Production",
+      "Description": "The expansion of nickel mining operations across Indonesia to meet global demand for nickel."
+    },
+    {
+      "Label": "Deforestation due to Nickel Mining",
+      "Type": "Outcome",
+      "Tags": "Environmental Impact, Forest Degradation",
+      "Description": "Increased deforestation as a result of expanded nickel mining activities, affecting the forest ecosystem."
+    },
+    {
+      "Label": "Pollution from Mining Activities",
+      "Type": "Direct Driver",
+      "Tags": "Air Pollution, Water Pollution",
+      "Description": "Pollution of air, water, and soil due to nickel mining processes, impacting local habitats and human health."
+    },
+    {
+      "Label": "Demand for Electric Vehicle Batteries",
+      "Type": "Exogenous Driver",
+      "Tags": "Global Nickel Demand, Electrification",
+      "Description": "The rising global demand for nickel, especially for use in electric vehicle batteries."
+    },
+    {
+      "Label": "Environmental Degradation",
+      "Type": "Outcome",
+      "Tags": "Habitat Loss, Biodiversity Threat",
+      "Description": "The degradation of natural ecosystems and biodiversity loss due to excessive nickel mining."
+    },
+    {
+      "Label": "Regulatory Enforcement",
+      "Type": "Indirect Driver",
+      "Tags": "Legal Framework, Mining Regulations",
+      "Description": "The role of regulations and their enforcement in managing mining activities and ensuring environmental protection."
+    }
+  ],
+  "extracted_pain_points": [
+    {
+      "id": "PP-001",
+      "category": "Environmental Impact",
+      "description": "Deforestation and habitat loss due to expanding nickel mining activities.",
+      "confidence": 95.0
+    },
+    {
+      "id": "PP-002",
+      "category": "Pollution",
+      "description": "Water and soil pollution from mining activities impacting local communities and agriculture.",
+      "confidence": 90.0
+    },
+    {
+      "id": "PP-003",
+      "category": "Regulatory Challenges",
+      "description": "Insufficient enforcement of regulations leading to uncontrolled environmental damage.",
+      "confidence": 85.0
+    },
+    {
+      "id": "PP-004",
+      "category": "Social Impact",
+      "description": "Social displacement and disruption of local communities due to mining concessions.",
+      "confidence": 88.0
+    },
+    {
+      "id": "PP-005",
+      "category": "Health Issues",
+      "description": "Health risks from air pollution and exposure to toxic metals due to mining activities.",
+      "confidence": 90.0
+    }
+  ]
+}

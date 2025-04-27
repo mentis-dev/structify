@@ -1,0 +1,117 @@
+{
+  "brain_info": {
+    "brain_id": "ce88cb71-2528-4598-a585-5fa2dfd03319",
+    "brain_name": "AP HK - Financial industry"
+  },
+  "document_info": {
+    "id": "db2e2b97-a82e-4998-ad17-f073bdc15404",
+    "file_name": "2022_SC_Sustainable-Banking-Report-22.pdf",
+    "content_length": 122142
+  },
+  "extracted_stakeholders": [
+    {
+      "name": "Retail Investors",
+      "category": "Consumer",
+      "role": "Provide capital for sustainable investments",
+      "confidence": 90,
+      "hierarchy_level": "Micro"
+    },
+    {
+      "name": "Standard Chartered",
+      "category": "Internal",
+      "role": "Financial institution supporting sustainable investments",
+      "confidence": 95,
+      "hierarchy_level": "Meso"
+    },
+    {
+      "name": "Marc Van de Walle",
+      "category": "Internal",
+      "role": "Global Head of Wealth Management at Standard Chartered",
+      "confidence": 95,
+      "hierarchy_level": "Micro"
+    },
+    {
+      "name": "Governments in 10 Growth Markets",
+      "category": "Regulator",
+      "role": "Facilitate and regulate sustainable investments",
+      "confidence": 90,
+      "hierarchy_level": "Macro"
+    },
+    {
+      "name": "ESG Data Providers",
+      "category": "Supplier",
+      "role": "Offer ESG data for investment decisions",
+      "confidence": 85,
+      "hierarchy_level": "Meso"
+    },
+    {
+      "name": "Financial Industry",
+      "category": "Partner",
+      "role": "Collaboration with governments and organizations to improve sustainable investment market",
+      "confidence": 88,
+      "hierarchy_level": "Meso"
+    }
+  ],
+  "extracted_factors": [
+    {
+      "Label": "USD8.2tn Mobilization",
+      "Type": "Outcome",
+      "Tags": "sustainable investments",
+      "Description": "Potential to mobilize USD8.2tn of retail investor capital into sustainable investments to address ESG objectives."
+    },
+    {
+      "Label": "Climate Change Concern",
+      "Type": "Direct Driver",
+      "Tags": "environment, carbon emissions",
+      "Description": "Top priority for investors, driving demand for investments in climate-themed funds and solutions."
+    },
+    {
+      "Label": "Transparency and Reporting",
+      "Type": "Direct Driver",
+      "Tags": "ESG compliance, reporting",
+      "Description": "Need for more transparency in ESG investment selection and performance reporting to enhance investor confidence."
+    },
+    {
+      "Label": "Market Barriers",
+      "Type": "Direct Driver",
+      "Tags": "accessibility, comprehension",
+      "Description": "Challenges in accessing sustainable investments include lack of transparency, complex information, and limited comparability."
+    },
+    {
+      "Label": "Growing Wealth",
+      "Type": "Exogenous Driver",
+      "Tags": "economic growth",
+      "Description": "Increasing personal wealth in key markets that can be channeled into sustainable investments."
+    }
+  ],
+  "extracted_pain_points": [
+    {
+      "id": "PP-001",
+      "category": "Financial Barriers",
+      "description": "Challenges in accessing sustainable investments due to lack of transparency and complex information.",
+      "confidence": 85,
+      "hierarchy_level": "Meso"
+    },
+    {
+      "id": "PP-002",
+      "category": "ESG Reporting",
+      "description": "Need for standardization in ESG data to facilitate investor decision-making and prevent greenwashing.",
+      "confidence": 90,
+      "hierarchy_level": "Macro"
+    },
+    {
+      "id": "PP-003",
+      "category": "Market Accessibility",
+      "description": "Limited sustainable investment opportunities available to retail investors affecting adoption rates.",
+      "confidence": 88,
+      "hierarchy_level": "Meso"
+    },
+    {
+      "id": "PP-004",
+      "category": "Investor Education",
+      "description": "Need for enhanced investor education to improve comprehension of sustainable investing benefits.",
+      "confidence": 80,
+      "hierarchy_level": "Micro"
+    }
+  ]
+}
