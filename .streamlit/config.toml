@@ -1,0 +1,10 @@
+port = 8502
+address = "0.0.0.0"
+baseUrlPath = ""
+enableCORS = true
+enableXsrfProtection = false  # Try disabling if needed
+
+
+[browser]
+serverAddress = "http://167.71.14.220/"
+serverPort = 8502
