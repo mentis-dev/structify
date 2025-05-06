@@ -1,16 +1,18 @@
+import asyncio
+
 from langchain.document_loaders import PyPDFLoader
 from dotenv import load_dotenv
 
-from raptor.models import Query
+from app.models.pydantic_models import Query
 # Import the FAISS-based VectorStoreManager instead of Pinecone version
-from app.vectorstore_manager import VectorStoreManager
+from app.vectorstore_manager_ import VectorStoreManager
 
 load_dotenv()
 # Import your store-agnostic RaptorRetriever code
-from raptor.base_pinecone import RaptorRetriever, QueryModes
+from raptor.base_faiss import RaptorRetriever, QueryModes
 
 # 1. Load PDF documents
-pdf_loader = PyPDFLoader("./raptor_paper.pdf")
+pdf_loader = PyPDFLoader("app/raptor_paper.pdf")
 raw_docs = pdf_loader.load()
 ids = [d.metadata.setdefault("document_id", str(i)) for (i, d) in enumerate(raw_docs)]
 
@@ -35,7 +37,7 @@ raptor_retriever = RaptorRetriever(
 # 4. Insert new documents (hierarchical clustering + summarization)
 
 # Uncomment to insert documents
-#asyncio.run(raptor_retriever.insert(raw_docs[3:], namespace="raptor-ns", fresh_start=True))
+asyncio.run(raptor_retriever.insert(raw_docs[3:], namespace="raptor-ns", fresh_start=True))
 
 # 5. Retrieve using collapsed mode
 collapsed_docs = raptor_retriever.retrieve(Query(text="What is Raptor?"), namespace="raptor-ns")

@@ -15,7 +15,7 @@ from langchain_core.prompts import ChatPromptTemplate
 
 from raptor.clustering import get_clusters  # your GMM + UMAP clustering code
 # Import the FAISS-based VectorStoreManager instead of Pinecone version
-from app.vectorstore_manager import VectorStoreManager, Query  # Your custom manager
+from app.vectorstore_manager_ import VectorStoreManager, Query  # Your custom manager
 from tenacity import retry, stop_after_attempt, wait_fixed
 
 DEFAULT_SUMMARY_PROMPT = (
