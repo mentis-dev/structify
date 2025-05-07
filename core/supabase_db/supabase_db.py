@@ -60,26 +60,63 @@ def get_brains_per_workspace(supabase, workspace_id):
 def get_documents_per_brain(supabase, brain_id):
     return supabase.table("knowledge").select("*").eq("brain_id", brain_id).execute().data
 
-def get_document_data(supabase, document_id, batch_size=50):
+
+def get_document_data(supabase, document_id, batch_size=50, return_chunks=False):
+    """
+    Get document data from Supabase, either as combined text or as individual chunks.
+
+    Args:
+        supabase: Supabase client instance
+        document_id: ID of the document or list of document IDs
+        batch_size: Number of vectors to fetch in each batch
+        return_chunks: If True, returns a list of chunks instead of combined text
+
+    Returns:
+        If return_chunks=False (default): Combined text content as a string
+        If return_chunks=True: List of individual text chunks
+    """
     # Handle both single ID and list of IDs
     if isinstance(document_id, list):
-        all_texts = []
-        for doc_id in document_id:
-            result = get_document_data(supabase, doc_id, batch_size)
-            if result:
-                all_texts.append(result)
-        return "\n\n---\n\n".join(all_texts)
-    
+        if return_chunks:
+            all_chunks = {}
+            for doc_id in document_id:
+                result = get_document_data(supabase, doc_id, batch_size, return_chunks=True)
+                if result:
+                    all_chunks[doc_id] = result
+            return all_chunks
+        else:
+            all_texts = []
+            for doc_id in document_id:
+                result = get_document_data(supabase, doc_id, batch_size)
+                if result:
+                    all_texts.append(result)
+            return "\n\n---\n\n".join(all_texts)
+
     # Single document_id
-    vector_ids = supabase.table("brains_vectors").select("vector_id").eq("knowledge_id", document_id).order("order", desc=False).execute().data
+    vector_ids = supabase.table("brains_vectors").select("vector_id").eq("knowledge_id", document_id).order("order",
+                                                                                                            desc=False).execute().data
 
-    texts = []
-    for i in range(0, len(vector_ids), batch_size):
-        batch = vector_ids[i:i+batch_size]
-        batch_results = supabase.table("vectors").select("content").in_("id", [vector_id['vector_id'] for vector_id in batch]).execute().data
-        texts.extend(batch_results)
+    if return_chunks:
+        # Return list of chunks
+        chunks = []
+        for i in range(0, len(vector_ids), batch_size):
+            batch = vector_ids[i:i + batch_size]
+            batch_results = supabase.table("vectors").select("content").in_("id",
+                                                                            [vector_id['vector_id'] for vector_id in
+                                                                             batch]).execute().data
+            chunks.extend([text['content'] for text in batch_results])
+        return chunks
+    else:
+        # Return combined text
+        texts = []
+        for i in range(0, len(vector_ids), batch_size):
+            batch = vector_ids[i:i + batch_size]
+            batch_results = supabase.table("vectors").select("content").in_("id",
+                                                                            [vector_id['vector_id'] for vector_id in
+                                                                             batch]).execute().data
+            texts.extend(batch_results)
 
-    return "\n".join([text['content'] for text in texts])
+        return "\n".join([text['content'] for text in texts])
 
 
 def decode_string(s):

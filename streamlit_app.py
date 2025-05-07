@@ -230,16 +230,6 @@ with st.sidebar:
     st.session_state.use_chunks = st.checkbox("Use Pre-chunked Documents", value=True,
                                               help="Use the pre-chunked documents from Supabase instead of treating each document as a whole")
 
-    # Extraction configuration options
-    st.subheader("Extraction Configuration")
-
-    # Mode selection for extraction
-    st.session_state.extraction_mode = st.radio(
-        "Extraction Mode",
-        ["Selected Documents", "Direct Text Input"],
-        help="Choose to analyze documents from Supabase or directly input text"
-    )
-
     # Model selection for extraction
     st.session_state.extraction_model = st.selectbox(
         "Extraction Model",

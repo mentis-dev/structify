@@ -28,7 +28,7 @@ from langchain_core.prompts import ChatPromptTemplate
 # We'll need to add proper protection to this module as well
 from tenacity import retry, stop_after_attempt, wait_fixed, wait_exponential
 
-from big_raptor.raptor_visualization_ import RaptorVisualizationHandler
+#from big_raptor.raptor_visualization import RaptorVisualizationHandler
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
