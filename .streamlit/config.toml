@@ -1,11 +1,13 @@
-[server]
-port = 8502
-address = "0.0.0.0"
-baseUrlPath = ""
-enableCORS = true
-enableXsrfProtection = false  # Try disabling if needed
-
-
 [browser]
-serverAddress = "http://167.71.14.220/"
-serverPort = 8502
+gatherUsageStats = false
+serverAddress = "localhost"
+
+[server]
+enableCORS = false
+enableXsrfProtection = false
+
+[server.headless]
+enableCORS = false
+
+[server.customHeaders]
+Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://cdn.plot.ly; style-src 'self' 'unsafe-inline'"

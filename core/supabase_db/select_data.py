@@ -12,9 +12,6 @@ from supabase.lib.client_options import ClientOptions
 
 # Load environment variables
 load_dotenv()
-
-# Set Supabase credentials
-import supabase_db
 SUPABASE_URL = os.getenv("SUPABASE_URL")
 SUPABASE_SERVICE_KEY = os.getenv("SUPABASE_SERVICE_KEY")
 
@@ -46,7 +43,7 @@ def initialize_vector_store():
     supabase_client = initialize_supabase()
 
     # This is assuming CustomSupabaseVectorStore is imported correctly
-    from ai_assistant.vector_store.supabase_db import CustomSupabaseVectorStore
+    #from ai_assistant.vector_store.supabase_db import CustomSupabaseVectorStore
     
     # Create custom vector store
     vector_store = CustomSupabaseVectorStore(

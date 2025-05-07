@@ -1,18 +1,16 @@
 import json
 import os
-import datetime
-from typing import Any, Dict, List, Optional, cast
+from typing import Any, Dict, Optional, cast
 
-from langchain_core.messages import AIMessage, BaseMessage, HumanMessage
+from langchain_core.messages import AIMessage, HumanMessage
 from langchain_core.runnables import RunnableConfig
 from langgraph.graph import StateGraph
-from openai import AsyncOpenAI
 
-from enrichment.configuration import Configuration
-from enrichment.state import InputState, OutputState, State
-from enrichment.utils import init_model
-from select_data import initialize_supabase, get_brains_per_workspace, get_documents_per_brain
-from supabase_db import get_vectors_by_knowledge_ids
+from core.configuration import Configuration
+from core.state import State
+from core.utils import init_model
+from core.supabase_db.select_data import initialize_supabase, get_brains_per_workspace, get_documents_per_brain
+from core.supabase_db.supabase_db import get_vectors_by_knowledge_ids
 
 # Default stakeholder extraction schema
 DEFAULT_SCHEMA = {
