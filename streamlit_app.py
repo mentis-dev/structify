@@ -9,8 +9,9 @@ from dotenv import load_dotenv
 # Import raptor components
 from big_raptor.base import QueryModes
 from big_raptor.raptor_visualization import display_raptor_visualization, generate_hierarchy_data
-# Import the new StakeholderAnalyzer
+# Import the StakeholderAnalyzer and new StakeholderValidator
 from core.raptor_stakeholder_analyzer import RaptorStakeholderAnalyzer, analyze_raptor_level, analyze_raptor_cluster
+from core.stakeholder_validator import validate_stakeholders  # NEW IMPORT
 from services.document_service import convert_supabase_to_langchain
 from services.raptor_service import RaptorService
 # Import our services
@@ -115,6 +116,18 @@ if "user_feedback" not in st.session_state:
 if "show_feedback" not in st.session_state:
     st.session_state.show_feedback = True
 
+# NEW: Session state for stakeholder validation
+if "show_validation_options" not in st.session_state:
+    st.session_state.show_validation_options = True  # Enable by default
+
+if "validation_results" not in st.session_state:
+    st.session_state.validation_results = None
+
+if "validation_in_progress" not in st.session_state:
+    st.session_state.validation_in_progress = False
+
+if "original_results" not in st.session_state:
+    st.session_state.original_results = None
 
 # Callback for workspace selection changes
 def on_workspace_change():
@@ -228,7 +241,7 @@ with st.sidebar:
 
     # Option to use pre-chunked documents
     st.session_state.use_chunks = st.checkbox("Use Pre-chunked Documents", value=True,
-                                              help="Use the pre-chunked documents from Supabase instead of treating each document as a whole")
+                                            help="Use the pre-chunked documents from Supabase instead of treating each document as a whole")
 
     # Model selection for extraction
     st.session_state.extraction_model = st.selectbox(
@@ -245,6 +258,16 @@ with st.sidebar:
         "Enable User Feedback Interface",
         value=st.session_state.show_feedback,
         help="Show checkboxes and comment fields for providing feedback on extraction results"
+    )
+
+    # Validation options
+    st.subheader("Validation Options")
+    
+    # Show validation options toggle
+    st.session_state.show_validation_options = st.checkbox(
+        "Enable Stakeholder Validation",
+        value=st.session_state.show_validation_options,
+        help="Automatically validate stakeholders by finding duplicates and normalizing categories"
     )
 
     # Extraction schema configuration
@@ -302,6 +325,7 @@ with st.sidebar:
         **Extraction Mode:** {st.session_state.extraction_mode}
         **Extraction Model:** {st.session_state.extraction_model}
         **Feedback Interface:** {"Enabled" if st.session_state.show_feedback else "Disabled"}
+        **Validation Interface:** {"Enabled" if st.session_state.show_validation_options else "Disabled"}
         """)
 
     st.subheader("RAPTOR Analysis Options")
@@ -359,7 +383,7 @@ with st.sidebar:
 
                         if clusters:
                             cluster_options = [f"Cluster {i + 1}: {c['content_preview'][:30]}..." for i, c in
-                                               enumerate(clusters)]
+                                            enumerate(clusters)]
                             selected_cluster_idx = st.sidebar.selectbox(
                                 "Select Cluster",
                                 options=range(len(cluster_options)),
@@ -825,7 +849,7 @@ with tab4:
 
                 # Show selected cluster info if in Single Cluster mode
                 if st.session_state.extraction_mode == "RAPTOR Clusters" and hasattr(st.session_state,
-                                                                                     "selected_cluster") and st.session_state.selected_cluster:
+                                                                                    "selected_cluster") and st.session_state.selected_cluster:
                     st.info(f"Selected cluster: {st.session_state.selected_cluster}")
 
                 # Information about how RAPTOR analysis works
@@ -882,9 +906,9 @@ with tab4:
             for i, text_input in enumerate(st.session_state.text_inputs):
                 with st.expander(f"{i + 1}. {text_input['name']}", expanded=False):
                     st.text_area(f"Content", text_input["text"][:1000] +
-                                 ("..." if len(text_input["text"]) > 1000 else ""),
-                                 height=150,
-                                 key=f"text_view_{i}")
+                                ("..." if len(text_input["text"]) > 1000 else ""),
+                                height=150,
+                                key=f"text_view_{i}")
 
                     if st.button(f"Remove", key=f"remove_{i}"):
                         st.session_state.text_inputs.pop(i)
@@ -902,6 +926,260 @@ with tab4:
     st.subheader("Run Extraction Analysis")
 
     col1, col2 = st.columns(2)
+    
+    with col1:
+        # Option to run extraction - adapt based on mode
+        if st.button("Run Extraction Analysis"):
+            if st.session_state.extraction_mode == "RAPTOR Clusters":
+                # RAPTOR-based extraction
+                if st.session_state.raptor_service is None:
+                    st.warning("Raptor service is not initialized")
+                elif st.session_state.indexed_status == "Not indexed":
+                    st.warning(
+                        "No documents have been indexed in RAPTOR. Please index documents in the Raptor Processing tab or load an existing index first.")
+                if st.session_state.raptor_service is None:
+                    st.warning("Raptor service is not initialized")
+                else:
+                    try:
+                        with st.spinner("Running RAPTOR extraction analysis..."):
+                            # Get the selected model from the sidebar
+                            model_name = st.session_state.get("extraction_model", "openai/gpt-4o")
+
+                            # Create a directory for extraction results if it doesn't exist
+                            output_dir = "raptor_extraction"
+                            os.makedirs(output_dir, exist_ok=True)
+
+                            # Determine analysis type
+                            raptor_analysis_type = "Single Cluster" if hasattr(st.session_state,
+                                                                              "selected_cluster") and st.session_state.selected_cluster else "All Clusters at Level"
+
+                            if raptor_analysis_type == "Single Cluster" and st.session_state.selected_cluster:
+                                # Analyze the selected cluster
+                                result = async_to_sync(analyze_raptor_cluster(
+                                    raptor_service=st.session_state.raptor_service,
+                                    cluster_id=st.session_state.selected_cluster,
+                                    cluster_name=f"Cluster {st.session_state.selected_cluster}",
+                                    model=model_name,
+                                    output_dir=output_dir,
+                                    namespace=st.session_state.raptor_service.namespace,
+                                    verbose=True
+                                ))
+
+                                if result.get('error'):
+                                    st.error(f"Error analyzing cluster: {result.get('error')}")
+                                else:
+                                    # Store original results
+                                    st.session_state.extraction_results = {st.session_state.selected_cluster: result}
+                                    st.session_state.original_results = result.copy()
+                                    
+                                    # Automatically run validation if enabled
+                                    if st.session_state.show_validation_options and "stakeholders" in result:
+                                        with st.spinner("Validating stakeholders..."):
+                                            try:
+                                                # Run validation
+                                                validation_results = async_to_sync(validate_stakeholders(
+                                                    stakeholders=result["stakeholders"],
+                                                    model=model_name,
+                                                    output_dir=output_dir,
+                                                    verbose=True
+                                                ))
+                                                
+                                                # Store validation results
+                                                st.session_state.validation_results = validation_results
+                                                
+                                                # Update stakeholders in the aggregated results
+                                                result["stakeholders"] = validation_results.get("stakeholders", [])
+                                                result["stakeholder_validation"] = {
+                                                    'original_count': validation_results.get("original_stakeholders", 0),
+                                                    'validated_count': validation_results.get("validated_stakeholders", 0),
+                                                    'duplicates_merged': validation_results.get("duplicates_merged", 0),
+                                                    'category_changes': validation_results.get("category_changes", 0)
+                                                }
+                                            except Exception as e:
+                                                st.warning(f"Stakeholder validation failed: {str(e)}")
+                                    
+                                    # Store final results
+                                    st.session_state.aggregated_results = result
+
+                                    # Initialize feedback for the results
+                                    initialize_feedback_for_results(result)
+
+                                    st.success(
+                                        f"✅ Extraction analysis completed for cluster {st.session_state.selected_cluster}")
+                                    try:
+                                        # Auto-save the results
+                                        saved_file = save_raptor_analysis_results(
+                                            results=result,
+                                            cluster_id=st.session_state.selected_cluster
+                                        )
+                                        st.info(f"Results automatically saved to: {saved_file}")
+                                    except Exception as e:
+                                        st.warning(f"Could not auto-save results: {str(e)}")
+                            else:
+                                # Analyze all clusters at the specified level
+                                level = st.session_state.raptor_level
+
+                                # Run the analysis
+                                results = async_to_sync(analyze_raptor_level(
+                                    raptor_service=st.session_state.raptor_service,
+                                    level=level,
+                                    model=model_name,
+                                    output_dir=output_dir,
+                                    namespace=st.session_state.raptor_service.namespace,
+                                    verbose=True,
+                                    aggregate=True
+                                ))
+
+                                if results.get('error'):
+                                    st.error(f"Error analyzing level {level}: {results.get('error')}")
+                                else:
+                                    # Store original results
+                                    st.session_state.extraction_results = results.get('individual_results', {})
+                                    aggregated_results = results.get('aggregated_results', {})
+                                    st.session_state.original_results = aggregated_results.copy()
+                                    
+                                    # Automatically run validation if enabled
+                                    if st.session_state.show_validation_options and "stakeholders" in aggregated_results:
+                                        with st.spinner("Validating stakeholders..."):
+                                            try:
+                                                # Run validation
+                                                validation_results = async_to_sync(validate_stakeholders(
+                                                    stakeholders=aggregated_results["stakeholders"],
+                                                    model=model_name,
+                                                    output_dir=output_dir,
+                                                    verbose=True
+                                                ))
+                                                
+                                                # Store validation results
+                                                st.session_state.validation_results = validation_results
+                                                
+                                                # Update stakeholders in the aggregated results
+                                                aggregated_results["stakeholders"] = validation_results.get("stakeholders", [])
+                                                aggregated_results["stakeholder_validation"] = {
+                                                    'original_count': validation_results.get("original_stakeholders", 0),
+                                                    'validated_count': validation_results.get("validated_stakeholders", 0),
+                                                    'duplicates_merged': validation_results.get("duplicates_merged", 0),
+                                                    'category_changes': validation_results.get("category_changes", 0)
+                                                }
+                                            except Exception as e:
+                                                st.warning(f"Stakeholder validation failed: {str(e)}")
+                                    
+                                    # Store final results
+                                    st.session_state.aggregated_results = aggregated_results
+
+                                    # Initialize feedback for the results
+                                    initialize_feedback_for_results(st.session_state.aggregated_results)
+
+                                    st.success(
+                                        f"✅ Extraction analysis completed for {results.get('clusters_analyzed', 0)} clusters at level {level}")
+                                    try:
+                                        # Auto-save the results
+                                        saved_file = save_raptor_analysis_results(
+                                            results=results,
+                                            level=level
+                                        )
+                                        st.info(f"Results automatically saved to: {saved_file}")
+                                    except Exception as e:
+                                        st.warning(f"Could not auto-save results: {str(e)}")
+                    except Exception as e:
+                        st.error(f"Error running RAPTOR extraction analysis: {str(e)}")
+            else:
+                # Original code for document/text-based extraction
+                success = run_extraction_analysis()
+                
+                if success:
+                    # Store original results
+                    if st.session_state.aggregated_results:
+                        st.session_state.original_results = st.session_state.aggregated_results.copy()
+                    
+                    # Automatically run validation if enabled
+                    if (st.session_state.show_validation_options and 
+                        st.session_state.aggregated_results and 
+                        "stakeholders" in st.session_state.aggregated_results):
+                        
+                        with st.spinner("Validating stakeholders..."):
+                            try:
+                                # Get the selected model from the sidebar
+                                model_name = st.session_state.get("extraction_model", "openai/gpt-4o")
+                                
+                                # Run validation
+                                validation_results = async_to_sync(validate_stakeholders(
+                                    stakeholders=st.session_state.aggregated_results["stakeholders"],
+                                    model=model_name,
+                                    output_dir="raptor_extraction",
+                                    verbose=True
+                                ))
+                                
+                                # Store validation results
+                                st.session_state.validation_results = validation_results
+                                
+                                # Update stakeholders in the aggregated results
+                                st.session_state.aggregated_results["stakeholders"] = validation_results.get("stakeholders", [])
+                                st.session_state.aggregated_results["stakeholder_validation"] = {
+                                    'original_count': validation_results.get("original_stakeholders", 0),
+                                    'validated_count': validation_results.get("validated_stakeholders", 0),
+                                    'duplicates_merged': validation_results.get("duplicates_merged", 0),
+                                    'category_changes': validation_results.get("category_changes", 0)
+                                }
+                            except Exception as e:
+                                st.warning(f"Stakeholder validation failed: {str(e)}")
+                    
+                    st.success("✅ Extraction analysis completed successfully")
+                    st.session_state.active_extraction_tab = "Stakeholders"
+                else:
+                    st.error("❌ Extraction analysis failed")
+
+    with col2:
+        # Create a container for load options
+        load_container = st.container()
+
+        # Option to load existing extraction results
+        if st.button("Load Existing Results"):
+            # Show a selection interface
+            with load_container:
+                st.info("Select a saved analysis to load:")
+
+                # List all saved analyses
+                saved_analyses = list_saved_raptor_analyses()
+
+                if not saved_analyses:
+                    st.warning("No saved analyses found.")
+                else:
+                    # Create a selectbox with analysis descriptions
+                    analysis_options = [analysis["description"] for analysis in saved_analyses]
+                    selected_index = st.selectbox(
+                        "Select analysis to load",
+                        options=range(len(analysis_options)),
+                        format_func=lambda i: analysis_options[i]
+                    )
+
+                    # Load button
+                    if st.button("Load Selected Analysis"):
+                        selected_analysis = saved_analyses[selected_index]
+                        file_path = selected_analysis["file_path"]
+
+                        # Load the analysis
+                        load_result = load_raptor_analysis(file_path)
+
+                        if load_result:
+                            individual_results, aggregated_results = load_result
+
+                            # Store in session state
+                            st.session_state.extraction_results = individual_results
+                            st.session_state.aggregated_results = aggregated_results
+                            st.session_state.original_results = aggregated_results.copy()
+
+                            # Initialize feedback for loaded results
+                            if st.session_state.aggregated_results:
+                                initialize_feedback_for_results(st.session_state.aggregated_results)
+
+                            st.success(f"✅ Loaded analysis: {selected_analysis['description']}")
+
+                            # Refresh the page to show results
+                            st.experimental_rerun()
+                        else:
+                            st.error("❌ Failed to load analysis")
+
     st.divider()
     st.subheader("Saved RAPTOR Analyses")
 
@@ -954,6 +1232,7 @@ with tab4:
                     # Store in session state
                     st.session_state.extraction_results = individual_results
                     st.session_state.aggregated_results = aggregated_results
+                    st.session_state.original_results = aggregated_results.copy()
 
                     # Initialize feedback for loaded results
                     if st.session_state.aggregated_results:
@@ -965,161 +1244,6 @@ with tab4:
                     st.experimental_rerun()
                 else:
                     st.error("❌ Failed to load analysis")
-    with col1:
-        # Option to run extraction - adapt based on mode
-        if st.button("Run Extraction Analysis"):
-            if st.session_state.extraction_mode == "RAPTOR Clusters":
-                # RAPTOR-based extraction
-                if st.session_state.raptor_service is None:
-                    st.warning("Raptor service is not initialized")
-                elif st.session_state.indexed_status == "Not indexed":
-                    st.warning(
-                        "No documents have been indexed in RAPTOR. Please index documents in the Raptor Processing tab or load an existing index first.")
-                if st.session_state.raptor_service is None:
-                    st.warning("Raptor service is not initialized")
-                else:
-                    try:
-                        with st.spinner("Running RAPTOR extraction analysis..."):
-                            # Get the selected model from the sidebar
-                            model_name = st.session_state.get("extraction_model", "openai/gpt-4o")
-
-                            # Create a directory for extraction results if it doesn't exist
-                            output_dir = "raptor_extraction"
-                            os.makedirs(output_dir, exist_ok=True)
-
-                            # Determine analysis type
-                            raptor_analysis_type = "Single Cluster" if hasattr(st.session_state,
-                                                                               "selected_cluster") and st.session_state.selected_cluster else "All Clusters at Level"
-
-                            if raptor_analysis_type == "Single Cluster" and st.session_state.selected_cluster:
-                                # Analyze the selected cluster
-                                result = async_to_sync(analyze_raptor_cluster(
-                                    raptor_service=st.session_state.raptor_service,
-                                    cluster_id=st.session_state.selected_cluster,
-                                    cluster_name=f"Cluster {st.session_state.selected_cluster}",
-                                    model=model_name,
-                                    output_dir=output_dir,
-                                    namespace=st.session_state.raptor_service.namespace,
-                                    verbose=True
-                                ))
-
-                                if result.get('error'):
-                                    st.error(f"Error analyzing cluster: {result.get('error')}")
-                                else:
-                                    # Store results in session state
-                                    st.session_state.extraction_results = {st.session_state.selected_cluster: result}
-                                    st.session_state.aggregated_results = result
-
-                                    # Initialize feedback for the results
-                                    initialize_feedback_for_results(result)
-
-                                    st.success(
-                                        f"✅ Extraction analysis completed for cluster {st.session_state.selected_cluster}")
-                                    try:
-                                        # Auto-save the results
-                                        saved_file = save_raptor_analysis_results(
-                                            results=result,
-                                            cluster_id=st.session_state.selected_cluster
-                                        )
-                                        st.info(f"Results automatically saved to: {saved_file}")
-                                    except Exception as e:
-                                        st.warning(f"Could not auto-save results: {str(e)}")
-                            else:
-                                # Analyze all clusters at the specified level
-                                level = st.session_state.raptor_level
-
-                                # Run the analysis
-                                results = async_to_sync(analyze_raptor_level(
-                                    raptor_service=st.session_state.raptor_service,
-                                    level=level,
-                                    model=model_name,
-                                    output_dir=output_dir,
-                                    namespace=st.session_state.raptor_service.namespace,
-                                    verbose=True,
-                                    aggregate=True
-                                ))
-
-                                if results.get('error'):
-                                    st.error(f"Error analyzing level {level}: {results.get('error')}")
-                                else:
-                                    # Store results in session state
-                                    st.session_state.extraction_results = results.get('individual_results', {})
-                                    st.session_state.aggregated_results = results.get('aggregated_results', {})
-
-                                    # Initialize feedback for the results
-                                    initialize_feedback_for_results(st.session_state.aggregated_results)
-
-                                    st.success(
-                                        f"✅ Extraction analysis completed for {results.get('clusters_analyzed', 0)} clusters at level {level}")
-                                    try:
-                                        # Auto-save the results
-                                        saved_file = save_raptor_analysis_results(
-                                            results=results,
-                                            level=level
-                                        )
-                                        st.info(f"Results automatically saved to: {saved_file}")
-                                    except Exception as e:
-                                        st.warning(f"Could not auto-save results: {str(e)}")
-                    except Exception as e:
-                        st.error(f"Error running RAPTOR extraction analysis: {str(e)}")
-            else:
-                # Original code for document/text-based extraction
-                success = run_extraction_analysis()
-                if success:
-                    st.success("✅ Extraction analysis completed successfully")
-                    st.session_state.active_extraction_tab = "Stakeholders"
-                else:
-                    st.error("❌ Extraction analysis failed")
-
-    with col2:
-        # Create a container for load options
-        load_container = st.container()
-
-        # Option to load existing extraction results
-        if st.button("Load Existing Results"):
-            # Show a selection interface
-            with load_container:
-                st.info("Select a saved analysis to load:")
-
-                # List all saved analyses
-                saved_analyses = list_saved_raptor_analyses()
-
-                if not saved_analyses:
-                    st.warning("No saved analyses found.")
-                else:
-                    # Create a selectbox with analysis descriptions
-                    analysis_options = [analysis["description"] for analysis in saved_analyses]
-                    selected_index = st.selectbox(
-                        "Select analysis to load",
-                        options=range(len(analysis_options)),
-                        format_func=lambda i: analysis_options[i]
-                    )
-
-                    # Load button
-                    if st.button("Load Selected Analysis"):
-                        selected_analysis = saved_analyses[selected_index]
-                        file_path = selected_analysis["file_path"]
-
-                        # Load the analysis
-                        load_result = load_raptor_analysis(file_path)
-
-                        if load_result:
-                            individual_results, aggregated_results = load_result
-
-                            # Store in session state
-                            st.session_state.extraction_results = individual_results
-                            st.session_state.aggregated_results = aggregated_results
-
-                            # Initialize feedback for loaded results
-                            if st.session_state.aggregated_results:
-                                initialize_feedback_for_results(st.session_state.aggregated_results)
-
-                            st.success(f"✅ Loaded analysis: {selected_analysis['description']}")
-
-                            # Refresh the page to show results
-                            st.experimental_rerun()
-                        else:
-                            st.error("❌ Failed to load analysis")
 
     # Display results if available
     if st.session_state.aggregated_results:
@@ -1139,6 +1263,58 @@ with tab4:
 
         # Display the selected tab content with feedback interface
         if st.session_state.active_extraction_tab == "Stakeholders":
+            # If validation was performed, show before/after summary
+            if (st.session_state.validation_results and 
+                st.session_state.original_results and 
+                "stakeholders" in st.session_state.original_results):
+                
+                # Display validation results summary
+                st.divider()
+                st.subheader("Stakeholder Validation Results")
+                
+                # Calculate validation metrics
+                original_count = len(st.session_state.original_results.get("stakeholders", []))
+                validated_count = len(st.session_state.aggregated_results.get("stakeholders", []))
+                duplicates_merged = st.session_state.validation_results.get("duplicates_merged", 0)
+                category_changes = st.session_state.validation_results.get("category_changes", 0)
+                
+                # Create columns for before/after metrics
+                col1, col2, col3, col4 = st.columns(4)
+                
+                with col1:
+                    st.metric("Original Stakeholders", original_count)
+                
+                with col2:
+                    st.metric("Current Stakeholders", validated_count, 
+                            delta=validated_count-original_count, 
+                            delta_color="inverse")
+                
+                with col3:
+                    st.metric("Duplicates Merged", duplicates_merged)
+                
+                with col4:
+                    st.metric("Categories Corrected", category_changes)
+                
+                # Show explanation in expander
+                with st.expander("About Stakeholder Validation Process", expanded=False):
+                    st.markdown("""
+                    ### Stakeholder Validation Explained
+                    
+                    The validation process automatically performs these improvements:
+                    
+                    1. **Duplicate Detection & Merging**
+                       - Identifies potential duplicates based on name similarity
+                       - Uses AI to determine if similar names refer to the same entity
+                       - Merges duplicates while preserving all information
+                    
+                    2. **Category Normalization**
+                       - Validates stakeholder categories against the standard taxonomy
+                       - Corrects inconsistent or invalid classifications
+                       - Ensures all stakeholders use approved category labels (Regulator, Supplier, Consumer, Competitor, Partner, Influencer, Internal)
+                    
+                    All of this happens automatically to improve data quality by resolving inconsistencies and standardizing stakeholder information.
+                    """)
+
             # Create a clean dataframe for display
             if "stakeholders" in st.session_state.aggregated_results:
                 stakeholders = st.session_state.aggregated_results["stakeholders"]
@@ -1217,7 +1393,6 @@ with tab4:
                     st.info("No stakeholders found in the extraction results.")
             else:
                 st.info("No stakeholder data available in the extraction results.")
-
         elif st.session_state.active_extraction_tab == "Factors":
             # Create a clean dataframe for display
             if "factors" in st.session_state.aggregated_results:
@@ -1380,7 +1555,6 @@ with tab4:
                     st.info("No pain points found in the extraction results.")
             else:
                 st.info("No pain points data available in the extraction results.")
-
         # Feedback summary and export
         if st.session_state.show_feedback and hasattr(st.session_state, "user_feedback"):
             st.divider()
@@ -1678,17 +1852,46 @@ with tab4:
 
         # Explain the process
         st.info("""
-        **How the extraction and feedback process works:**
+        **How the extraction and validation process works:**
 
-        1. Choose your extraction mode in the sidebar: "Selected Documents" or "Direct Text Input"
+        1. Choose your extraction mode in the sidebar: "Selected Documents", "Direct Text Input", or "RAPTOR Clusters"
         2. If using documents, select them in the Document Selection tab
         3. If using direct text input, add your text content in the form above
         4. Click 'Run Extraction Analysis' to process the text
         5. The system will extract stakeholders, factors, and pain points from your text
-        6. Review the extractions and provide feedback:
+        6. If enabled, it will automatically validate stakeholders to:
+           - Find and merge duplicate stakeholders
+           - Correct stakeholder categories
+           - Improve the quality of extracted data
+        7. Review the extractions and provide feedback:
            - Check the box if you agree with the extraction
            - Uncheck and provide comments if you disagree
-        7. Save your feedback to help improve the extraction process
+        8. Save your feedback to help improve the extraction process
+        """)
+
+# Create a new file in the sidebar to show stakeholder validator status
+if st.session_state.validation_in_progress:
+    st.sidebar.warning("⚙️ Stakeholder validation in progress...")
+
+# Add information about the ValidationAgent
+if st.session_state.show_validation_options:
+    with st.sidebar.expander("About Stakeholder Validation", expanded=False):
+        st.markdown("""
+        ### Stakeholder Validation Agent
+
+        The validation agent performs two key functions:
+        
+        1. **Duplicate Detection & Merging**
+           - Identifies potential duplicates based on name similarity
+           - Uses AI to determine if similar names refer to the same entity
+           - Merges duplicates while preserving all information
+        
+        2. **Category Normalization**
+           - Validates stakeholder categories against the standard taxonomy
+           - Corrects inconsistent or invalid classifications
+           - Ensures all stakeholders use approved category labels
+        
+        The validation process significantly improves data quality by resolving inconsistencies and standardizing stakeholder information.
         """)
 
 st.divider()

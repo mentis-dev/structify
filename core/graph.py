@@ -11,6 +11,7 @@ from core.state import State
 from core.utils import init_model
 from core.supabase_db.select_data import initialize_supabase, get_brains_per_workspace, get_documents_per_brain
 from core.supabase_db.supabase_db import get_vectors_by_knowledge_ids
+from core.stakeholder_validator import validate_stakeholders  # Import the validator
 
 # Default stakeholder extraction schema
 DEFAULT_SCHEMA = {
@@ -362,7 +363,6 @@ async def extract_stakeholders(
             "messages": [HumanMessage(content=f"Error extracting information: {str(e)}")]
         }
 
-
 async def aggregate_stakeholders(
     state: State, *, config: Optional[RunnableConfig] = None
 ) -> Dict[str, Any]:
@@ -443,7 +443,7 @@ async def aggregate_stakeholders(
                     if hierarchy_level not in stakeholder_data[name]['hierarchy_levels']:
                         stakeholder_data[name]['hierarchy_levels'][hierarchy_level] = 0
                     stakeholder_data[name]['hierarchy_levels'][hierarchy_level] += 1
-        
+
         # Determine the most common category and role for each stakeholder
         aggregated_stakeholders = []
         
@@ -502,7 +502,7 @@ async def aggregate_stakeholders(
         aggregated_file = os.path.join(state.output_dir, f"workspace_{state.workspace_id}_aggregated_stakeholders.json")
         with open(aggregated_file, 'w', encoding='utf-8') as f:
             json.dump(aggregated_result, f, indent=2)
-        
+
         # Aggregate factors across all documents
         all_factors = []
         for doc_id, doc_result in state.processed_documents.items():
@@ -570,7 +570,7 @@ async def aggregate_stakeholders(
                             pain_point['hierarchy_level'] = 'Meso'
                     
                     all_pain_points.append(pain_point)
-        
+
         # Include all data in the final info
         info = {
             'stakeholders': aggregated_stakeholders,
@@ -632,7 +632,6 @@ async def aggregate_stakeholders(
 
         # Add to the combined result
         combined_result["relationships"] = hierarchy_relationships
-
         # Create multi-level ecosystem representation
         multi_level_ecosystem = {
             "ecosystemMap": {
@@ -663,11 +662,15 @@ async def aggregate_stakeholders(
         # Add to the final info
         info["multi_level_ecosystem"] = multi_level_ecosystem
         
+        # Store original stakeholders for comparison
+        original_stakeholders = aggregated_stakeholders.copy()
+        
         return {
             "aggregated_stakeholders": aggregated_result,
             "factors": all_factors,
             "pain_points": all_pain_points,
             "info": info,  # Final output that will be in OutputState
+            "original_stakeholders": original_stakeholders,  # Store for validation comparison
             "messages": [AIMessage(content=f"Aggregated {len(aggregated_stakeholders)} stakeholders, {len(all_factors)} factors, and {len(all_pain_points)} pain points from {len(state.processed_documents)} documents. Created multi-level ecosystem map.")]
         }
     
@@ -675,9 +678,106 @@ async def aggregate_stakeholders(
         return {
             "error": f"Error aggregating results: {str(e)}",
             "messages": [HumanMessage(content=f"Error aggregating results: {str(e)}")]
-        }    
+        }
 
+async def validate_stakeholders_node(
+    state: State, *, config: Optional[RunnableConfig] = None
+) -> Dict[str, Any]:
+    """
+    Validate stakeholders by finding duplicates and normalizing categories.
+    """
+    if state.error:
+        return {
+            "error": state.error,
+            "messages": [HumanMessage(content=f"Error in previous step: {state.error}")]
+        }
+        
+    if not state.aggregated_stakeholders or "stakeholders" not in state.aggregated_stakeholders:
+        return {
+            "error": "No aggregated stakeholders available for validation",
+            "messages": [HumanMessage(content="No stakeholders to validate. Skipping validation step.")]
+        }
     
+    try:
+        configuration = Configuration.from_runnable_config(config)
+        model_name = configuration.model
+        
+        # Get stakeholders from aggregated results
+        stakeholders = state.aggregated_stakeholders.get("stakeholders", [])
+        
+        if not stakeholders:
+            return {
+                "messages": [HumanMessage(content="No stakeholders found to validate.")]
+            }
+        
+        # Run validation
+        validation_results = await validate_stakeholders(
+            stakeholders=stakeholders,
+            model=model_name,
+            output_dir=state.output_dir,
+            verbose=True
+        )
+        
+        # Extract the validated stakeholders
+        validated_stakeholders = validation_results.get("stakeholders", [])
+        
+        # Update the aggregated stakeholders
+        aggregated_stakeholders = state.aggregated_stakeholders.copy()
+        aggregated_stakeholders["stakeholders"] = validated_stakeholders
+        aggregated_stakeholders["stakeholder_validation"] = {
+            "original_count": validation_results.get("original_stakeholders", 0),
+            "validated_count": validation_results.get("validated_stakeholders", 0),
+            "duplicates_merged": validation_results.get("duplicates_merged", 0),
+            "category_changes": validation_results.get("category_changes", 0)
+        }
+        
+        # Update combined results file
+        combined_file = os.path.join(state.output_dir, f"workspace_{state.workspace_id}_analysis.json")
+        
+        if os.path.exists(combined_file):
+            try:
+                with open(combined_file, 'r', encoding='utf-8') as f:
+                    combined_result = json.load(f)
+                
+                # Update stakeholders in combined results
+                combined_result["stakeholders"] = validated_stakeholders
+                combined_result["stakeholder_validation"] = aggregated_stakeholders["stakeholder_validation"]
+                
+                # Save updated combined results
+                with open(combined_file, 'w', encoding='utf-8') as f:
+                    json.dump(combined_result, f, indent=2)
+            except Exception as e:
+                print(f"Error updating combined results file: {str(e)}")
+        
+        # Save validated stakeholders separately
+        validated_file = os.path.join(state.output_dir, f"workspace_{state.workspace_id}_validated_stakeholders.json")
+        
+        with open(validated_file, 'w', encoding='utf-8') as f:
+            json.dump(validation_results, f, indent=2)
+        
+        # Update info for final output
+        info = state.info.copy() if state.info else None
+        
+        if info and "stakeholders" in info:
+            info["stakeholders"] = validated_stakeholders
+            info["stakeholder_validation"] = aggregated_stakeholders["stakeholder_validation"]
+        
+        duplicates_merged = validation_results.get("duplicates_merged", 0)
+        category_changes = validation_results.get("category_changes", 0)
+        
+        return {
+            "aggregated_stakeholders": aggregated_stakeholders,
+            "validated_stakeholders": validation_results,
+            "info": info,
+            "messages": [AIMessage(content=f"Validated stakeholders: merged {duplicates_merged} duplicates and corrected {category_changes} category assignments.")]
+        }
+    
+    except Exception as e:
+        return {
+            "error": f"Error validating stakeholders: {str(e)}",
+            "messages": [HumanMessage(content=f"Error validating stakeholders: {str(e)}")]
+        }
+
 def route_after_initialization(state: State) -> str:
     """Route after workspace initialization."""
     if state.error:
@@ -704,6 +804,12 @@ def route_after_extraction(state: State) -> str:
         return "get_next_document"
     return "aggregate_stakeholders"
 
+def route_after_aggregation(state: State) -> str:
+    """Route after stakeholder aggregation."""
+    if state.error:
+        return "__end__"
+    return "validate_stakeholders"  # Always go to validation after aggregation
+
 def should_continue(state: State, config: RunnableConfig) -> str:
     """Decide whether to continue or end based on state."""
     configuration = Configuration.from_runnable_config(config)
@@ -722,13 +828,15 @@ workflow.add_node("initialize_workspace", initialize_workspace)
 workflow.add_node("get_next_document", get_next_document)
 workflow.add_node("extract_stakeholders", extract_stakeholders)
 workflow.add_node("aggregate_stakeholders", aggregate_stakeholders)
+workflow.add_node("validate_stakeholders", validate_stakeholders_node)  # Add the validation node
 
 # Add edges
 workflow.add_edge("__start__", "initialize_workspace")
 workflow.add_conditional_edges("initialize_workspace", route_after_initialization)
 workflow.add_conditional_edges("get_next_document", route_after_get_document)
 workflow.add_conditional_edges("extract_stakeholders", route_after_extraction)
-workflow.add_edge("aggregate_stakeholders", "__end__")
+workflow.add_conditional_edges("aggregate_stakeholders", route_after_aggregation)  # Add conditional edge after aggregation
+workflow.add_edge("validate_stakeholders", "__end__")  # Add edge from validation to end
 
 # Compile the graph
 graph = workflow.compile()
