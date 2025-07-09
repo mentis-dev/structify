@@ -1,0 +1,169 @@
+{
+    "type": "object",
+            "properties": {
+                "stakeholders": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string",
+                                "description": "The name of the stakeholder organization or individual."
+                            },
+                            "category": {
+                                "type": "string",
+                                "description": "The category of the stakeholder (Regulator, Supplier, Consumer, Competitor, Partner, Influencer, Internal)."
+                            },
+                            "role": {
+                                "type": "string",
+                                "description": "Brief description of the stakeholder's role or function."
+                            },
+                            "confidence": {
+                                "type": "number",
+                                "description": "Confidence score (0-100%) for the classification."
+                            },
+                            "hierarchy_level": {
+                                "type": "string",
+                                "description": "Level in the ecosystem hierarchy (Macro, Meso, Micro)."
+                            }
+                        },
+                        "required": ["name", "category", "role", "confidence", "hierarchy_level"]
+                    },
+                    "description": "List of stakeholders identified in the text."
+                },
+                "factors": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "Label": {
+                                "type": "string",
+                                "description": "The descriptive name for the factor."
+                            },
+                            "Type": {
+                                "type": "string",
+                                "description": "Classification type (e.g., Indirect Driver, Exogenous Driver, Outcome, Direct Driver)."
+                            },
+                            "Tags": {
+                                "type": "string",
+                                "description": "Any additional tags or keywords (optional)."
+                            },
+                            "Description": {
+                                "type": "string",
+                                "description": "A detailed description of the factor including stakeholder information."
+                            }
+                        },
+                        "required": ["Label", "Type", "Description"]
+                    },
+                    "description": "List of factors identified in the text."
+                },
+                "pain_points": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "description": "A unique identifier for the pain point (e.g., PP-001)."
+                            },
+                            "category": {
+                                "type": "string",
+                                "description": "The category of the pain point (e.g., Healthcare Access, Financial Barriers)."
+                            },
+                            "description": {
+                                "type": "string",
+                                "description": "A brief description of the pain point."
+                            },
+                            "affected_stakeholders": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                },
+                                "description": "List of stakeholder names that experience or are affected by this pain point."
+                            },
+                            "causing_stakeholders": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                },
+                                "description": "List of stakeholder names that cause or contribute to this pain point (optional)."
+                            },
+                            "stakeholder_impact": {
+                                "type": "object",
+                                "description": "Detailed impact description for each affected stakeholder",
+                                "additionalProperties": {
+                                    "type": "string",
+                                    "description": "Description of how this pain point specifically affects the named stakeholder"
+                                }
+                            },
+                            "confidence": {
+                                "type": "number",
+                                "description": "Confidence score (0-100%) for this pain point identification."
+                            },
+                            "hierarchy_level": {
+                                "type": "string",
+                                "description": "Level in the ecosystem hierarchy (Macro, Meso, Micro)."
+                            },
+                            "severity": {
+                                "type": "string",
+                                "enum": ["Low", "Medium", "High", "Critical"],
+                                "description": "Severity level of the pain point based on text evidence."
+                            }
+                        },
+                        "required": ["id", "category", "description", "affected_stakeholders", "confidence"]
+                    },
+                    "description": "List of pain points identified in the text, with explicit stakeholder relationships."
+                },
+                "relationships": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "description": "A unique identifier for the relationship (e.g., REL-001)."
+                            },
+                            "source_stakeholder": {
+                                "type": "string",
+                                "description": "The name of the source stakeholder in the relationship."
+                            },
+                            "target_stakeholder": {
+                                "type": "string",
+                                "description": "The name of the target stakeholder in the relationship."
+                            },
+                            "relationship_type": {
+                                "type": "string",
+                                "description": "The primary type of relationship (e.g., Regulatory, Collaborative, Competitive, Transactional, Hierarchical, Informational)."
+                            },
+                            "relationship_subtype": {
+                                "type": "string",
+                                "description": "The specific subtype of relationship (e.g., Oversight, Partnership, Rivalry, Service Provision, Reporting, Advisory)."
+                            },
+                            "direction": {
+                                "type": "string",
+                                "description": "The direction of the relationship (Bidirectional, Unidirectional_Source_to_Target, Unidirectional_Target_to_Source)."
+                            },
+                            "strength": {
+                                "type": "number",
+                                "description": "The strength of the relationship (0-100%), based on frequency of interaction or importance mentioned in text."
+                            },
+                            "justification": {
+                                "type": "string",
+                                "description": "Detailed justification for this relationship based on evidence from the text, including specific quotes or references."
+                            },
+                            "confidence": {
+                                "type": "number",
+                                "description": "Confidence score (0-100%) for this relationship identification."
+                            }
+                        },
+                        "required": ["id", "source_stakeholder", "target_stakeholder", "relationship_type", "relationship_subtype", "direction", "strength", "justification", "confidence"]
+                    },
+                    "description": "List of relationships between stakeholders identified in the text."
+                }
+            },
+    "required": [
+	"stakeholders",
+	"factors",
+	"pain_points",
+	"relationships"]
+}

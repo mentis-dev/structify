@@ -1,0 +1,17 @@
+"As a stakeholder analyst, I need to assign the correct category to this stakeholder:
+
+Name: {name}
+Current Category: {category}
+Role: {role}
+
+The valid categories are:
+- Regulator: Government or oversight bodies that create and enforce rules
+- Supplier: Provides products or services to the organization or industry
+- Consumer: Receives or benefits from products or services
+- Competitor: Other organizations providing similar services or competing for resources
+- Partner: Organizations working together with shared goals
+- Influencer: Shapes opinions or decisions without direct authority
+- Internal: Employees, management, or departments within the organization
+
+Which ONE category best describes this stakeholder?
+Answer with ONLY the category name from the list above."

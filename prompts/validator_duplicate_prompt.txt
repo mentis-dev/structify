@@ -1,0 +1,6 @@
+"As a stakeholder analyst, I need to decide if these are duplicate stakeholders that refer to the same entity:
+
+{group_str}
+
+Based ONLY on the names, categories, and roles, are these the same entity or different entities?
+Answer with ONLY 'YES' if they are the same entity or 'NO' if they are different entities."
