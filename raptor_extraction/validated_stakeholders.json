@@ -1,0 +1,806 @@
+{
+  "original_stakeholders": 43,
+  "validated_stakeholders": 43,
+  "duplicates_merged": 0,
+  "category_changes": 0,
+  "stakeholders": [
+    {
+      "name": "Social Welfare Department (\u793e\u6703\u798f\u5229\u7f72)",
+      "category": "Regulator",
+      "role": "Governing authority responsible for overseeing and coordinating welfare and protection services related to elder abuse cases.",
+      "hierarchy_level": "Macro",
+      "confidence": 100,
+      "mentions": 2,
+      "documents": [
+        {
+          "id": "13f548f8-49af-4957-b3f7-18470e200c3b",
+          "name": "2021_Procedural_Guidelines_for_Handling_Elder_Abuse_Cases_(Revised_2021)_ch_20210331.pdf"
+        },
+        {
+          "id": "510f35b9-de4b-4949-9515-d26fc0243493",
+          "name": "2019_government-expenditure-on-the-elderly-20191213-e.pdf"
+        }
+      ],
+      "challenge_relevance_capacity": "high",
+      "cross_theme_connections": "high",
+      "decision_authority": "high",
+      "resource_control": "high",
+      "original_names": [
+        "Social Welfare Department (\u793e\u6703\u798f\u5229\u7f72)",
+        "Social Welfare Department"
+      ]
+    },
+    {
+      "name": "Hospital Authority (\u91ab\u9662\u7ba1\u7406\u5c40)",
+      "category": "Regulator",
+      "role": "Oversees public hospitals, approves disclosure of patient data, and supports clinical intervention and protection in abuse cases.",
+      "hierarchy_level": "Macro",
+      "confidence": 100,
+      "mentions": 2,
+      "documents": [
+        {
+          "id": "13f548f8-49af-4957-b3f7-18470e200c3b",
+          "name": "2021_Procedural_Guidelines_for_Handling_Elder_Abuse_Cases_(Revised_2021)_ch_20210331.pdf"
+        },
+        {
+          "id": "510f35b9-de4b-4949-9515-d26fc0243493",
+          "name": "2019_government-expenditure-on-the-elderly-20191213-e.pdf"
+        }
+      ],
+      "challenge_relevance_capacity": "high",
+      "cross_theme_connections": "high",
+      "decision_authority": "high",
+      "resource_control": "high",
+      "original_names": [
+        "Hospital Authority (\u91ab\u9662\u7ba1\u7406\u5c40)",
+        "Hospital Authority"
+      ]
+    },
+    {
+      "name": "Equal Opportunities Commission",
+      "category": "Influencer",
+      "role": "Promotes and monitors equal opportunity, including issues concerning age discrimination and elderly rights.",
+      "hierarchy_level": "Macro",
+      "confidence": 100,
+      "mentions": 2,
+      "documents": [
+        {
+          "id": "510f35b9-de4b-4949-9515-d26fc0243493",
+          "name": "2019_government-expenditure-on-the-elderly-20191213-e.pdf"
+        },
+        {
+          "id": "aa14b095-6326-47e4-84b4-135b81a3f82c",
+          "name": "2016_Exploratory Study on Age Discrimination in Employment.pdf"
+        }
+      ],
+      "challenge_relevance_capacity": "medium",
+      "cross_theme_connections": "medium",
+      "decision_authority": "low",
+      "resource_control": "low",
+      "original_names": [
+        "Equal Opportunities Commission",
+        "Equal Opportunities Commission (EOC) (\u5e73\u7b49\u6a5f\u6703\u59d4\u54e1\u6703)"
+      ]
+    },
+    {
+      "name": "Social Workers",
+      "category": "Internal",
+      "role": "Frontline professionals responsible for intake, case management, assessment, coordination of services, and follow-up for suspected elder abuse cases.",
+      "hierarchy_level": "Meso",
+      "confidence": 100,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "13f548f8-49af-4957-b3f7-18470e200c3b",
+          "name": "2021_Procedural_Guidelines_for_Handling_Elder_Abuse_Cases_(Revised_2021)_ch_20210331.pdf"
+        }
+      ],
+      "challenge_relevance_capacity": "high",
+      "cross_theme_connections": "high",
+      "decision_authority": "medium",
+      "resource_control": "medium"
+    },
+    {
+      "name": "Multi-disciplinary Case Conference (\u591a\u5c08\u696d\u500b\u6848\u6703\u8b70)",
+      "category": "Partner",
+      "role": "Collaborative platform involving professionals from various disciplines for assessment and decision-making regarding elder abuse.",
+      "hierarchy_level": "Meso",
+      "confidence": 95,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "13f548f8-49af-4957-b3f7-18470e200c3b",
+          "name": "2021_Procedural_Guidelines_for_Handling_Elder_Abuse_Cases_(Revised_2021)_ch_20210331.pdf"
+        }
+      ],
+      "challenge_relevance_capacity": "high",
+      "cross_theme_connections": "medium",
+      "decision_authority": "medium",
+      "resource_control": "medium"
+    },
+    {
+      "name": "Elderly Persons (\u9577\u8005)",
+      "category": "Consumer",
+      "role": "Primary recipients and potential victims of services and interventions; includes the physically/mentally frail or disabled.",
+      "hierarchy_level": "Micro",
+      "confidence": 100,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "13f548f8-49af-4957-b3f7-18470e200c3b",
+          "name": "2021_Procedural_Guidelines_for_Handling_Elder_Abuse_Cases_(Revised_2021)_ch_20210331.pdf"
+        }
+      ],
+      "challenge_relevance_capacity": "medium",
+      "cross_theme_connections": "medium",
+      "decision_authority": "low",
+      "resource_control": "low"
+    },
+    {
+      "name": "Suspected Perpetrators (\u7591\u4f3c\u65bd\u8650\u8005)",
+      "category": "Internal",
+      "role": "Individuals (often caregivers, family members, or staff) suspected of committing abuse against elderly persons.",
+      "hierarchy_level": "Micro",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "13f548f8-49af-4957-b3f7-18470e200c3b",
+          "name": "2021_Procedural_Guidelines_for_Handling_Elder_Abuse_Cases_(Revised_2021)_ch_20210331.pdf"
+        }
+      ],
+      "challenge_relevance_capacity": "low",
+      "cross_theme_connections": "low",
+      "decision_authority": "low",
+      "resource_control": "low"
+    },
+    {
+      "name": "Family Members/Caregivers (\u5bb6\u4eba/\u7167\u9867\u8005)",
+      "category": "Consumer",
+      "role": "Direct providers of care and support to elderly persons; may be at risk of perpetrating or preventing abuse; often involved in case conferences.",
+      "hierarchy_level": "Micro",
+      "confidence": 100,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "13f548f8-49af-4957-b3f7-18470e200c3b",
+          "name": "2021_Procedural_Guidelines_for_Handling_Elder_Abuse_Cases_(Revised_2021)_ch_20210331.pdf"
+        }
+      ],
+      "challenge_relevance_capacity": "medium",
+      "cross_theme_connections": "medium",
+      "decision_authority": "medium",
+      "resource_control": "medium"
+    },
+    {
+      "name": "Hong Kong Police Force (\u9999\u6e2f\u8b66\u52d9\u8655)",
+      "category": "Regulator",
+      "role": "Law enforcement body involved in criminal investigation and immediate safety protection of elder abuse cases.",
+      "hierarchy_level": "Macro",
+      "confidence": 100,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "13f548f8-49af-4957-b3f7-18470e200c3b",
+          "name": "2021_Procedural_Guidelines_for_Handling_Elder_Abuse_Cases_(Revised_2021)_ch_20210331.pdf"
+        }
+      ],
+      "challenge_relevance_capacity": "high",
+      "cross_theme_connections": "high",
+      "decision_authority": "high",
+      "resource_control": "high"
+    },
+    {
+      "name": "Medical Practitioners (including Psychiatrists, Geriatricians, etc.)",
+      "category": "Supplier",
+      "role": "Provide health assessment, evaluation of mental capacity, injury examination, and medical care for the elderly in abuse cases.",
+      "hierarchy_level": "Meso",
+      "confidence": 100,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "13f548f8-49af-4957-b3f7-18470e200c3b",
+          "name": "2021_Procedural_Guidelines_for_Handling_Elder_Abuse_Cases_(Revised_2021)_ch_20210331.pdf"
+        }
+      ],
+      "challenge_relevance_capacity": "high",
+      "cross_theme_connections": "medium",
+      "decision_authority": "medium",
+      "resource_control": "medium"
+    },
+    {
+      "name": "NGOs Providing Elder Services (\u5b89\u8001\u670d\u52d9\u6a5f\u69cb)",
+      "category": "Supplier",
+      "role": "Non-governmental organizations offering elderly care, community support, and reporting suspected abuse.",
+      "hierarchy_level": "Meso",
+      "confidence": 95,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "13f548f8-49af-4957-b3f7-18470e200c3b",
+          "name": "2021_Procedural_Guidelines_for_Handling_Elder_Abuse_Cases_(Revised_2021)_ch_20210331.pdf"
+        }
+      ],
+      "challenge_relevance_capacity": "medium",
+      "cross_theme_connections": "medium",
+      "decision_authority": "low",
+      "resource_control": "medium"
+    },
+    {
+      "name": "Residential Care Homes for the Elderly (\u5b89\u8001\u9662\u820d)",
+      "category": "Supplier",
+      "role": "Institutions providing residential and nursing care to elderly persons, and sites where abuse may occur and be reported.",
+      "hierarchy_level": "Meso",
+      "confidence": 100,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "13f548f8-49af-4957-b3f7-18470e200c3b",
+          "name": "2021_Procedural_Guidelines_for_Handling_Elder_Abuse_Cases_(Revised_2021)_ch_20210331.pdf"
+        }
+      ],
+      "challenge_relevance_capacity": "medium",
+      "cross_theme_connections": "medium",
+      "decision_authority": "medium",
+      "resource_control": "medium"
+    },
+    {
+      "name": "Multi-disciplinary Support Centers (\u591a\u5c08\u696d\u652f\u63f4\u4e2d\u5fc3)",
+      "category": "Partner",
+      "role": "Facilities providing urgent intervention and support services, including crisis intervention, for abused elders.",
+      "hierarchy_level": "Meso",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "13f548f8-49af-4957-b3f7-18470e200c3b",
+          "name": "2021_Procedural_Guidelines_for_Handling_Elder_Abuse_Cases_(Revised_2021)_ch_20210331.pdf"
+        }
+      ],
+      "challenge_relevance_capacity": "high",
+      "cross_theme_connections": "medium",
+      "decision_authority": "medium",
+      "resource_control": "medium"
+    },
+    {
+      "name": "Legal Sector (\u6cd5\u5f8b\u754c)",
+      "category": "Supplier",
+      "role": "Provide legal opinions, assistance with guardianship orders, and support in handling criminal cases related to elder abuse.",
+      "hierarchy_level": "Meso",
+      "confidence": 95,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "13f548f8-49af-4957-b3f7-18470e200c3b",
+          "name": "2021_Procedural_Guidelines_for_Handling_Elder_Abuse_Cases_(Revised_2021)_ch_20210331.pdf"
+        }
+      ],
+      "challenge_relevance_capacity": "medium",
+      "cross_theme_connections": "medium",
+      "decision_authority": "medium",
+      "resource_control": "medium"
+    },
+    {
+      "name": "Guardianship Board (\u76e3\u8b77\u59d4\u54e1\u6703)",
+      "category": "Regulator",
+      "role": "Authority for issuing guardianship orders, critical in protecting incapacitated elders.",
+      "hierarchy_level": "Macro",
+      "confidence": 95,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "13f548f8-49af-4957-b3f7-18470e200c3b",
+          "name": "2021_Procedural_Guidelines_for_Handling_Elder_Abuse_Cases_(Revised_2021)_ch_20210331.pdf"
+        }
+      ],
+      "challenge_relevance_capacity": "medium",
+      "cross_theme_connections": "medium",
+      "decision_authority": "high",
+      "resource_control": "medium"
+    },
+    {
+      "name": "GovHK",
+      "category": "Regulator",
+      "role": "Hong Kong SAR Government, responsible for overarching policy, budget allocation, and coordination of elderly care, healthcare, and welfare systems.",
+      "hierarchy_level": "Macro",
+      "confidence": 100,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "510f35b9-de4b-4949-9515-d26fc0243493",
+          "name": "2019_government-expenditure-on-the-elderly-20191213-e.pdf"
+        }
+      ],
+      "challenge_relevance_capacity": "high",
+      "cross_theme_connections": "high",
+      "decision_authority": "high",
+      "resource_control": "high"
+    },
+    {
+      "name": "Labour and Welfare Bureau",
+      "category": "Regulator",
+      "role": "Formulates and implements policies on labour, manpower development, social welfare, and elderly financial assistance in Hong Kong.",
+      "hierarchy_level": "Macro",
+      "confidence": 100,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "510f35b9-de4b-4949-9515-d26fc0243493",
+          "name": "2019_government-expenditure-on-the-elderly-20191213-e.pdf"
+        }
+      ],
+      "challenge_relevance_capacity": "high",
+      "cross_theme_connections": "high",
+      "decision_authority": "high",
+      "resource_control": "high"
+    },
+    {
+      "name": "Food and Health Bureau",
+      "category": "Regulator",
+      "role": "Oversees health policies, healthcare provision, and schemes such as the Elderly Health Care Voucher Scheme.",
+      "hierarchy_level": "Macro",
+      "confidence": 100,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "510f35b9-de4b-4949-9515-d26fc0243493",
+          "name": "2019_government-expenditure-on-the-elderly-20191213-e.pdf"
+        }
+      ],
+      "challenge_relevance_capacity": "high",
+      "cross_theme_connections": "high",
+      "decision_authority": "high",
+      "resource_control": "high"
+    },
+    {
+      "name": "Elderly Commission",
+      "category": "Influencer",
+      "role": "Advisory body to the government, providing strategic guidance and policy input on elderly services.",
+      "hierarchy_level": "Meso",
+      "confidence": 95,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "510f35b9-de4b-4949-9515-d26fc0243493",
+          "name": "2019_government-expenditure-on-the-elderly-20191213-e.pdf"
+        }
+      ],
+      "challenge_relevance_capacity": "medium",
+      "cross_theme_connections": "medium",
+      "decision_authority": "low",
+      "resource_control": "low"
+    },
+    {
+      "name": "Community Care Fund",
+      "category": "Supplier",
+      "role": "Provides funding for pilot schemes and initiatives to support community-based elderly programs.",
+      "hierarchy_level": "Meso",
+      "confidence": 95,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "510f35b9-de4b-4949-9515-d26fc0243493",
+          "name": "2019_government-expenditure-on-the-elderly-20191213-e.pdf"
+        }
+      ],
+      "challenge_relevance_capacity": "medium",
+      "cross_theme_connections": "medium",
+      "decision_authority": "medium",
+      "resource_control": "medium"
+    },
+    {
+      "name": "Hong Kong Social Service Federation (\u9999\u6e2f\u793e\u6703\u670d\u52d9\u806f\u6703)",
+      "category": "Partner",
+      "role": "Umbrella NGO coordinating and advocating for social service provision, including elderly and healthcare services.",
+      "hierarchy_level": "Meso",
+      "confidence": 95,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "510f35b9-de4b-4949-9515-d26fc0243493",
+          "name": "2019_government-expenditure-on-the-elderly-20191213-e.pdf"
+        }
+      ],
+      "challenge_relevance_capacity": "medium",
+      "cross_theme_connections": "high",
+      "decision_authority": "low",
+      "resource_control": "medium"
+    },
+    {
+      "name": "Hong Kong Community Organizations Association (\u9999\u6e2f\u793e\u5340\u7d44\u7e54\u5354\u6703)",
+      "category": "Partner",
+      "role": "Local community-based NGO, advocates for elderly rights, primary healthcare, and social services.",
+      "hierarchy_level": "Meso",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "510f35b9-de4b-4949-9515-d26fc0243493",
+          "name": "2019_government-expenditure-on-the-elderly-20191213-e.pdf"
+        }
+      ],
+      "challenge_relevance_capacity": "medium",
+      "cross_theme_connections": "high",
+      "decision_authority": "low",
+      "resource_control": "low"
+    },
+    {
+      "name": "Elderly (General Population Group)",
+      "category": "Consumer",
+      "role": "Primary recipients and users of elderly care, healthcare, financial support, and related services.",
+      "hierarchy_level": "Micro",
+      "confidence": 100,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "510f35b9-de4b-4949-9515-d26fc0243493",
+          "name": "2019_government-expenditure-on-the-elderly-20191213-e.pdf"
+        }
+      ],
+      "challenge_relevance_capacity": "medium",
+      "cross_theme_connections": "high",
+      "decision_authority": "low",
+      "resource_control": "low"
+    },
+    {
+      "name": "Residential Care Service Providers",
+      "category": "Supplier",
+      "role": "Organizations running residential care homes\u2014provide long-term stay, daily living, and healthcare support for the elderly.",
+      "hierarchy_level": "Meso",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "510f35b9-de4b-4949-9515-d26fc0243493",
+          "name": "2019_government-expenditure-on-the-elderly-20191213-e.pdf"
+        }
+      ],
+      "challenge_relevance_capacity": "medium",
+      "cross_theme_connections": "medium",
+      "decision_authority": "medium",
+      "resource_control": "medium"
+    },
+    {
+      "name": "Department of Health",
+      "category": "Regulator",
+      "role": "Formulates and implements public health measures and reports, monitors elderly health outcomes.",
+      "hierarchy_level": "Meso",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "510f35b9-de4b-4949-9515-d26fc0243493",
+          "name": "2019_government-expenditure-on-the-elderly-20191213-e.pdf"
+        }
+      ],
+      "challenge_relevance_capacity": "medium",
+      "cross_theme_connections": "medium",
+      "decision_authority": "medium",
+      "resource_control": "medium"
+    },
+    {
+      "name": "Hospital Authority Staff",
+      "category": "Internal",
+      "role": "Frontline professionals delivering health services to elderly patients in public hospitals.",
+      "hierarchy_level": "Micro",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "510f35b9-de4b-4949-9515-d26fc0243493",
+          "name": "2019_government-expenditure-on-the-elderly-20191213-e.pdf"
+        }
+      ],
+      "challenge_relevance_capacity": "low",
+      "cross_theme_connections": "low",
+      "decision_authority": "low",
+      "resource_control": "low"
+    },
+    {
+      "name": "Census and Statistics Department",
+      "category": "Influencer",
+      "role": "Collects and disseminates demographic data, supporting policy decisions on ageing and elderly care.",
+      "hierarchy_level": "Macro",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "510f35b9-de4b-4949-9515-d26fc0243493",
+          "name": "2019_government-expenditure-on-the-elderly-20191213-e.pdf"
+        }
+      ],
+      "challenge_relevance_capacity": "medium",
+      "cross_theme_connections": "medium",
+      "decision_authority": "low",
+      "resource_control": "low"
+    },
+    {
+      "name": "CUHK Jockey Club Institute of Ageing",
+      "category": "Influencer",
+      "role": "Academic institute conducting research and developing indicators on elderly quality of life and age-related policy issues.",
+      "hierarchy_level": "Meso",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "510f35b9-de4b-4949-9515-d26fc0243493",
+          "name": "2019_government-expenditure-on-the-elderly-20191213-e.pdf"
+        }
+      ],
+      "challenge_relevance_capacity": "medium",
+      "cross_theme_connections": "medium",
+      "decision_authority": "low",
+      "resource_control": "low"
+    },
+    {
+      "name": "World Health Organization",
+      "category": "Influencer",
+      "role": "Provides international policy frameworks, research, and recommendations on ageing, health, and social support.",
+      "hierarchy_level": "Macro",
+      "confidence": 100,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "510f35b9-de4b-4949-9515-d26fc0243493",
+          "name": "2019_government-expenditure-on-the-elderly-20191213-e.pdf"
+        }
+      ],
+      "challenge_relevance_capacity": "high",
+      "cross_theme_connections": "high",
+      "decision_authority": "low",
+      "resource_control": "low"
+    },
+    {
+      "name": "Hong Kong Housing Authority",
+      "category": "Supplier",
+      "role": "Allocates and manages public rental housing, including special consideration for elderly applicants.",
+      "hierarchy_level": "Meso",
+      "confidence": 95,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "510f35b9-de4b-4949-9515-d26fc0243493",
+          "name": "2019_government-expenditure-on-the-elderly-20191213-e.pdf"
+        }
+      ],
+      "challenge_relevance_capacity": "medium",
+      "cross_theme_connections": "medium",
+      "decision_authority": "medium",
+      "resource_control": "medium"
+    },
+    {
+      "name": "Hong Kong Special Administrative Region Government (\u9999\u6e2f\u7279\u5225\u884c\u653f\u5340\u653f\u5e9c)",
+      "category": "Regulator",
+      "role": "Sets and enforces labor policy, leads on anti-discrimination law, manages civil service retirement age.",
+      "hierarchy_level": "Macro",
+      "confidence": 100,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "aa14b095-6326-47e4-84b4-135b81a3f82c",
+          "name": "2016_Exploratory Study on Age Discrimination in Employment.pdf"
+        }
+      ],
+      "challenge_relevance_capacity": "high",
+      "cross_theme_connections": "high",
+      "decision_authority": "high",
+      "resource_control": "high"
+    },
+    {
+      "name": "Labour Department (\u52de\u5de5\u8655)",
+      "category": "Regulator",
+      "role": "Publishes guidelines for employers, promotes equal opportunity, oversees labor practices.",
+      "hierarchy_level": "Meso",
+      "confidence": 100,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "aa14b095-6326-47e4-84b4-135b81a3f82c",
+          "name": "2016_Exploratory Study on Age Discrimination in Employment.pdf"
+        }
+      ],
+      "challenge_relevance_capacity": "medium",
+      "cross_theme_connections": "medium",
+      "decision_authority": "medium",
+      "resource_control": "medium"
+    },
+    {
+      "name": "SME Employers",
+      "category": "Supplier",
+      "role": "Provide employment, set internal hiring/retirement policy, impacted by or implement anti-discrimination guidelines.",
+      "hierarchy_level": "Meso",
+      "confidence": 100,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "aa14b095-6326-47e4-84b4-135b81a3f82c",
+          "name": "2016_Exploratory Study on Age Discrimination in Employment.pdf"
+        }
+      ],
+      "challenge_relevance_capacity": "medium",
+      "cross_theme_connections": "medium",
+      "decision_authority": "medium",
+      "resource_control": "medium"
+    },
+    {
+      "name": "General Employed Persons",
+      "category": "Consumer",
+      "role": "Primary recipients of employment policies and direct targets of age discrimination.",
+      "hierarchy_level": "Micro",
+      "confidence": 100,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "aa14b095-6326-47e4-84b4-135b81a3f82c",
+          "name": "2016_Exploratory Study on Age Discrimination in Employment.pdf"
+        }
+      ],
+      "challenge_relevance_capacity": "medium",
+      "cross_theme_connections": "medium",
+      "decision_authority": "low",
+      "resource_control": "low"
+    },
+    {
+      "name": "Mature Workers",
+      "category": "Consumer",
+      "role": "Older employees disproportionately affected by age discrimination, particularly in hiring, promotion, and redundancy.",
+      "hierarchy_level": "Micro",
+      "confidence": 100,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "aa14b095-6326-47e4-84b4-135b81a3f82c",
+          "name": "2016_Exploratory Study on Age Discrimination in Employment.pdf"
+        }
+      ],
+      "challenge_relevance_capacity": "medium",
+      "cross_theme_connections": "medium",
+      "decision_authority": "low",
+      "resource_control": "low"
+    },
+    {
+      "name": "Young Workers",
+      "category": "Consumer",
+      "role": "Younger employees who may face stereotypes of immaturity and lack of experience; may encounter discrimination in job seeking.",
+      "hierarchy_level": "Micro",
+      "confidence": 95,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "aa14b095-6326-47e4-84b4-135b81a3f82c",
+          "name": "2016_Exploratory Study on Age Discrimination in Employment.pdf"
+        }
+      ],
+      "challenge_relevance_capacity": "medium",
+      "cross_theme_connections": "low",
+      "decision_authority": "low",
+      "resource_control": "low"
+    },
+    {
+      "name": "Legislative Councillors (\u7acb\u6cd5\u6703\u8b70\u54e1)",
+      "category": "Influencer",
+      "role": "Shape, debate, and vote on employment/anti-discrimination legislation, reflect public and sector views.",
+      "hierarchy_level": "Macro",
+      "confidence": 100,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "aa14b095-6326-47e4-84b4-135b81a3f82c",
+          "name": "2016_Exploratory Study on Age Discrimination in Employment.pdf"
+        }
+      ],
+      "challenge_relevance_capacity": "medium",
+      "cross_theme_connections": "medium",
+      "decision_authority": "high",
+      "resource_control": "low"
+    },
+    {
+      "name": "Consumer Search Hong Kong Limited (CSG)",
+      "category": "Supplier",
+      "role": "Provides research and consultancy, conducts employment and discrimination studies for policy makers.",
+      "hierarchy_level": "Meso",
+      "confidence": 100,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "aa14b095-6326-47e4-84b4-135b81a3f82c",
+          "name": "2016_Exploratory Study on Age Discrimination in Employment.pdf"
+        }
+      ],
+      "challenge_relevance_capacity": "low",
+      "cross_theme_connections": "low",
+      "decision_authority": "low",
+      "resource_control": "low"
+    },
+    {
+      "name": "Insurance Industry",
+      "category": "Supplier",
+      "role": "Sets terms for employees' compensation insurance; higher premiums may impede hiring mature workers.",
+      "hierarchy_level": "Meso",
+      "confidence": 85,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "aa14b095-6326-47e4-84b4-135b81a3f82c",
+          "name": "2016_Exploratory Study on Age Discrimination in Employment.pdf"
+        }
+      ],
+      "challenge_relevance_capacity": "low",
+      "cross_theme_connections": "low",
+      "decision_authority": "low",
+      "resource_control": "medium"
+    },
+    {
+      "name": "Office of the Commissioner of Insurance (\u4fdd\u96aa\u696d\u76e3\u7406\u8655)",
+      "category": "Regulator",
+      "role": "Regulates insurance sector; may coordinate with Labor Department regarding premiums for mature workers.",
+      "hierarchy_level": "Meso",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "aa14b095-6326-47e4-84b4-135b81a3f82c",
+          "name": "2016_Exploratory Study on Age Discrimination in Employment.pdf"
+        }
+      ],
+      "challenge_relevance_capacity": "low",
+      "cross_theme_connections": "medium",
+      "decision_authority": "medium",
+      "resource_control": "medium"
+    },
+    {
+      "name": "Educational Institutions",
+      "category": "Partner",
+      "role": "Collaborate with government and private sector to provide trainee and internship opportunities to young people.",
+      "hierarchy_level": "Meso",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "aa14b095-6326-47e4-84b4-135b81a3f82c",
+          "name": "2016_Exploratory Study on Age Discrimination in Employment.pdf"
+        }
+      ],
+      "challenge_relevance_capacity": "medium",
+      "cross_theme_connections": "medium",
+      "decision_authority": "low",
+      "resource_control": "medium"
+    },
+    {
+      "name": "Business Sector (Private Companies)",
+      "category": "Supplier",
+      "role": "Major employers; set hiring/retirement practices, key implementers of anti-discrimination measures.",
+      "hierarchy_level": "Meso",
+      "confidence": 100,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "aa14b095-6326-47e4-84b4-135b81a3f82c",
+          "name": "2016_Exploratory Study on Age Discrimination in Employment.pdf"
+        }
+      ],
+      "challenge_relevance_capacity": "medium",
+      "cross_theme_connections": "high",
+      "decision_authority": "medium",
+      "resource_control": "high"
+    },
+    {
+      "name": "International Jurisdictions (e.g., Japan, Singapore, Taiwan, United Kingdom, Australia)",
+      "category": "Influencer",
+      "role": "Provide policy models and comparative experience influencing Hong Kong legal and policy debates.",
+      "hierarchy_level": "Macro",
+      "confidence": 90,
+      "mentions": 1,
+      "documents": [
+        {
+          "id": "aa14b095-6326-47e4-84b4-135b81a3f82c",
+          "name": "2016_Exploratory Study on Age Discrimination in Employment.pdf"
+        }
+      ],
+      "challenge_relevance_capacity": "low",
+      "cross_theme_connections": "high",
+      "decision_authority": "low",
+      "resource_control": "low"
+    }
+  ]
+}

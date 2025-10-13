@@ -1,0 +1,373 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Universal Causality Analysis Schema",
+  "description": "Comprehensive schema for analyzing causal relationships, chains, and loops between entities in any domain",
+  "type": "object",
+  "properties": {
+    "domain_context": {
+      "type": "object",
+      "description": "Context information about the domain being analyzed",
+      "properties": {
+        "domain_name": {
+          "type": "string",
+          "description": "Name of the domain (e.g., 'Healthcare System', 'Supply Chain', 'Urban Planning')"
+        },
+        "entity_type": {
+          "type": "string",
+          "description": "Type of entities being analyzed (e.g., 'pain_points', 'risk_factors', 'bottlenecks')"
+        },
+        "entity_prefix": {
+          "type": "string",
+          "description": "ID prefix for entities (e.g., 'PP', 'RF', 'BT')",
+          "pattern": "^[A-Z]{2,4}$"
+        },
+        "scope": {
+          "type": "string",
+          "description": "Scope of analysis (e.g., 'Hong Kong elderly care', 'European supply chains')"
+        },
+        "analysis_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Date when this analysis was conducted"
+        }
+      },
+      "required": ["domain_name", "entity_type", "entity_prefix", "scope"]
+    },
+    "causal_relationships": {
+      "type": "array",
+      "description": "Array of identified causal relationships between entities",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier for this causal relationship (e.g., CAUS-001)",
+            "pattern": "^CAUS-[0-9]{3}$"
+          },
+          "cause_entity_id": {
+            "type": "string",
+            "description": "ID of the entity that acts as the cause",
+            "pattern": "^[A-Z]{2,4}-[0-9]{3}$"
+          },
+          "effect_entity_id": {
+            "type": "string",
+            "description": "ID of the entity that is the effect/result",
+            "pattern": "^[A-Z]{2,4}-[0-9]{3}$"
+          },
+          "causality_type": {
+            "type": "string",
+            "enum": ["Direct", "Indirect", "Contributing", "Amplifying", "Catalytic", "Enabling"],
+            "description": "Type of causal relationship"
+          },
+          "strength": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100,
+            "description": "Strength of the causal relationship as a percentage (0-100%)"
+          },
+          "mechanism": {
+            "type": "string",
+            "description": "Detailed explanation of HOW the cause leads to the effect",
+            "minLength": 20
+          },
+          "evidence": {
+            "type": "string",
+            "description": "Specific evidence or reasoning that supports this causal relationship",
+            "minLength": 10
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 50,
+            "maximum": 100,
+            "description": "Confidence level in this causal inference (50-100%)"
+          },
+          "time_delay": {
+            "type": "string",
+            "enum": ["Immediate", "Short-term", "Medium-term", "Long-term", "Variable"],
+            "description": "Expected time delay between cause and effect"
+          },
+          "reversibility": {
+            "type": "string",
+            "enum": ["reversible", "partially_reversible", "irreversible"],
+            "description": "Whether the effect can be reversed if the cause is addressed"
+          },
+          "intervention_points": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Potential intervention points to break or weaken this causal link"
+          }
+        },
+        "required": ["id", "cause_entity_id", "effect_entity_id", "causality_type", "strength", "mechanism", "evidence", "confidence", "time_delay"],
+        "additionalProperties": false
+      }
+    },
+    "causal_chains": {
+      "type": "array",
+      "description": "Multi-step causal sequences involving 3+ entities",
+      "items": {
+        "type": "object",
+        "properties": {
+          "chain_id": {
+            "type": "string",
+            "description": "Unique identifier for this causal chain (e.g., CHAIN-001)",
+            "pattern": "^CHAIN-[0-9]{3}$"
+          },
+          "entity_sequence": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Z]{2,4}-[0-9]{3}$"
+            },
+            "minItems": 3,
+            "description": "Ordered sequence of entity IDs showing the causal flow"
+          },
+          "chain_description": {
+            "type": "string",
+            "description": "Comprehensive description of the complete causal sequence",
+            "minLength": 50
+          },
+          "overall_strength": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100,
+            "description": "Overall strength of the complete causal chain (0-100%)"
+          },
+          "chain_type": {
+            "type": "string",
+            "enum": ["linear", "reinforcing_loop", "balancing_loop", "cascading", "branching", "converging"],
+            "description": "Type of causal chain"
+          },
+          "intervention_priority": {
+            "type": "string",
+            "enum": ["upstream", "midstream", "downstream", "multiple_points"],
+            "description": "Where intervention would be most effective"
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 40,
+            "maximum": 100,
+            "description": "Confidence in the complete causal chain (40-100%)"
+          }
+        },
+        "required": ["chain_id", "entity_sequence", "chain_description", "overall_strength", "chain_type", "confidence"],
+        "additionalProperties": false
+      }
+    },
+    "causal_loops": {
+      "type": "array",
+      "description": "Identified feedback loops where entities reinforce each other cyclically",
+      "items": {
+        "type": "object",
+        "properties": {
+          "loop_id": {
+            "type": "string",
+            "description": "Unique identifier for this feedback loop (e.g., LOOP-001)",
+            "pattern": "^LOOP-[0-9]{3}$"
+          },
+          "participating_entities": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Z]{2,4}-[0-9]{3}$"
+            },
+            "minItems": 2,
+            "description": "Entities that participate in this feedback loop"
+          },
+          "loop_type": {
+            "type": "string",
+            "enum": ["reinforcing", "balancing", "delayed_reinforcing", "delayed_balancing"],
+            "description": "Type of feedback loop"
+          },
+          "loop_description": {
+            "type": "string",
+            "description": "Description of how the feedback loop operates",
+            "minLength": 30
+          },
+          "loop_strength": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100,
+            "description": "Strength of the feedback loop (0-100%)"
+          },
+          "break_points": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Potential intervention points to break the loop"
+          }
+        },
+        "required": ["loop_id", "participating_entities", "loop_type", "loop_description", "loop_strength"],
+        "additionalProperties": false
+      }
+    },
+    "root_causes": {
+      "type": "array",
+      "description": "Entities that are primary causes with no identified upstream causes",
+      "items": {
+        "type": "object",
+        "properties": {
+          "entity_id": {
+            "type": "string",
+            "pattern": "^[A-Z]{2,4}-[0-9]{3}$"
+          },
+          "justification": {
+            "type": "string",
+            "description": "Why this is considered a root cause",
+            "minLength": 20
+          },
+          "downstream_effects_count": {
+            "type": "number",
+            "description": "Number of other entities this directly or indirectly causes"
+          },
+          "controllability": {
+            "type": "string",
+            "enum": ["highly_controllable", "moderately_controllable", "low_controllability", "uncontrollable"],
+            "description": "How much control stakeholders have over this root cause"
+          }
+        },
+        "required": ["entity_id", "justification", "downstream_effects_count", "controllability"]
+      }
+    },
+    "ultimate_effects": {
+      "type": "array",
+      "description": "Entities that are final outcomes with no identified downstream effects",
+      "items": {
+        "type": "object",
+        "properties": {
+          "entity_id": {
+            "type": "string",
+            "pattern": "^[A-Z]{2,4}-[0-9]{3}$"
+          },
+          "justification": {
+            "type": "string",
+            "description": "Why this is considered an ultimate effect",
+            "minLength": 20
+          },
+          "upstream_causes_count": {
+            "type": "number",
+            "description": "Number of other entities that contribute to causing this"
+          },
+          "impact_severity": {
+            "type": "string",
+            "enum": ["low", "moderate", "high", "critical"],
+            "description": "Severity of this ultimate effect"
+          }
+        },
+        "required": ["entity_id", "justification", "upstream_causes_count", "impact_severity"]
+      }
+    },
+    "leverage_points": {
+      "type": "array",
+      "description": "Entities that, if addressed, would have the highest impact on the overall system",
+      "items": {
+        "type": "object",
+        "properties": {
+          "entity_id": {
+            "type": "string",
+            "pattern": "^[A-Z]{2,4}-[0-9]{3}$"
+          },
+          "leverage_score": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100,
+            "description": "Score representing the leverage potential (0-100%)"
+          },
+          "impact_reasoning": {
+            "type": "string",
+            "description": "Explanation of why addressing this entity would have high system-wide impact",
+            "minLength": 30
+          },
+          "affected_relationships_count": {
+            "type": "number",
+            "description": "Number of causal relationships that would be impacted"
+          },
+          "intervention_difficulty": {
+            "type": "string",
+            "enum": ["low", "moderate", "high", "very_high"],
+            "description": "Difficulty level of implementing interventions"
+          }
+        },
+        "required": ["entity_id", "leverage_score", "impact_reasoning", "affected_relationships_count", "intervention_difficulty"]
+      }
+    },
+    "network_metrics": {
+      "type": "object",
+      "description": "Network analysis metrics",
+      "properties": {
+        "total_entities_analyzed": {
+          "type": "number",
+          "description": "Total number of entities analyzed"
+        },
+        "total_relationships": {
+          "type": "number",
+          "description": "Number of causal relationships identified"
+        },
+        "total_chains": {
+          "type": "number",
+          "description": "Number of causal chains identified"
+        },
+        "total_loops": {
+          "type": "number",
+          "description": "Number of feedback loops identified"
+        },
+        "network_density": {
+          "type": "number",
+          "description": "Density of the causal network (0-1)"
+        },
+        "average_confidence": {
+          "type": "number",
+          "description": "Average confidence score across all relationships"
+        },
+        "longest_chain": {
+          "type": "number",
+          "description": "Length of the longest causal chain"
+        },
+        "strongest_loop": {
+          "type": "number",
+          "description": "Strength of the strongest feedback loop"
+        }
+      },
+      "required": ["total_entities_analyzed", "total_relationships", "average_confidence"]
+    },
+    "analysis_metadata": {
+      "type": "object",
+      "properties": {
+        "analysis_approach": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["explicit_causality", "semantic_causality", "domain_knowledge", "temporal_logic", "stakeholder_analysis", "statistical_correlation", "expert_judgment", "literature_review"]
+          },
+          "description": "Methods used in the causal analysis"
+        },
+        "data_sources": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Sources of data used for analysis"
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Acknowledged limitations of this causal analysis"
+        },
+        "validation_methods": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Methods used to validate the causal inferences"
+        }
+      },
+      "required": ["analysis_approach"]
+    }
+  },
+  "required": ["domain_context", "causal_relationships", "causal_chains", "causal_loops", "network_metrics", "analysis_metadata"],
+  "additionalProperties": false
+}

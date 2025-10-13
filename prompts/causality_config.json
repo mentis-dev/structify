@@ -1,0 +1,166 @@
+{
+  "analysis_parameters": {
+    "minimum_confidence_threshold": 50,
+    "chain_confidence_threshold": 45,
+    "loop_confidence_threshold": 50,
+    "enable_confidence_boosting": true,
+    "max_chain_length": 6,
+    "min_leverage_score": 3,
+    "enable_network_analysis": true,
+    "auto_detect_chains": true,
+    "auto_detect_loops": true,
+    "max_relationships_per_analysis": 25,
+    "max_chains_per_analysis": 15,
+    "max_loops_per_analysis": 10
+  },
+  "validation_rules": {
+    "require_mechanism": true,
+    "validate_entity_ids": true,
+    "check_circular_references": true,
+    "minimum_relationships": 1,
+    "enforce_schema_compliance": true,
+    "validate_confidence_scores": true
+  },
+  "domain_patterns": {
+    "pain_points": {
+      "entity_prefix": "PP",
+      "common_themes": ["cost", "quality", "access", "efficiency", "awareness", "resources"],
+      "typical_relationships": ["resource_constraint", "quality_impact", "adoption_barrier", "awareness_gap"]
+    },
+    "risk_factors": {
+      "entity_prefix": "RF",
+      "common_themes": ["vulnerability", "threat", "exposure", "impact", "likelihood"],
+      "typical_relationships": ["threat_exposure", "impact_amplification", "cascading_failure", "mitigation_failure"]
+    },
+    "bottlenecks": {
+      "entity_prefix": "BT",
+      "common_themes": ["throughput", "capacity", "delay", "queue", "processing"],
+      "typical_relationships": ["capacity_constraint", "flow_disruption", "queue_buildup", "processing_delay"]
+    }
+  },
+  "causal_patterns": {
+    "explicit_causal_keywords": [
+      "leads to", "causes", "results in", "triggers", "creates", 
+      "generates", "produces", "brings about", "gives rise to",
+      "contributes to", "stems from", "due to", "because of",
+      "resulting from", "caused by", "driven by", "enables",
+      "prevents", "blocks", "facilitates", "amplifies", "exacerbates"
+    ],
+    "resource_constraint_patterns": [
+      "shortage", "lack of", "insufficient", "limited", "inadequate",
+      "under-resourced", "under-staffed", "under-funded", "constrained",
+      "scarcity", "depleted", "exhausted"
+    ],
+    "quality_impact_patterns": [
+      "poor quality", "substandard", "inadequate service", "delays",
+      "inefficient", "ineffective", "unsatisfactory", "deteriorating",
+      "declining", "compromised", "degraded"
+    ],
+    "adoption_barrier_patterns": [
+      "high cost", "expensive", "complex", "difficult", "barriers",
+      "obstacles", "challenges", "resistance", "reluctance", "hesitation",
+      "unwillingness", "prohibitive"
+    ],
+    "awareness_patterns": [
+      "unaware", "lack of knowledge", "unfamiliar", "don't know",
+      "limited understanding", "poor awareness", "misconceptions",
+      "ignorance", "uninformed", "oblivious"
+    ],
+    "system_failure_patterns": [
+      "breakdown", "failure", "collapse", "malfunction", "disruption",
+      "outage", "error", "crash", "dysfunction"
+    ]
+  },
+  "confidence_boosting": {
+    "explicit_language_boost": 15,
+    "pattern_match_boost": 10,
+    "domain_knowledge_boost": 8,
+    "stakeholder_alignment_boost": 5,
+    "multiple_evidence_boost": 12,
+    "temporal_logic_boost": 7,
+    "quantitative_evidence_boost": 20
+  },
+  "relationship_types": {
+    "Direct": {
+      "description": "Immediate cause-effect relationship",
+      "confidence_modifier": 0,
+      "typical_strength": 80,
+      "time_delay": "Immediate"
+    },
+    "Indirect": {
+      "description": "Mediated through intermediate factors", 
+      "confidence_modifier": -5,
+      "typical_strength": 65,
+      "time_delay": "Medium-term"
+    },
+    "Contributing": {
+      "description": "Significant contributing factor",
+      "confidence_modifier": -3,
+      "typical_strength": 70,
+      "time_delay": "Short-term"
+    },
+    "Amplifying": {
+      "description": "Strengthens existing causal effects",
+      "confidence_modifier": 5,
+      "typical_strength": 75,
+      "time_delay": "Short-term"
+    },
+    "Catalytic": {
+      "description": "Accelerates causal processes",
+      "confidence_modifier": 3,
+      "typical_strength": 70,
+      "time_delay": "Immediate"
+    },
+    "Enabling": {
+      "description": "Makes other causes possible",
+      "confidence_modifier": 0,
+      "typical_strength": 65,
+      "time_delay": "Variable"
+    }
+  },
+  "intervention_strategies": {
+    "root_cause_elimination": {
+      "priority": "high",
+      "description": "Address fundamental causes",
+      "expected_impact": 85
+    },
+    "leverage_point_intervention": {
+      "priority": "high", 
+      "description": "Target high-influence nodes",
+      "expected_impact": 80
+    },
+    "chain_breaking": {
+      "priority": "medium",
+      "description": "Interrupt causal sequences",
+      "expected_impact": 70
+    },
+    "loop_breaking": {
+      "priority": "medium",
+      "description": "Disrupt reinforcing cycles",
+      "expected_impact": 75
+    },
+    "symptom_management": {
+      "priority": "low",
+      "description": "Manage effects without addressing causes",
+      "expected_impact": 30
+    }
+  },
+  "network_analysis": {
+    "centrality_measures": ["degree", "betweenness", "closeness", "eigenvector"],
+    "clustering_threshold": 0.6,
+    "path_analysis": true,
+    "component_analysis": true,
+    "enable_shortest_path": true,
+    "enable_strongly_connected_components": true,
+    "max_path_length": 8
+  },
+  "output_formatting": {
+    "include_metadata": true,
+    "include_network_metrics": true,
+    "include_visualization_data": true,
+    "confidence_precision": 1,
+    "strength_precision": 1,
+    "sort_by_confidence": true,
+    "group_by_entity_type": false
+  }
+}
